@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spinal Cord Injury Support Group</title>
     <style>
-       body {
+        body {
             font-family: Arial, sans-serif;
             background-color: rgba(13, 62, 239, 0.9);
             background-size: cover;
@@ -25,64 +25,70 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            font-size: 29px;
-            color: #000000;
-            margin-bottom: 20px;
+        .image-card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
         }
 
-        h2 {
-            font-size: 18px;
-            color: #f40b0b;
-            margin-bottom: 15px;
+        .image-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
-        p {
-            font-size: 16px;
-            color: #000000;
-            margin-bottom: 10px;
+        .logo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 5px;
         }
 
-        .navigation {
+        .navigation ul {
+            list-style: none;
+            padding: 0;
             display: flex;
             justify-content: center;
             margin: 20px 0;
         }
 
-        .navigation table {
-            border-collapse: collapse;
-            width: 100%;
-            max-width: 365px;
+        .navigation li {
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            padding: 10px 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 0;
         }
 
-        .navigation th, .navigation td {
-            border: 1px solid #000000;
-            padding: 10px;
-            text-align: center;
+        .navigation li:not(:last-child) {
+            border-right: none;
         }
 
         .navigation a {
             text-decoration: none;
             color: #0d4bf7;
             font-weight: bold;
-            transition: color 0.3s ease;
+            transition: color 0.3s;
         }
 
         .navigation a:hover {
             color: #ee0a0a;
         }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 15px 0;
-        }
-
         .meeting-info {
             background-color: #f8f8f8;
             padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .center-address {
+            font-weight: bold;
+            margin-top: -10px;
+            line-height: 1.4;
         }
 
         @media (max-width: 600px) {
@@ -90,8 +96,13 @@
                 padding: 15px;
             }
 
-            .navigation table {
-                width: 100%;
+            .navigation ul {
+                flex-direction: column;
+            }
+
+            .navigation li {
+                border-right: 1px solid #000000;
+                border-radius: 5px;
             }
         }
     </style>
@@ -99,38 +110,54 @@
 <body>
     <div class="container">
         <h1>Spinal Cord Injury Support Group</h1>
-        
-        <h1>Sponsored by:</h1>
-        <img src="logo.jpg" width="150" height="150" alt="Independent Living Center Logo drawing of disabled stick figure in wheelchair releasing dove" />
 
-        <div class="navigation">
-            <table>
-                <tr>
-                    <th><a href="about.html">About</a></th>
-                    <th><a href="contact.html">Contact</a></th>
-                    <th><a href="gallery.html">Gallery</a></th>
-                </tr>
-            </table>
+        <h2>Sponsored by:</h2>
+        <div class="logo">
+            <img src="logo.jpg" alt="Independent Living Center Logo drawing of disabled stick figure in wheelchair releasing dove">
         </div>
 
-        <h2>WE WOULD LIKE FOR ALL SPINAL CORD INJURY SURVIVORS, FAMILY, AND FRIENDS TO JOIN US AND HELP ADDRESS THE CONCERNS OF LIVING WITH DAILY ISSUES, BOTH FOR CAREGIVERS AND SPINAL CORD INJURY SURVIVORS. </h2>
+        <nav class="navigation">
+            <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
 
-        <img src="group pic rev.png" width="640" height="198" alt="Spinal Cord Injury Support Group Members" />
-        <div class="meeting-info">
-            <p><strong> We meet on the fourth Monday of every month. Please call to confirm the date.</strong></p>
-            <p><strong>Location:</strong></p>
-            <p>Independent Living Center of Mobile </p>
-            <p>6750 Howells Ferry Road</p>
-            <p>Mobile, AL 36618</p>
-            <p>(251) 460-0301</p>
-            <p><strong>Time: 1:00 PM - 2:30 PM</strong></p>
-            <p><strong>Light refreshments will be served</strong></p>
+        <h2>We invite all spinal cord injury survivors, family, and friends to join us!</h2>
+        <p>Together, let's address daily issues faced by both caregivers and spinal cord injury survivors.</p>
+
+        <div class="image-card">
+            <img src="group pic rev.png" alt="Spinal Cord Injury Support Group Members">
         </div>
-        <img src=" May meeting Loaves & Fishes.jpg" alt=" May meeting at Loaves & Fishes Family Restaurant located at 13476 Old Tanner Williams Rd, Wilmer, AL 36587" />
-        <img src=" May meeting at Loaves & Fishes2.jpg" alt=" May meeting from another angle at Loaves & Fishes Family Restaurant located at 13476 Old Tanner Williams Rd, Wilmer, AL 36587" />
-            <p>On Thursday, May 22nd, the spinal injury support group held the meeting at Loaves & Fishes Family Restaurant located at 13476 Old Tanner Williams Rd, Wilmer, AL 36587.  </p>
-            <p>Topics on the agenda included: Dealing with Anxiety and providing feedback regarding the spinal injury support website.</p>
+
+        <section class="meeting-info">
+            <p><strong>We meet on the fourth Monday of every month. Please call to confirm the date.</strong></p>
+            <p><strong>Location:</strong><br>
+            Independent Living Center of Mobile<br>
+            6750 Howells Ferry Road<br>
+            Mobile, AL 36618<br>
+            (251) 460-0301</p>
+            <p><strong>Time:</strong> 1:00 PM – 2:30 PM</p>
+            <p><strong>Light refreshments will be served.</strong></p>
+        </section>
+
+        <div class="image-card">
+            <img src=" May meeting Loaves & Fishes.jpg" alt="May meeting at Loaves & Fishes Family Restaurant">
+        </div>
+
+        <div class="image-card">
+            <img src=" May meeting at Loaves & Fishes2.jpg" alt="May meeting from another angle at Loaves & Fishes Family Restaurant">
+        </div>
+
+        <section>
+            <p>On Thursday, May 22nd, the spinal injury support group held a meeting at <strong>Loaves & Fishes Family Restaurant</strong> located at:</p>
+            <p class="center-address">
+                13476 Old Tanner Williams Rd<br>
+                Wilmer, AL 36587
+            </p>
+            <p>Topics discussed included dealing with anxiety and feedback regarding the spinal injury support website.</p>
+        </section>
     </div>
 </body>
 </html>
-
