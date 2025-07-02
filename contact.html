@@ -1,156 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://kit.fontawesome.com/6142fb19d3.js" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spinal Cord Injury Support Group - Contact</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: rgba(13, 62, 239, 0.9);
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            line-height: 1.6;
-        }
+  <script src="https://kit.fontawesome.com/6142fb19d3.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spinal Cord Injury Support Group - Contact</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgba(13, 62, 239, 0.9);
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      line-height: 1.6;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background-color: #EBF3FD;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #EBF3FD;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-        h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-            color: #000000;
-        }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: #000000;
+    }
 
-        h2 {
-            font-size: 24px;
-            color: #000000;
-            margin-bottom: 15px;
-        }
+    h2 {
+      font-size: 24px;
+      color: #000000;
+      margin-bottom: 15px;
+    }
 
-        .contact-info {
-            background-color: #f4f4f4;
-            padding: 20px;
-            border-radius: 5px;
-            margin: 20px 0;
-            text-align: center;
-        }
+    .logo img {
+      width: 150px;
+      height: 150px;
+      border-radius: 5px;
+    }
 
-        .contact-info p {
-            font-size: 18px;
-            color: #333;
-            margin: 10px 0;
-        }
+    .contact-info {
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      margin: 20px auto;
+      text-align: center;
+    }
 
-        .contact-info a {
-            color: rgba(13, 62, 239, 0.9);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+    .contact-info p {
+      font-size: 18px;
+      color: #333;
+      margin: 10px 0;
+    }
 
-        .contact-info a:hover {
-            color: #ee0a0a;
-            text-decoration: underline;
-        }
+    .contact-info a {
+      color: rgba(13, 62, 239, 0.9);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
 
-        .navigation {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
+    .contact-info a:hover {
+      color: #ee0a0a;
+      text-decoration: underline;
+    }
 
-        .navigation table {
-            border-collapse: collapse;
-            width: 100%;
-            max-width: 200px;
-        }
+    .navigation ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
 
-        .navigation th, .navigation td {
-            border: 1px solid #000000;
-            padding: 10px;
-            text-align: center;
-        }
+    .navigation li {
+      background-color: #ffffff;
+      border: 1px solid #000000;
+      padding: 10px 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 0;
+    }
 
-        .navigation a {
-            text-decoration: none; 
-            color: #0d4bf7;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
+    .navigation li:not(:last-child) {
+      border-right: none;
+    }
 
-        .navigation a:hover {
-            color: #ee0a0a;
-        }
+    .navigation a {
+      text-decoration: none;
+      color: #0d4bf7;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 15px 0;
-        }
+    .navigation a:hover {
+      color: #ee0a0a;
+    }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-            }
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+      }
 
-            .contact-info p {
-                font-size: 16px;
-            }
-        }
-    </style>
+      .navigation ul {
+        flex-direction: column;
+      }
+
+      .navigation li {
+        border-right: 1px solid #000000;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+
+      .contact-info p {
+        font-size: 16px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Spinal Cord Injury Support Group</h1>
-        
-        <h2>Sponsored by:</h2>
-        <img src="logo.jpg" width="150" height="150" alt="Independent Living Center Logo drawing of disabled stick figure in wheelchair releasing dove" />
-        
-        <div class="contact-info">
-            <h2>Contact Information</h2>
-            
-            <p><strong>Group Coordinator:</strong> Jerry Cochran Sr.</p>
-            <p><strong>Phone:</strong> (251) 391-6307</p>
-            
-            <p><strong>For Accommodations or Information:</strong><br>
-            
-            <p><strong>Independent Living Center of Mobile</strong></p>
-            
-            <p>Lesia Dailey</p>
-            <p><strong>Phone:</strong> (251) 525-9638 EXT. 202</p>
-            <p><strong>Email:</strong> <a href="mailto:lesiad@ilcmobile.org">lesiad@ilcmobile.org</a></p>
-            <p><strong>or</strong></p>
-            <p>Cyneria Austin</p>
-            <p><strong>Email:</strong> <a href="mailto:cyneriaa@ilvmobile.org">cyneriaa@ilcmobile.org</a></p>
-         
-            <p><strong>Additional Information:</strong><br>
-            <a href="http://ilcmobile.org/" target="_blank">Visit Independent Living Center of Mobile Website</a></p>
-            <p><strong>Or visit their social media pages:</strong></p>
-            <a href="https://www.facebook.com/profile.php?id=61557665836753"> <i class="fa-brands fa-facebook-f fa-3x" style="color:rgba(13, 62, 239, 0.9) ; margin: 0 10px;"></i></a>
+  <div class="container">
+    <h1>Spinal Cord Injury Support Group</h1>
 
-        </div>
-        
-        <div class="navigation">
-            <table>
-                <tr>
-                    <th><a href="index.html">Home</a></th>
-                    <th><a href="about.html">About</a></th>
-                    <th><a href="gallery.html">Gallery</a></th>
-                </tr>
-            </table>
-        </div>
+    <h2>Sponsored by:</h2>
+    <div class="logo">
+      <img src="logo.jpg" alt="Independent Living Center Logo drawing of disabled stick figure in wheelchair releasing dove" />
     </div>
-   
+
+    <div class="contact-info">
+      <h2>Contact Information</h2>
+
+      <p><strong>Group Coordinator:</strong> Jerry Cochran Sr.</p>
+      <p><strong>Phone:</strong> (251) 391-6307</p>
+
+      <p><strong>For Accommodations or Information:</strong></p>
+
+      <p><strong>Independent Living Center of Mobile</strong></p>
+
+      <p>Lesia Dailey</p>
+      <p><strong>Phone:</strong> (251) 525-9638 EXT. 202</p>
+      <p><strong>Email:</strong> <a href="mailto:lesiad@ilcmobile.org">lesiad@ilcmobile.org</a></p>
+
+      <p><strong>or</strong></p>
+
+      <p>Cyneria Austin</p>
+      <p><strong>Email:</strong> <a href="mailto:cyneriaa@ilcmobile.org">cyneriaa@ilcmobile.org</a></p>
+
+      <p><strong>Additional Information:</strong><br>
+        <a href="http://ilcmobile.org/" target="_blank">Visit Independent Living Center of Mobile Website</a>
+      </p>
+
+      <p><strong>Or visit their social media pages:</strong></p>
+      <a href="https://www.facebook.com/profile.php?id=61557665836753" target="_blank">
+        <i class="fa-brands fa-facebook-f fa-3x" style="color:rgba(13, 62, 239, 0.9); margin: 0 10px;"></i>
+      </a>
+    </div>
+
+    <nav class="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
 </body>
 </html>
-
