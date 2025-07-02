@@ -1,177 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spinal Cord Injury Support Group - About Us</title>
-    <style>
-      body {
-            font-family: Arial, sans-serif;
-            background-color: rgba(13, 62, 239, 0.9);
-            background-size: cover;
-            background-attachment: fixed;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            line-height: 1.6;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spinal Cord Injury Support Group - About Us</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: rgba(13, 62, 239, 0.9);
+      background-size: cover;
+      background-attachment: fixed;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+      line-height: 1.6;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #EBF3FD;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }        h1, h2 {
-            color: #000000;
-            margin-bottom: 20px;
-        }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: #EBF3FD;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-        h1 {
-            font-size: 36px;
-        }
+    h1, h2 {
+      color: #000000;
+      margin-bottom: 20px;
+    }
 
-        h2 {
-            font-size: 24px;
-        }
+    h1 {
+      font-size: 36px;
+    }
 
-        .about-content {
-            text-align: left;
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            border-radius: 5px;
-        }
+    h2 {
+      font-size: 24px;
+    }
 
-        .about-content p {
-            font-size: 16px;
-            color: #333;
-            margin-bottom: 15px;
-        }
+    /* Unified card frame style */
+    .card-box {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      margin: 20px 0;
+      text-align: left;
+    }
 
-        .highlight-text {
-            color: #f40b0b;
-            font-weight: bold;
-            text-align: center;
-        }
+    .card-box p,
+    .card-box li {
+      font-size: 16px;
+      color: #333;
+    }
 
-        .image-gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin: 20px 0;
-        }
+    .highlight-text {
+      color: #f40b0b;
+      font-weight: bold;
+      text-align: center;
+    }
 
-        .group-goals {
-            background-color: #f0f0f0;
-            padding: 20px;
-            border-radius: 5px;
-        }
+    .image-gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
+    }
 
-        .group-goals ul {
-            list-style-type: none;
-            padding: 0;
-        }
+    .image-frame {
+      background-color: #ffffff;
+      padding: 8px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    }
 
-        .group-goals li {
-            font-size: 16px;
-            margin-bottom: 10px;
-            color: #333
-        }
+    /* Navigation (modern flex version) */
+    .navigation ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
+    }
 
-        .navigation {
-            display: flex;
-            justify-content: center;
-            margin: 20px 0;
-        }
+    .navigation li {
+      background-color: #ffffff;
+      border: 1px solid #000000;
+      padding: 10px 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 0;
+    }
 
-        .navigation table {
-            border-collapse: collapse;
-            width: 100%;
-            max-width: 200px;
-        }
+    .navigation li:not(:last-child) {
+      border-right: none;
+    }
 
-        .navigation th, .navigation td {
-            border: 1px solid #000000;
-            padding: 10px;
-            text-align: center;
-        }
+    .navigation a {
+      text-decoration: none;
+      color: #0d4bf7;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
 
-        .navigation a {
-            text-decoration: none;
-            color: #0d4bf7;
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
+    .navigation a:hover {
+      color: #ee0a0a;
+    }
 
-        .navigation a:hover {
-            color: #ee0a0a;
-        }
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px;
+      border-radius: 5px;
+    }
 
-        img {
-            max-width: 100%;
-            height: auto;
-            margin: 10px;
-            border-radius: 5px;
-        }
+    @media (max-width: 600px) {
+      .container {
+        padding: 15px;
+      }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 15px;
-            }
+      .image-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
 
-            .image-gallery {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    </style>
+      .navigation ul {
+        flex-direction: column;
+      }
+
+      .navigation li {
+        border-right: 1px solid #000000;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Spinal Cord Injury Support Group</h1>
+  <div class="container">
+    <h1>Spinal Cord Injury Support Group</h1>
 
-        <h2>Sponsored by:</h2>
-        <img src="logo.jpg" width="150" height="150" alt="Independent Living Center Logo drawing of a disabled stick figure in wheelchair releasing dove" />
+    <h2>Sponsored by:</h2>
+    <img src="logo.jpg" width="150" height="150" alt="Independent Living Center Logo drawing of a disabled stick figure in wheelchair releasing dove" />
 
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p>We are members of the community who understand the daily challenges of living with spinal cord injuries. Our group is dedicated to supporting individuals who have experienced spinal cord injuries, as well as their caregivers.</p>
-            
-            <p>Our mission is to create a supportive environment where individuals can share experiences, learn from each other, and find hope and strength in the community. We recognize that most people who haven't experienced a spinal cord injury cannot fully understand the daily challenges we face.</p>
-        </div>
-
-        <div class="image-gallery">
-            <img src="5.jpg" width="400" height="224" alt="Wheelchair basketball game volunteers sponsored by Mobile Wave transit." />
-            <img src="1.jpg" width="224" height="332" alt="Our member Brian Johnson at the wheelchair basketball game." />
-            <img src="4.jpg" width="240" height="332" alt="Pat Peterson, who was an active group member, whom we missed dearly." />
-            <img src="2.jpg" width="400" height="400" alt="Wheelchair basketball game sponsored by the Mobile Wave transit bus system." />
-        </div>
-
-        <p class="highlight-text">IF YOU HAVE A SPINAL CORD INJURY, KNOW THAT YOU ARE NOT ALONE. PLEASE JOIN US AND SEE HOW OTHERS DEAL WITH THEIR INJURY. </p>
-
-        <p class="highlight-text">YOU DO HAVE A VOICE!!!</p>
-
-        <div class="group-goals">
-            <h2>Our Group Activities and Discussions Include:</h2>
-            <ul>
-                <li> Fellowship - Meet and socialize with others who live with spinal injuries</li>
-                <li> Coping - Develop strategies for managing conditions related to spinal injury</li>
-                <li> Dealing - Discuss and plan for life after spinal injuries</li>
-            </ul>
-        </div>
-
-        <div class="navigation">
-            <table>
-                <tr>
-                    <th><a href="index.html">Home</a></th>
-                    <th><a href="contact.html">Contact</a></th>
-                    <th><a href="gallery.html">Gallery</a></th>
-                </tr>
-            </table>
-        </div>
+    <!-- About Section -->
+    <div class="card-box">
+      <h2>About Us</h2>
+      <p>We are members of the community who understand the daily challenges of living with spinal cord injuries. Our group is dedicated to supporting individuals who have experienced spinal cord injuries, as well as their caregivers.</p>
+      <p>Our mission is to create a supportive environment where individuals can share experiences, learn from each other, and find hope and strength in the community. We recognize that most people who haven't experienced a spinal cord injury cannot fully understand the daily challenges we face.</p>
     </div>
+
+    <!-- Image Gallery -->
+    <div class="image-gallery">
+      <div class="image-frame">
+        <img src="5.jpg" width="400" height="224" alt="Wheelchair basketball game volunteers sponsored by Mobile Wave transit." />
+      </div>
+      <div class="image-frame">
+        <img src="1.jpg" width="224" height="332" alt="Our member Brian Johnson at the wheelchair basketball game." />
+      </div>
+      <div class="image-frame">
+        <img src="4.jpg" width="240" height="332" alt="Pat Peterson, who was an active group member, whom we missed dearly." />
+      </div>
+      <div class="image-frame">
+        <img src="2.jpg" width="400" height="400" alt="Wheelchair basketball game sponsored by the Mobile Wave transit bus system." />
+      </div>
+    </div>
+
+    <p class="highlight-text">IF YOU HAVE A SPINAL CORD INJURY, KNOW THAT YOU ARE NOT ALONE. PLEASE JOIN US AND SEE HOW OTHERS DEAL WITH THEIR INJURY.</p>
+
+    <p class="highlight-text">YOU DO HAVE A VOICE!!!</p>
+
+    <!-- Goals Section -->
+    <div class="card-box">
+      <h2>Our Group Activities and Discussions Include:</h2>
+      <ul>
+        <li>Fellowship - Meet and socialize with others who live with spinal injuries</li>
+        <li>Coping - Develop strategies for managing conditions related to spinal injury</li>
+        <li>Dealing - Discuss and plan for life after spinal injuries</li>
+      </ul>
+    </div>
+
+    <!-- Navigation Section -->
+    <nav class="navigation">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </nav>
+  </div>
 </body>
 </html>
