@@ -77,6 +77,23 @@
             position:absolute; top:15px; right:35px; color:#f1f1f1;
             font-size:40px; font-weight:bold; cursor:pointer;
         }
+        
+        /* Footer styles */
+        footer {
+          width: calc(100% + 40px);   /* extend past 20px side-padding */
+          margin: 20px -20px -20px;   /* top 20px  |  left -20px  |  bottom -20px  |  right -20px */
+          background: #EBF3FD;
+          padding: 20px 10px;
+          border-top: 3px solid #0d4bf7;
+          box-shadow: 0 2px 6px rgba(0,0,0,.15);
+          text-align: center;
+          border-radius: 0;
+          color: #333;
+        }
+        footer p { margin: 5px 0; font-size: 16px; }
+        footer a { color: #0d4bf7; text-decoration: none; font-weight: bold; }
+        footer a:hover { color: #ee0a0a; }
+        
         @media(max-width:600px){
             .navigation ul{ flex-direction:column; }
             .navigation li{ border-right:1px solid #000; border-radius:5px; }
@@ -234,6 +251,26 @@
             <p>Stay tuned for updates!</p>
         </div>
     </div><!-- end .container -->
+
+     <!-- Footer outside main container -->
+<footer>
+  <p><strong>The Spinal Cord Injury Support Group is sponsored by:<br>
+    The Independent Living Center of Mobile</strong></p>
+
+  <p>6750 Howells Ferry Road<br>
+     Mobile, AL 36618</p>
+  <p>(251) 391‑6307</p>
+
+  <p><strong>Email:</strong></p>
+  <p>
+    <a href="mailto:lesiad@ilcmobile.org">Lesia Dailey &nbsp;•&nbsp; lesiad@ilcmobile.org</a>
+  </p>
+  <p>
+    <a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin &nbsp;•&nbsp; cyneriaa@ilcmobile.org</a>
+  </p>
+</footer>
+
+
 
     <div id="imageModal">
         <span class="closeModal" onclick="closeModal()">&times;</span>
