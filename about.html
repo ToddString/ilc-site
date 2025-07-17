@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- SEO‑optimized meta tags -->
   <title>About | Spinal Cord Injury Support Group – Mobile, Alabama</title>
-  <meta name="description" content="Learn about the Mobile, Alabama Spinal Cord Injury Support Group: our mission, peer‑support activities and resources that help SCI survivors and caregivers cope, connect and thrive.">
-  <meta name="keywords" content="about spinal cord injury support, Mobile Alabama SCI group, spinal injury peer support, wheelchair support Mobile AL, spinal cord resources Alabama">
+  <meta name="description"
+    content="Learn about the Mobile, Alabama Spinal Cord Injury Support Group: our mission, peer‑support activities and resources that help SCI survivors and caregivers cope, connect and thrive.">
+  <meta name="keywords"
+    content="about spinal cord injury support, Mobile Alabama SCI group, spinal injury peer support, wheelchair support Mobile AL, spinal cord resources Alabama">
 
   <style>
     body {
@@ -20,6 +23,7 @@
       text-align: center;
       line-height: 1.6;
     }
+
     .container {
       max-width: 900px;
       margin: 0 auto;
@@ -28,50 +32,159 @@
       border-radius: 10px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    h1, h2 { color: #000; margin-bottom: 20px; }
-    h1 { font-size: 36px; }
-    h2 { font-size: 24px; }
+
+    h1,
+    h2 {
+      color: #000;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    /* Footer styles */
+    footer {
+      width: calc(100% + 40px);   /* extend past 20px side-padding */
+      margin: 20px -20px -20px;   /* top 20px  |  left -20px  |  bottom -20px  |  right -20px */
+      background: #EBF3FD;
+      padding: 20px 10px;
+      border-top: 3px solid #0d4bf7;
+      box-shadow: 0 2px 6px rgba(0,0,0,.15);
+      text-align: center;
+      border-radius: 0;
+      color: #333;
+    }
+    footer p { margin: 5px 0; font-size: 16px; }
+    footer a { color: #0d4bf7; text-decoration: none; font-weight: bold; }
+    footer a:hover { color: #ee0a0a; }
 
     /* Unified card frame style */
     .card-box {
       background: #fff;
       padding: 20px;
       border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,.15);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
       margin: 20px 0;
       text-align: left;
     }
-    .card-box p, .card-box li { font-size: 16px; color: #333; }
 
-    .highlight-text { color: #f40b0b; font-weight: bold; text-align: center; }
+    .card-box p,
+    .card-box li {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .highlight-text {
+      color: #f40b0b;
+      font-weight: bold;
+      text-align: center;
+    }
 
     .image-gallery {
-      display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 20px 0;
     }
+
     .image-frame {
-      background: #fff; padding: 8px; border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,.15);
+      background: #fff;
+      padding: 8px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
     }
 
     /* Navigation */
     .navigation ul {
-      list-style: none; padding: 0; display: flex; justify-content: center; margin: 20px 0;
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      margin: 20px 0;
     }
-    .navigation li {
-      background: #fff; border: 1px solid #000; padding: 10px 15px;
-      box-shadow: 0 2px 4px rgba(0,0,0,.1); border-radius: 0;
-    }
-    .navigation li:not(:last-child) { border-right: none; }
-    .navigation a { text-decoration: none; color: #0d4bf7; font-weight: bold; transition: color .3s; }
-    .navigation a:hover { color: #ee0a0a; }
 
-    img { max-width: 100%; height: auto; margin: 10px; border-radius: 5px; }
+    .navigation li {
+      background: #fff;
+      border: 1px solid #000;
+      padding: 10px 15px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
+      border-radius: 0;
+    }
+
+    .navigation li:not(:last-child) {
+      border-right: none;
+    }
+
+    .navigation a {
+      text-decoration: none;
+      color: #0d4bf7;
+      font-weight: bold;
+      transition: color .3s;
+    }
+
+    .navigation a:hover {
+      color: #ee0a0a;
+    }
+
+    /* Footer */
+    .footer {
+      background: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
+      margin: 20px 0;
+      text-align: center;
+      border-top: 3px solid #0d4bf7;
+    }
+
+    .footer p {
+      margin: 5px 0;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .footer a {
+      color: #0d4bf7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .footer a:hover {
+      color: #ee0a0a;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin: 10px;
+      border-radius: 5px;
+    }
 
     @media (max-width: 600px) {
-      .container { padding: 15px; }
-      .image-gallery { flex-direction: column; align-items: center; }
-      .navigation ul { flex-direction: column; }
-      .navigation li { border-right: 1px solid #000; border-radius: 5px; margin-bottom: 5px; }
+      .container {
+        padding: 15px;
+      }
+
+      .image-gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .navigation ul {
+        flex-direction: column;
+      }
+
+      .navigation li {
+        border-right: 1px solid #000;
+        border-radius: 5px;
+        margin-bottom: 5px;
+      }
     }
   </style>
 </head>
@@ -81,42 +194,49 @@
     <h1>Spinal Cord Injury Support Group</h1>
 
     <h2>Sponsored by:</h2>
-    <img src="logo.jpg" width="150" height="150" alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" />
+    <img src="logo.jpg" width="150" height="150"
+      alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" />
 
     <!-- About Section -->
     <div class="card-box">
       <h2>About Us</h2>
-      <p>We are members of the Mobile, Alabama community who understand the daily challenges of living with spinal cord injuries. Our peer‑led group supports SCI survivors and their caregivers through fellowship, education and advocacy.</p>
-      <p>Our mission is to create a welcoming environment where individuals can share experiences, learn coping strategies and find hope and strength together. We recognize that people who haven't experienced a spinal cord injury can’t fully understand its impact—that’s why our lived experience is so valuable.</p>
+      <p>We are members of the Mobile, Alabama community who understand the daily challenges of living with spinal cord
+        injuries. Our peer‑led group supports SCI survivors and their caregivers through fellowship, education and
+        advocacy.</p>
+      <p>Our mission is to create a welcoming environment where individuals can share experiences, learn coping
+        strategies and find hope and strength together. We recognize that people who haven't experienced a spinal cord
+        injury can’t fully understand its impact—that’s why our lived experience is so valuable.</p>
     </div>
 
     <!-- Image Gallery -->
     <div class="image-gallery">
       <div class="image-frame">
-        <img src="5.jpg" width="400" height="224" alt="Volunteers and Mobile Wave Transit staff at wheelchair basketball fundraiser">
+        <img src="5.jpg" width="400" height="224"
+          alt="Volunteers and Mobile Wave Transit staff at wheelchair basketball fundraiser">
       </div>
       <div class="image-frame">
-        <img src="1.jpg" width="224" height="332" alt="Group member Brian Johnson cheering courtside at wheelchair basketball game">
+        <img src="1.jpg" width="224" height="332"
+          alt="Group member Brian Johnson cheering courtside at wheelchair basketball game">
       </div>
       <div class="image-frame">
         <img src="4.jpg" width="240" height="332" alt="Beloved member Pat Peterson smiling during peer‑support outing">
       </div>
       <div class="image-frame">
-        <img src="2.jpg" width="400" height="400" alt="Full‑court wheelchair basketball action sponsored by Mobile Wave Transit">
+        <img src="2.jpg" width="400" height="400"
+          alt="Full‑court wheelchair basketball action sponsored by Mobile Wave Transit">
       </div>
     </div>
 
-    <p class="highlight-text">IF YOU HAVE A SPINAL CORD INJURY, KNOW THAT YOU ARE NOT ALONE. PLEASE JOIN US AND SEE HOW OTHERS DEAL WITH THEIR INJURY.</p>
+    <p class="highlight-text">IF YOU HAVE A SPINAL CORD INJURY, KNOW THAT YOU ARE NOT ALONE. PLEASE JOIN US AND SEE HOW
+      OTHERS DEAL WITH THEIR INJURY.</p>
     <p class="highlight-text">YOU DO HAVE A VOICE!!!</p>
 
     <!-- Goals Section -->
-    <div class="card-box">
+    <div class="card-box" style="text-align: center;">
       <h2>Our Group Activities and Discussions Include:</h2>
-      <ul>
-        <li>Fellowship – meet and socialise with others living with spinal injuries</li>
-        <li>Coping – develop strategies for managing conditions related to spinal injury</li>
-        <li>Dealing – discuss and plan for life after spinal injuries</li>
-      </ul>
+      <p>Fellowship – meet and socialise with others living with spinal injuries</p>
+      <p>Coping – develop strategies for managing conditions related to spinal injury</p>
+      <p>Dealing - discussing, and planning for life after spinal injuries</p>
     </div>
 
     <!-- Navigation Section -->
@@ -128,5 +248,23 @@
       </ul>
     </nav>
   </div>
+
+  <!-- Footer outside main container -->
+<footer>
+  <p><strong>The Spinal Cord Injury Support Group is sponsored by:<br>
+    The Independent Living Center of Mobile</strong></p>
+
+  <p>6750 Howells Ferry Road<br>
+     Mobile, AL 36618</p>
+  <p>(251) 391‑6307</p>
+
+  <p><strong>Email:</strong></p>
+  <p>
+    <a href="mailto:lesiad@ilcmobile.org">Lesia Dailey &nbsp;•&nbsp; lesiad@ilcmobile.org</a>
+  </p>
+  <p>
+    <a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin &nbsp;•&nbsp; cyneriaa@ilcmobile.org</a>
+  </p>
+</footer>
 </body>
 </html>
