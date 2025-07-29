@@ -63,8 +63,18 @@ footer a:hover{color:#ee0a0a;}
 
     @media(max-width:600px){
       .container{padding:15px;}
-      .navigation ul{flex-direction:column;}
-      .navigation li{border-right:1px solid #000;border-radius:5px;margin-bottom:5px;}
+      .navigation ul{flex-direction:column !important;}
+      .navigation li{
+        border-right:1px solid #000 !important;
+        border-radius:5px !important;
+        margin-bottom:5px !important;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .navigation li:not(:last-child){
+        border-right:1px solid #000 !important;
+        border-bottom:1px solid #000 !important;
+      }
     }
   </style>
 </head>
@@ -117,7 +127,7 @@ footer a:hover{color:#ee0a0a;}
       <img src="ilcscimeeting1.JPG" alt="July's meeting was held at the Independent Living Center facility in Mobile, Alabama.">
     </div>
     <div class="image-card">
-      <img src="ilcscimeeting2.JPG" alt="July's meeting from another angle at the Independent Living Center facility, Mobile, Alabama.">
+      <img src="ilcscimeeting2.JPG" alt="July's meeting from another angle at the Independent Living Center facility Mobile, Alabama.">
     </div>
 
     <!-- Outing info -->
