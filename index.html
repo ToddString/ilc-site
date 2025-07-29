@@ -1,139 +1,280 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="v    </nav>
+    <!-- Core meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+    <!-- SEO‑optimised meta tags -->
+    <title>Photo Gallery | Spinal Cord Injury Support Group – Mobile, Alabama Events</title>
+    <meta name="description" content="Browse photos of spinal cord injury support meetings, wheelchair‑basketball games and disability‑rights rallies in Mobile, Alabama. See how our SCI community connects and thrives.">
+    <meta name="keywords" content="spinal cord injury photos, wheelchair basketball Mobile, spinal injury support gallery, disability events Alabama, SCI peer meetings images, Mobile AL adaptive sports">
 
-  <!-- SEO‑optimized meta tags -->
-  <title>Spinal Cord Injury Support Group | Mobile, AL Peer Meetings & Resources</title>
-  <meta name="description" content="Join the Mobile, Alabama Spinal Cord Injury Support Group for monthly peer‑to‑peer meetings, wheelchair‑sports outings, and local rehabilitation resources. All SCI survivors, families, and caregivers welcome.">
-  <meta name="keywords" content="spinal cord injury support, Mobile Alabama, SCI peer group, wheelchair support Mobile, spinal cord resources Alabama, spinal cord injury meetings, disability support Mobile AL">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgba(13, 62, 239, 0.9);
+            background-size: cover;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background-color: #EBF3FD;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,.1);
+        }
+        .navigation ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .navigation li {
+            background:#fff; border:1px solid #000; padding:10px 15px;
+            box-shadow:0 2px 4px rgba(0,0,0,.1); border-radius:0; transition:background .3s;
+        }
+        .navigation li:not(:last-child){ border-right:none; }
+        .navigation a{ text-decoration:none; color:#0d4bf7; font-weight:bold; display:block; }
+        .navigation a:hover{ color:#ee0a0a; }
+        .navigation li:hover{ background:#f0f0f0; }
 
-  <style>
-    /* ====== Base styles (unchanged) ====== */
-    body{
-      font-family:Arial, sans-serif;
-      background-color:rgba(13,62,239,.9);
-      background-size:cover;
-      background-attachment:fixed;
-      margin:0;padding:20px;text-align:center;line-height:1.6;
-    }
-    .container{
-      max-width:800px;margin:0 auto;background:#EBF3FD;padding:30px;
-      border-radius:10px;box-shadow:0 4px 6px rgba(0,0,0,.1);
-    }
-    .logo img{border-radius:5px;}
-    .navigation ul{list-style:none;padding:0;display:flex;justify-content:center;margin:20px 0;}
-    .navigation li{background:#fff;border:1px solid #000;padding:10px 15px;box-shadow:0 2px 4px rgba(0,0,0,.1);}
-    .navigation li:not(:last-child){border-right:none;}
-    .navigation a{text-decoration:none;color:#0d4bf7;font-weight:bold;transition:color .3s;}
-    .navigation a:hover{color:#ee0a0a;}
-    .image-card{background:#fff;border-radius:8px;padding:15px;box-shadow:0 2px 4px rgba(0,0,0,.1);margin:20px auto;max-width:800px;}
-    .image-card img{width:100%;height:auto;border-radius:5px;cursor:pointer;}
-    .card-box{background:#fff;padding:20px;border-radius:8px;margin:20px 0;box-shadow:0 2px 6px rgba(0,0,0,.15);text-align:left;}
-    .card-box.centered{text-align:center;}
-    .card-box p{font-size:16px;color:#333;}
+        .gallery-title{ font-size:18px; color:#000; margin-top:20px; }
+        .gallery-description{ font-size:16px; color:#000; margin-bottom:20px; }
 
-    /* ====== Modal styles (unchanged) ====== */
-    .modal{display:none;position:fixed;z-index:999;padding-top:60px;left:0;top:0;width:100%;height:100%;overflow:auto;background:rgba(0,0,0,.9);}
-    .modal-content{margin:auto;display:block;max-width:90%;max-height:80%;animation:zoom .3s;}
-    @keyframes zoom{from{transform:scale(.7);opacity:0;}to{transform:scale(1);opacity:1;}}
-    .modal-close{position:absolute;top:20px;right:35px;color:#fff;font-size:40px;font-weight:bold;cursor:pointer;}
-    .modal-close:hover{color:#f00;}
+        .gallery-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+            gap:20px; margin-top:30px;
+        }
+        .image-card{
+            background:#fff; border-radius:8px; padding:15px;
+            box-shadow:0 2px 4px rgba(0,0,0,.1);
+        }
+        .image-card img{
+            width:100%; height:280px; object-fit:cover; object-position:center top;
+            border-radius:5px; cursor:pointer;
+        }
+        .image-caption{ font-size:12px; color:#666; margin:5px 0; }
 
-/* Footer styles */
-footer{
-  width:calc(100% + 40px);   /* extend past 20 px side‑padding */
-  margin:20px -20px -20px;   /* top 20px  |  left -20px  |  bottom -20px  |  right -20px */
-  /*              ↑ pulls footer downward to cover blue strip */
+        .coming-soon{ text-align:center; margin-top:30px; }
+        .coming-soon p{ color:#666; margin-top:10px; }
 
-  background:#EBF3FD;
-  padding:20px 10px;
-  border-top:3px solid #0d4bf7;
-  box-shadow:0 2px 6px rgba(0,0,0,.15);
-  text-align:center;
-  border-radius:0;
-  color:#333;
-}
-footer p{margin:5px 0;font-size:16px;}
-footer a{color:#0d4bf7;text-decoration:none;font-weight:bold;}
-footer a:hover{color:#ee0a0a;}
+        #imageModal{
+            display:none; position:fixed; z-index:1000; left:0; top:0;
+            width:100%; height:100%; background:rgba(0,0,0,.9);
+        }
+        #modalImage{
+            margin:auto; display:block; max-width:90%; max-height:90%; object-fit:contain;
+        }
+        .closeModal{
+            position:absolute; top:15px; right:35px; color:#f1f1f1;
+            font-size:40px; font-weight:bold; cursor:pointer;
+        }
+        
+        /* Footer styles */
+        footer {
+          width: calc(100% + 40px);   /* extend past 20px side-padding */
+          margin: 20px -20px -20px;   /* top 20px  |  left -20px  |  bottom -20px  |  right -20px */
+          background: #EBF3FD;
+          padding: 20px 10px;
+          border-top: 3px solid #0d4bf7;
+          box-shadow: 0 2px 6px rgba(0,0,0,.15);
+          text-align: center;
+          border-radius: 0;
+          color: #333;
+        }
+        footer p { margin: 5px 0; font-size: 16px; }
+        footer a { color: #0d4bf7; text-decoration: none; font-weight: bold; }
+        footer a:hover { color: #ee0a0a; }
+        
+        @media(max-width:600px){
+            .navigation ul{ flex-direction:column; }
+            .navigation li{ border-right:1px solid #000; border-radius:5px; }
+        }
+    </style>
 
-
-
-    @media(max-width:600px){
-      .container{padding:15px;}
-      .navigation ul{flex-direction:column;}
-      .navigation li{border-right:1px solid #000;border-radius:5px;margin-bottom:5px;}
-    }
-  </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Spinal Cord Injury Support Group</h1>
+    <div class="container">
+        <h1 style="font-size:29px; color:#000; margin-bottom:20px;">Spinal Cord Injury Support Group</h1>
 
-    <h2>Sponsored by:</h2>
-    <div class="logo">
-     <img src="logo.jpg" width="150" height="150"
-      alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" />
-    </div>
+        <h2>Sponsored by:</h2>
+        <img src="logo.jpg" width="150" height="150"
+          alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" />
 
-    <nav class="navigation">
-      <ul>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </nav>
-    <section class="card-box centered">
-    <h2>Spinal Cord Injury Support in Mobile, Alabama – How We Help</h2>
-      <p style="font-size:18px; margin:0 0 25px;">
-      Our peer‑led group gathers on the <strong>fourth Monday of every month</strong> to exchange lived‑experience insights, host guest therapists, and plan activities such as <strong>dining out at local restaurants, cheering on wheelchair‑basketball games and other adaptive sports, and joining local or state demonstrations in support of the Americans with Disabilities Act</strong>.  
-      We also curate a local resource list that covers rehabilitation services, transportation through the <strong>Wave Transit Mobility Assistance Program (MAP)</strong>, and grants for durable medical equipment across Mobile and the wider Gulf Coast.  
-      Whether you are newly injured or a seasoned survivor, <em>you’ll discover practical help, genuine friendship, and a strong voice here.</em>
-    </p>
-    </section>
-    <div class="image-card">
-      <img src="group pic rev.png" alt="Mobile Alabama spinal cord injury support group meets monthly at 6750 Howells Ferry Rd, Mobile, AL 36618. Photo of group members when the Spinal Injury Support Group met at the West Regional Library.">
-    </div>
+        <h2 style="font-size:18px; color:#f40b0b; margin-bottom:15px;">Photo Gallery</h2>
+        <h3 class="gallery-description">Welcome to our gallery! Here you can find photos from various events and activities the Spinal Cord Injury Support Group has participated in.</h3>
 
-    <!-- Meeting info -->
-    <section class="card-box centered">
-      <p><strong>We meet on the fourth Monday of every month. Please call to confirm the date, <br>
-      THE NEXT MEETING WILL BE HELD ON JULY 28, 2025.</strong></p>
-      <p><strong>Location:</strong><br>
-         Independent Living Center of Mobile<br>
-         6750 Howells Ferry Road<br>
-         Mobile, AL 36618<br>
-      ☎ (251) 460-0301</p>
-      <p><strong>Time:</strong> 1:00 PM – 2:30 PM</p>
-      <p><strong>Light refreshments will be served.</strong></p>
-    </section>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
 
-    <div class="image-card">
-      <img src="May meeting Loaves Fishes.JPG" alt="Spinal cord injury support meeting at Loaves & Fishes Family Restaurant in Wilmer Alabama, May 2025">
-    </div>
-    <div class="image-card">
-      <img src="May meeting at Loaves Fishes2.JPG" alt="Opposite angle of spinal cord injury peer meeting at Loaves & Fishes Family Restaurant">
-    </div>
+        <!-- 2025 Events Section -->
+        <h3 class="gallery-title">2025 Events</h3>
+        <p class="gallery-description">The first set of photos in 2025 features our Spinal Cord Injury Support Group meeting at Loaves &amp; Fishes Family Restaurant.</p>
+        <div class="gallery-grid">
+            <div class="image-card">
+                <img src="ilcscimeeting1.jpg" alt="July 2025 spinal injury support meeting at the The Independent Living Center of Mobile Alabama." onclick="openModal(this)">
+                <p class="image-caption">July 2025 spinal injury support meeting at the The Independent Living Center of Mobile Alabama</p>
+            </div>
+            <div class="image-card">
+                <img src="ilcscimeeting2.jpg" alt="July 2025 spinal injury support meeting at the The Independent Living Center of Mobile Alabama." onclick="openModal(this)">
+                <p class="image-caption">July 2025 spinal injury support meeting at the The Independent Living Center of Mobile Alabama</p>
+            </div>
+            <div class="image-card">
+                <img src="tpov.jpg" alt="July 2025 spinal injury support meeting at the The Independent Living Center of Mobile Alabama." onclick="openModal(this)">
+                <p class="image-caption">July 2025 spinal injury support meeting at the The Independent Living Center of Mobile Alabama</p>
+            </div>
+            <div class="image-card">
+                <img src="tpov3.jpg" alt="July 2025 spinal injury support meeting at the The Independent Living Center of Mobile Alabama." onclick="openModal(this)">
+                <p class="image-caption">July 2025 spinal injury support meeting at the The Independent Living Center of Mobile Alabama</p>
+            </div>
+            <div class="image-card">
+                <img src="May meeting Loaves Fishes.JPG" alt="May 2025 spinal injury support meeting at Loaves &amp; Fishes Family Restaurant, Wilmer Alabama" onclick="openModal(this)">
+                <p class="image-caption">May spinal injury support meeting at Loaves &amp; Fishes Family Restaurant.</p>
+            </div>
+            <div class="image-card">
+                <img src="May meeting at Loaves Fishes2.JPG" alt="Opposite angle of spinal cord injury peer meeting at Loaves &amp; Fishes Family Restaurant, Wilmer AL" onclick="openModal(this)">
+                <p class="image-caption">Spinal injury support meeting at Loaves &amp; Fishes Family Restaurant opposite angle.</p>
+            </div>
+        </div>
 
-    <!-- Outing info -->
-    <section class="card-box centered">
-      <p>On Thursday, May 22nd, the spinal cord injury support group met at<br>
-         <strong>Loaves & Fishes Family Restaurant</strong><br>
-         13476 Old Tanner Williams Road <br>
-         Wilmer, AL 36587</p>
-      <p>Topics discussed included dealing with anxiety and feedback regarding the spinal cord injury support website.</p>
-    </section>
-  </div><!-- /.container -->
+        <!-- 2019 Events Section -->
+        <h3 class="gallery-title">2019 Events</h3>
+        <p class="gallery-description">The 2019 events showcase our Spinal Cord Injury Support Group's activities, including meetings, wheelchair basketball games, community outreach, and social gatherings.</p>
+        <div class="gallery-grid">
+            <div class="image-card">
+                <img src="retire4.JPG" alt="2019 Event - Image 8" onclick="openModal(this)">
+                <p class="image-caption">People for people meeting at Moe's Original BBQ located:<br>701 Spring Hill Avenue<br>Mobile, Alabama 36602<br>6/19/2019</p>
+            </div>
+            <div class="image-card">
+                <img src="adaceleb.png" alt="2019 Event - Image 1" onclick="openModal(this)">
+                <p class="image-caption">Mobile City Council meeting Proclamation for Americans with Disabilities Act.<br>7/30/2019</p>
+            </div>
+            <div class="image-card">
+                <img src="adaceleb.JPG" alt="2019 Event - Image 2" onclick="openModal(this)">
+                <p class="image-caption">Mobile City Council meeting Proclamation for Americans with Disabilities Act.<br>7/30/2019</p>
+            </div>
+            <div class="image-card">
+                <img src="Citycm.JPG" alt="2019 Event - Image 3" onclick="openModal(this)">
+                <p class="image-caption">Mobile City Council meeting Proclamation for Americans with Disabilities Act.<br>7/30/2019</p>
+            </div>
+            <div class="image-card">
+                <img src="adaceleb0.png" alt="2019 Event - Image 4" onclick="openModal(this)">
+                <p class="image-caption">Mobile City Council meeting Proclamation for Americans with Disabilities Act.<br>7/30/2019</p>
+            </div>
+            <div class="image-card">
+                <img src="Wheelchair basketball event.JPG" alt="2019 Event - Image 5" onclick="openModal(this)">
+                <p class="image-caption">The Mobile Patriots wheelchair basketball game.<br>James Seals Park &amp; Community Center<br>540 Texas St<br>Mobile, AL 36603<br>8/4/2019</p>
+            </div>
+            <div class="image-card">
+                <img src="Wheelchair basketball event0.JPG" alt="2019 Event - Image 6" onclick="openModal(this)">
+                <p class="image-caption">The Mobile Patriots wheelchair basketball game.<br>James Seals Park &amp; Community Center<br>540 Texas St<br>Mobile, AL 36603<br>8/4/2019</p>
+            </div>
+            <div class="image-card">
+                <img src="Wheelchair basketball event2.JPG" alt="2019 Event - Image 7" onclick="openModal(this)">
+                <p class="image-caption">The Mobile Patriots wheelchair basketball game.<br>James Seals Park &amp; Community Center<br>540 Texas St<br>Mobile, AL 36603<br>8/4/2019</p>
+            </div>
+            <div class="image-card">
+                <img src="Wheelchair basketball event3.JPG" alt="2019 Event - Image 8" onclick="openModal(this)">
+                <p class="image-caption">The Mobile Patriots wheelchair basketball game.<br>James Seals Park &amp; Community Center<br>540 Texas St<br>Mobile, AL 36603<br>8/4/2019</p>
+            </div>
+            <div class="image-card">
+                <img src="group members.JPG" alt="2019 Event - Image 9" onclick="openModal(this)">
+                <p class="image-caption">Group member and a referee at the Mobile Patriots wheelchair basketball game.<br>James Seals Park &amp; Community Center<br>540 Texas St<br>Mobile, AL 36603<br>8/4/2019</p>
+            </div>
+            <div class="image-card">
+                <img src="ilcwheelchairgame0.JPG" alt="2019 Event - Image 10" onclick="openModal(this)">
+                <p class="image-caption">Independent Living Center staff booth at the Mobile Patriots wheelchair basketball game.<br>James Seals Park &amp; Community Center<br>540 Texas St<br>Mobile, AL 36603<br>8/4/2019</p>
+            </div>
+            <div class="image-card">
+                <img src="ilcwheelchairgame1.jpeg" alt="2019 Event - Image 11" onclick="openModal(this)">
+                <p class="image-caption">Independent Living Center staff booth at the Mobile Patriots wheelchair basketball game.<br>James Seals Park &amp; Community Center<br>540 Texas St<br>Mobile, AL 36603<br>8/4/2019</p>
+            </div>
+            <div class="image-card">
+                <img src="retire1.JPG" alt="2019 Event - Image 12" onclick="openModal(this)">
+                <p class="image-caption">Quo Williams retirement party at a Mexican restaurant.</p>
+            </div>
+            <div class="image-card">
+                <img src="retire2.JPG" alt="2019 Event - Image 13" onclick="openModal(this)">
+                <p class="image-caption">Quo Williams retirement party at a Mexican restaurant.</p>
+            </div>
+            <div class="image-card">
+                <img src="retire3.JPG" alt="2019 Event - Image 14" onclick="openModal(this)">
+                <p class="image-caption">Quo Williams retirement party at a Mexican restaurant.</p>
+            </div>
+        </div>
 
-  <!-- Footer outside main container -->
-<footer>
+        <!-- 2018 Events Section -->
+        <h3 class="gallery-title">2018 Events</h3>
+        <p class="gallery-description">In 2018, disability rights advocates, including members of People for People and staff from Independent Living Centers, gathered in Montgomery, Alabama, to participate in “The People Can’t Wait” demonstration. The rally aimed to raise awareness of the urgent needs of people with disabilities, advocate for greater access to services, and push for policy changes that ensure equality, dignity, and independent living. The demonstration united community members, activists, and allies in a shared call for justice and systemic reform.</p>
+
+        <div class="gallery-grid">
+            <div class="image-card"><img src="IMG_2299.JPG" alt="2018 Event - Image 1" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2300.JPG" alt="2018 Event - Image 2" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2301.JPG" alt="2018 Event - Image 3" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2302.JPG" alt="2018 Event - Image 4" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2303.JPG" alt="2018 Event - Image 5" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2304.JPG" alt="2018 Event - Image 6" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2305.JPG" alt="2018 Event - Image 7" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2306.JPG" alt="2018 Event - Image 8" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2307.JPG" alt="2018 Event - Image 9" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2308.JPG" alt="2018 Event - Image 10" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2309.JPG" alt="2018 Event - Image 11" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2310.JPG" alt="2018 Event - Image 12" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2311.JPG" alt="2018 Event - Image 13" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2312.JPG" alt="2018 Event - Image 14" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2313.JPG" alt="2018 Event - Image 15" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2314.JPG" alt="2018 Event - Image 16" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2315.JPG" alt="2018 Event - Image 17" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2316.JPG" alt="2018 Event - Image 18" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2317.JPG" alt="2018 Event - Image 19" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2318.JPG" alt="2018 Event - Image 20" onclick="openModal(this)"><p class="image-caption"></p></div>
+            <div class="image-card"><img src="IMG_2319.JPG" alt="2018 Event - Image 21" onclick="openModal(this)"><p class="image-caption"></p></div>
+        </div>
+
+        <!-- Transit Awareness Day 2013 -->
+        <h3 class="gallery-title">Transit Awareness Day 2013</h3>
+        <p class="gallery-description">Transit Awareness Day 2013 was presented by the Wave Transit System and the Prichard Housing Authority. The Mobile Patriots wheelchair basketball team played an exhibition game before a charity basketball game that pitted the Kappa Alpha Psi fraternity against the Alpha Phi Alpha fraternity in a bid to raise money for the March of Dimes.</p>
+
+        <div class="gallery-grid">
+            <div class="image-card"><img src="Ladies of Wave Transit0.JPG" alt="Transit Awareness Day 2013 - Image 1" onclick="openModal(this)"><p class="image-caption">Two representatives from the Wave Transit System participating in the event.</p></div>
+            <div class="image-card"><img src="Ladies of Wave Transit1.JPG" alt="Transit Awareness Day 2013 - Image 2" onclick="openModal(this)"><p class="image-caption">Another two representatives from the Wave Transit System participating in the event.</p></div>
+            <div class="image-card"><img src="Ladies of Wave Transit3.JPG" alt="Transit Awareness Day 2013 - Image 3" onclick="openModal(this)"><p class="image-caption">Wave Transit staff posing for a picture at the event.</p></div>
+            <div class="image-card"><img src="Brian.JPG" alt="Transit Awareness Day 2013 - Image 4" onclick="openModal(this)"><p class="image-caption">Brian Johnson with Alpha Phi Alpha member.</p></div>
+            <div class="image-card"><img src="Pat Peterson0.JPG" alt="Transit Awareness Day 2013 - Image 5" onclick="openModal(this)"><p class="image-caption">Pat Peterson of the Mobile Patriots wheelchair basketball team.</p></div>
+            <div class="image-card"><img src="Wheelchairbasketball1.JPG" alt="Transit Awareness Day 2013 - Image 6" onclick="openModal(this)"><p class="image-caption">Mobile Patriots wheelchair basketball team in action.</p></div>
+            <div class="image-card"><img src="Wheelchairbasketball2.JPG" alt="Transit Awareness Day 2013 - Image 7" onclick="openModal(this)"><p class="image-caption">Mobile Patriots wheelchair basketball team in action.</p></div>
+            <div class="image-card"><img src="Wheelchairbasketball3.JPG" alt="Transit Awareness Day 2013 - Image 8" onclick="openModal(this)"><p class="image-caption">Mobile Patriots wheelchair basketball team in action.</p></div>
+            <div class="image-card"><img src="Wheelchairbasketball4.JPG" alt="Transit Awareness Day 2013 - Image 9" onclick="openModal(this)"><p class="image-caption">Mobile Patriots wheelchair basketball team in action.</p></div>
+            <div class="image-card"><img src="Wheelchairbasketball5.JPG" alt="Transit Awareness Day 2013 - Image 10" onclick="openModal(this)"><p class="image-caption">Mobile Patriots wheelchair basketball team in action.</p></div>
+            <div class="image-card"><img src="Wheelchairbasketball6.JPG" alt="Transit Awareness Day 2013 - Image 11" onclick="openModal(this)"><p class="image-caption">Mobile Patriots wheelchair basketball team in action.</p></div>
+            <div class="image-card"><img src="Jim Flora Brian Johnson0.JPG" alt="Transit Awareness Day 2013 - Image 12" onclick="openModal(this)"><p class="image-caption">Brian Johnson, Jim Flora, and Mr. White.</p></div>
+            <div class="image-card"><img src="ilc bus driver.JPG" alt="Transit Awareness Day 2013 - Image 13" onclick="openModal(this)"><p class="image-caption">Big Jim Willams</p></div>
+            <div class="image-card"><img src="ilc staff.JPG" alt="Transit Awareness Day 2013 - Image 14" onclick="openModal(this)"><p class="image-caption">Jim Williams and a spectator.</p></div>
+            <div class="image-card"><img src="ilc staff1.JPG" alt="Transit Awareness Day 2013 - Image 15" onclick="openModal(this)"><p class="image-caption">Jim Williams with two spectators.</p></div>
+        </div>
+
+         <div class="coming-soon">
+            <h3>More photos are coming soon from other events our group has participated in.</h3>
+            <p>Stay tuned for updates!</p>
+        </div>
+    </div><!-- end .container -->
+    <footer>
         <p><strong>The Spinal Cord Injury Support Group is sponsored by:<br>
             The Independent Living Center of Mobile</strong></p>
             <p>6750 Howells Ferry Road<br>
@@ -148,27 +289,20 @@ footer a:hover{color:#ee0a0a;}
             </p>
         </footer>
 
-  <!-- Modal -->
-  <div id="imgModal" class="modal">
-    <span class="modal-close" id="modalClose">&times;</span>
-    <img class="modal-content" id="modalImg" alt="Expanded view">
-  </div>
+    <div id="imageModal">
+        <span class="closeModal" onclick="closeModal()">&times;</span>
+        <img id="modalImage" alt="Enlarged view">
+    </div>
 
-  <!-- Script -->
-  <script>
-    const modal = document.getElementById("imgModal");
-    const modalImg = document.getElementById("modalImg");
-    const closeBtn = document.getElementById("modalClose");
+    <script>
+        function openModal(imageElement) {
+            document.getElementById("imageModal").style.display = "block";
+            document.getElementById("modalImage").src = imageElement.src;
+        }
 
-    document.querySelectorAll('.image-card img').forEach(img=>{
-      img.addEventListener('click',()=>{
-        modal.style.display="block";
-        modalImg.src=img.src;
-        modalImg.alt=img.alt;
-      });
-    });
-    closeBtn.onclick=()=>{modal.style.display="none";};
-    window.onclick=e=>{if(e.target===modal)modal.style.display="none";};
-  </script>
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
 </body>
 </html>
