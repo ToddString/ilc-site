@@ -28,7 +28,6 @@
     .navigation li:not(:last-child){border-right:none;}
     .navigation a{text-decoration:none;color:#0d4bf7;font-weight:bold;transition:color .3s;}
     .navigation a:hover{color:#ee0a0a;}
-
     /* Footer */
     footer{width:calc(100% + 40px);margin:20px -20px -20px;background:#EBF3FD;padding:20px 10px;text-align:center;border-top:3px solid #0d4bf7;box-shadow:0 2px 6px rgba(0,0,0,.15);border-radius:0;color:#333;}
     footer p{margin:5px 0;font-size:16px;}
@@ -38,8 +37,8 @@
     @media(max-width:600px){
       .container{padding:15px;}
       .navigation ul{flex-direction:column;align-items:stretch;}
-      .navigation li{border:1px solid #000;border-radius:5px;margin-bottom:5px;width:100%;text-align:center;box-sizing:border-box;}
-      .navigation li:not(:last-child){border-bottom:1px solid #000;}
+      .navigation li{border-right:1px solid #000;border-radius:5px;margin-bottom:5px;width:100%;text-align:center;box-sizing:border-box;}
+      .navigation li:not(:last-child){border-right:1px solid #000;border-bottom:1px solid #000;}
     }
   </style>
 </head>
