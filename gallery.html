@@ -161,6 +161,17 @@
         }
     </style>
 
+     <!-- Preload the rest of your CSS and swap it in non-blocking -->
+  <link
+    rel="preload"
+    href="styles.css"
+    as="style"
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link rel="stylesheet" href="styles.css" />
+  </noscript>
+
 </head>
 
 <body>
@@ -366,6 +377,7 @@
     </script>
 </body>
 </html>
+
 
 
 
