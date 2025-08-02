@@ -239,13 +239,16 @@
     }
   </style>
 
-    <link
+    <!-- Preload the rest of your CSS and swap it in non-blocking -->
+  <link
     rel="preload"
     href="styles.css"
     as="style"
-    onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="styles.css"></noscript>
-</head>
+    onload="this.onload=null;this.rel='stylesheet'"
+  />
+  <noscript>
+    <link rel="stylesheet" href="styles.css" />
+  </noscript>
 
 <body>
   <div class="container">
@@ -326,6 +329,7 @@
         </footer>
 </body>
 </html>
+
 
 
 
