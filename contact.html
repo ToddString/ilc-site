@@ -109,16 +109,10 @@
   </style>
 
   <!-- Preload the rest of your CSS and swap it in non-blocking -->
-  <link
-    rel="preload"
-    href="styles.css"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  />
-  <noscript>
-    <link rel="stylesheet" href="styles.css" />
-  </noscript>
-
+  <link rel="preload" href="styles.css" as="style"
+      onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="styles.css">
+</noscript>
   <!-- JSON-LD Organization markup -->
   <script type="application/ld+json">
   {
@@ -143,7 +137,6 @@
     }
   }
   </script>
-
   <!-- Defer FontAwesome -->
   <script
     defer
@@ -243,3 +236,4 @@
   </footer>
 </body>
 </html>
+
