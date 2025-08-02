@@ -108,10 +108,19 @@
     }
 
     footer{
-    background:#EBF3FD;       /* light-blue panel      */
-    color:#333;               /* body text colour      */
-    border-top:3px solid #0d4bf7;
-  }
+      width:calc(100% + 40px);        /* stretch past the 20 px body padding  */
+      margin:20px -20px -20px;        /* pull left/right -20  & tuck bottom   */
+      background:#EBF3FD;             /* light-blue panel                     */
+      padding:20px 10px;              /* same inner padding as other pages    */
+      border-top:3px solid #0d4bf7;   /* blue border line                     */
+      box-shadow:0 2px 6px rgba(0,0,0,.15);
+      text-align:center;
+      border-radius:0;
+      color:#333;
+    }
+    footer p{margin:5px 0;font-size:16px;}
+    footer a{color:#0d4bf7;text-decoration:none;font-weight:bold;}
+    footer a:hover{color:#ee0a0a;}
   </style>
 
   <!-- Preload the rest of your CSS and swap it in non-blocking -->
@@ -242,5 +251,6 @@
   </footer>
 </body>
 </html>
+
 
 
