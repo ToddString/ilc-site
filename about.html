@@ -74,15 +74,25 @@ h2{font-size:24px}
 .card-box p,
 .card-box li{font-size:16px;color:#333}
 
-/* High-visibility banner text (AA compliant) --------------------------- */
-.highlight-text{
-  background:none;          /* no bar, just plain card */
-  color:#BF0000;            /* deep red — 6.3:1 contrast on #EBF3FD */
-  font-weight:bold;
+/* =====  Single pale-white banner card  ===== */
+.banner-strip{
+  background:#FFFFFF;          /* pale-white card */
+  border-radius:6px;
+  padding:0.75rem 1rem;
+  margin:1.5rem 0;             /* space above & below */
+  box-shadow:0 1px 4px rgba(0,0,0,.06);
   text-align:center;
-  padding:0;
-  margin:1rem 0;
 }
+
+/* red lines inside the banner — no extra background */
+.banner-strip .highlight-text{
+  background:none;             /* kill any previous bg */
+  color:#BF0000;               /* WCAG-AA contrast on white */
+  font-weight:bold;
+  margin:.35rem 0;             /* tighten vertical gap */
+  padding:0;                   /* strip old padding      */
+}
+
 
 /* Image gallery --------------------------------------------------------- */
 .image-gallery{
@@ -222,10 +232,11 @@ footer a:hover{color:#ee0a0a}
       </div>
     </div> <!-- END .image-gallery -->
     
-    <!-- Now the banner text is still inside .container, on the pale card -->
-     <p class="highlight-text"> IF YOU HAVE A SPINAL CORD INJURY, KNOW THAT YOU ARE NOT ALONE. PLEASE JOIN US AND SEE HOW OTHERS DEAL WITH THEIR INJURY.</p>
-     <p class="highlight-text">YOU DO HAVE A VOICE!!!</p>
-
+   <!--  Banner strip -->
+     <div class="banner-strip">
+      <p class="highlight-text"> IF YOU HAVE A SPINAL CORD INJURY, KNOW THAT YOU ARE NOT ALONE. PLEASE JOIN US AND SEE HOW OTHERS DEAL WITH THEIR INJURY.</p>
+      <p class="highlight-text"> YOU DO HAVE A VOICE!!!</p>
+    </div>
 
     <!-- Goals Section -->
     <div class="card-box" style="text-align: center;">
@@ -264,5 +275,3 @@ footer a:hover{color:#ee0a0a}
         </footer>
 </body>
 </html>
-
-
