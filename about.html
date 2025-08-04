@@ -34,211 +34,133 @@
   }
 }
 </script>  
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: rgba(13, 62, 239, 0.9);
-      background-size: cover;
-      background-attachment: fixed;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-      line-height: 1.6;
-    }
+<style>
+/* ------------- Global layout & colours -------------------------------- */
+body{
+  margin:0;
+  padding:20px;
+  font-family:Arial, sans-serif;
+  background:rgba(13,62,239,.9);   /* blue background */
+  background-size:cover;
+  background-attachment:fixed;
+  text-align:center;
+  line-height:1.6;
+  color:#000;                     /* default text on blue until card loads */
+}
 
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background-color: #EBF3FD;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-  
-    body {
-      font-family: Arial, sans-serif;
-      background-color: rgba(13, 62, 239, 0.9);
-      background-size: cover;
-      background-attachment: fixed;
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-      line-height: 1.6;
-    }
+.container{
+  max-width:900px;
+  margin:0 auto;
+  background:#EBF3FD;             /* pale-blue card */
+  padding:30px;
+  border-radius:10px;
+  box-shadow:0 4px 6px rgba(0,0,0,.1);
+}
 
-    .container {
-      max-width: 900px;
-      margin: 0 auto;
-      background-color: #EBF3FD;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+/* Headings -------------------------------------------------------------- */
+h1,h2{color:#000;margin-bottom:20px}
+h1{font-size:36px}
+h2{font-size:24px}
 
-    h1,
-    h2 {
-      color: #000;
-      margin-bottom: 20px;
-    }
+/* Card / box ------------------------------------------------------------ */
+.card-box{
+  background:#fff;
+  padding:20px;
+  border-radius:6px;
+  box-shadow:0 2px 6px rgba(0,0,0,.15);
+  margin:20px 0;
+  text-align:left;
+}
+.card-box p,
+.card-box li{font-size:16px;color:#333}
 
-    h1 {
-      font-size: 36px;
-    }
+/* High-visibility banner text (AA compliant) --------------------------- */
+.highlight-text{
+  background:none;          /* no bar, just plain card */
+  color:#BF0000;            /* deep red — 6.3:1 contrast on #EBF3FD */
+  font-weight:bold;
+  text-align:center;
+  padding:0;
+  margin:1rem 0;
+}
 
-    h2 {
-      font-size: 24px;
-    }
+/* Image gallery --------------------------------------------------------- */
+.image-gallery{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:15px;
+  margin:20px 0;
+}
+.image-frame{
+  background:#fff;
+  padding:8px;
+  border-radius:6px;
+  box-shadow:0 2px 6px rgba(0,0,0,.15);
+}
+img{
+  max-width:100%;
+  height:auto;
+  margin:10px;
+  border-radius:5px;
+}
 
-    /* Footer styles */
-    footer {
-      width: calc(100% + 40px);   /* extend past 20px side-padding */
-      margin: 20px -20px -20px;   /* top 20px  |  left -20px  |  bottom -20px  |  right -20px */
-      background: #EBF3FD;
-      padding: 20px 10px;
-      border-top: 3px solid #0d4bf7;
-      box-shadow: 0 2px 6px rgba(0,0,0,.15);
-      text-align: center;
-      border-radius: 0;
-      color: #333;
-    }
-    footer p { margin: 5px 0; font-size: 16px; }
-    footer a { color: #0d4bf7; text-decoration: none; font-weight: bold; }
-    footer a:hover { color: #ee0a0a; }
+/* Navigation ------------------------------------------------------------ */
+.navigation ul{
+  list-style:none;
+  padding:0;
+  display:flex;
+  justify-content:center;
+  margin:20px 0;
+}
+.navigation li{
+  background:#fff;
+  border:1px solid #000;
+  padding:10px 15px;
+  box-shadow:0 2px 4px rgba(0,0,0,.1);
+}
+.navigation li:not(:last-child){border-right:none}
+.navigation a{
+  text-decoration:none;
+  color:#0d4bf7;
+  font-weight:bold;
+  transition:color .3s;
+}
+.navigation a:hover{color:#ee0a0a}
 
-    /* Unified card frame style */
-    .card-box {
-      background: #fff;
-      padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
-      margin: 20px 0;
-      text-align: left;
-    }
+/* Footer --------------------------------------------------------------- */
+footer{
+  width:calc(100% + 40px);
+  margin:20px -20px -20px;
+  background:#EBF3FD;
+  padding:20px 10px;
+  border-top:3px solid #0d4bf7;
+  box-shadow:0 2px 6px rgba(0,0,0,.15);
+  text-align:center;
+  border-radius:0;
+  color:#333;
+}
+footer p{margin:5px 0;font-size:16px}
+footer a{color:#0d4bf7;text-decoration:none;font-weight:bold}
+footer a:hover{color:#ee0a0a}
 
-    .card-box p,
-    .card-box li {
-      font-size: 16px;
-      color: #333;
-    }
-    
-    .highlight-text {
-      color: #000000;     /* black (18.8:1) */
-      font-weight: bold;
-      text-align: center;
-    }
+/* -------------------  Responsive tweaks ------------------------------ */
+@media(max-width:600px){
+  .container{padding:15px}
+  .image-gallery{flex-direction:column;align-items:center}
 
-
-    .image-gallery {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin: 20px 0;
-    }
-
-    .image-frame {
-      background: #fff;
-      padding: 8px;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
-    }
-
-    /* Navigation */
-    .navigation ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-    }
-
-    .navigation li {
-      background: #fff;
-      border: 1px solid #000;
-      padding: 10px 15px;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, .1);
-    }
-
-    .navigation li:not(:last-child) {
-      border-right: none;
-    }
-
-    .navigation a {
-      text-decoration: none;
-      color: #0d4bf7;
-      font-weight: bold;
-      transition: color .3s;
-    }
-
-    .navigation a:hover {
-      color: #ee0a0a;
-    }
-
-    @media (max-width: 600px) {
-      .container {
-        padding: 15px;
-      }
-
-      .image-gallery {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .navigation ul {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .navigation li {
-        border-right: 1px solid #000;
-        border-radius: 5px;
-        margin-bottom: 5px;
-        width: 100%;
-        text-align: center;
-        box-sizing: border-box;
-      }
-
-      .navigation li:not(:last-child) {
-        border-right: 1px solid #000;
-        border-bottom: 1px solid #000;
-      }
-    }
-
-    /* Footer */
-    .footer {
-      background: #fff;
-      padding: 20px;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, .15);
-      margin: 20px 0;
-      text-align: center;
-      border-top: 3px solid #0d4bf7;
-    }
-
-    .footer p {
-      margin: 5px 0;
-      color: #333;
-      font-size: 16px;
-    }
-
-    .footer a {
-      color: #0d4bf7;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .footer a:hover {
-      color: #ee0a0a;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 10px;
-      border-radius: 5px;
-    }
-  </style>
-
+  .navigation ul{flex-direction:column;align-items:stretch}
+  .navigation li{
+    border-right:1px solid #000;
+    border-bottom:1px solid #000;
+    border-radius:5px;
+    margin-bottom:5px;
+    width:100%;
+    text-align:center;
+    box-sizing:border-box;
+  }
+}
+</style>
     <!-- Preload the rest of your CSS and swap it in non-blocking -->
   <link
     rel="preload"
@@ -255,7 +177,7 @@
     <h1>About the Spinal Injury Support Group in Mobile, Alabama</h1>
     <h2>Sponsored by:</h2>
     <div class="logo">
-      <img src="logo.webp" width="150" height="150"
+      <img src="logo.jpg" width="150" height="150"
         alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" />
     </div>
     <!-- About Section -->
@@ -329,9 +251,3 @@
         </footer>
 </body>
 </html>
-
-
-
-
-
-
