@@ -2,5 +2,6 @@
 User-agent: *
 Disallow:
 
-# Hint where the sitemap lives (optional but recommended)
+# robots.txt  —  crawler directives
 Sitemap: https://spinalinjurysupportmobileal.org/sitemap.xml
+Allow: /llm.txt
