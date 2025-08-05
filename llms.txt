@@ -1,28 +1,41 @@
-# Spinal Cord Injury Support Group - Mobile, Alabama
+###############################################################################
+# llm.txt   –  Content map & contact info for Large-Language-Model crawlers
+# Site: https://spinalinjurysupportmobileal.org
+# Updated: 2025-08-04
+###############################################################################
 
-> Peer-led support, resources and advocacy for people living with spinal-cord injuries in Mobile, AL.  
-> Monthly meetings at the Independent Living Center of Mobile (6750 Howell’s Ferry Rd).
+title: Spinal Cord Injury Support Group – Mobile, Alabama
+description: Peer-led support, resources and advocacy for people living with
+ spinal-cord injuries in Mobile, Alabama.  Monthly meetings at the Independent
+ Living Center of Mobile (6750 Howell’s Ferry Rd).
 
-Welcome — this file gives large-language-model tools a clean, minimal map of the
-content that matters most on our site.  
-All links point to Markdown versions of the corresponding pages for easy parsing.
+###############################################################################
+# Core pages (HTML in production – Markdown mirrors provided for parsing)
+###############################################################################
+page: /index.html      md: /index.html.md   label: Home
+page: /about.html      md: /about.html.md   label: About
+page: /contact.html    md: /contact.html.md label: Contact
+page: /gallery.html    md: /gallery.html.md label: Gallery
+page: /resources.html  md: /resources.html.md label: Resources
+page: /faq.html        md: /faq.html.md     label: FAQ
 
-## Core pages
+###############################################################################
+# Organisation details
+###############################################################################
+phone: +1-251-460-0301
+email: lesiad@ilcmobile.org
+meeting_schedule: “4th Monday, 1 pm – 2 : 30 pm (call to confirm)”
 
-- [Home](https://spinalinjurysupportmobileal.org/index.html.md)
-- [About](https://spinalinjurysupportmobileal.org/about.html.md)
-- [Contact](https://spinalinjurysupportmobileal.org/contact.html.md)
-- [Gallery](https://spinalinjurysupportmobileal.org/gallery.html.md)
-- [Resources](https://spinalinjurysupportmobileal.org/resources.html.md)
-- [FAQ](https://spinalinjurysupportmobileal.org/faq.html.md)
+###############################################################################
+# Optional extra documents
+###############################################################################
+doc: https://wave-transit-example.org/MAP.md          label: Wave Transit MAP brochure
+doc: https://ada.gov/resources.md                     label: ADA resources
 
-## Organisation details
+###############################################################################
+# Meta
+###############################################################################
+contact: mailto:webmaster@spinalinjurysupportmobileal.org
+policy:  https://spinalinjurysupportmobileal.org/terms.html
+###############################################################################
 
-- **Phone:** (251) 460-0301  
-- **Email (general):** lesiad@ilcmobile.org  
-- **Meeting schedule:** 4th Monday, 1 pm – 2 : 30 pm (confirm by phone)
-
-## Optional
-
-- [Wave Transit Mobility Assistance Program brochure](https://wave-transit-example.org/MAP.md) – transport options.
-- [ADA resources](https://ada.gov/resources.md) – federal guidance for accessibility.
