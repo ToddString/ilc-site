@@ -1,0 +1,6 @@
+# Allow all legitimate crawlers full access
+User-agent: *
+Disallow:
+
+# Hint where the sitemap lives (optional but recommended)
+Sitemap: https://spinalinjurysupportmobileal.org/sitemap.xml
