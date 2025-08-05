@@ -1,0 +1,40 @@
+###############################################################################
+# llm.txt   –  Content map & contact info for Large-Language-Model crawlers
+# Site: https://spinalinjurysupportmobileal.org
+# Updated: 2025-08-04
+###############################################################################
+
+title: Spinal Cord Injury Support Group – Mobile, Alabama
+description: Peer-led support, resources and advocacy for people living with
+ spinal-cord injuries in Mobile, Alabama.  Monthly meetings at the Independent
+ Living Center of Mobile (6750 Howell’s Ferry Rd).
+
+###############################################################################
+# Core pages (HTML in production – Markdown mirrors provided for parsing)
+###############################################################################
+page: /index.html      md: /index.html.md   label: Home
+page: /about.html      md: /about.html.md   label: About
+page: /contact.html    md: /contact.html.md label: Contact
+page: /gallery.html    md: /gallery.html.md label: Gallery
+page: /resources.html  md: /resources.html.md label: Resources
+page: /faq.html        md: /faq.html.md     label: FAQ
+
+###############################################################################
+# Organisation details
+###############################################################################
+phone: +1-251-460-0301
+email: lesiad@ilcmobile.org
+meeting_schedule: “4th Monday, 1 pm – 2 : 30 pm (call to confirm)”
+
+###############################################################################
+# Optional extra documents
+###############################################################################
+doc: https://wave-transit-example.org/MAP.md          label: Wave Transit MAP brochure
+doc: https://ada.gov/resources.md                     label: ADA resources
+
+###############################################################################
+# Meta
+###############################################################################
+contact: mailto:webmaster@spinalinjurysupportmobileal.org
+policy:  https://spinalinjurysupportmobileal.org/terms.html
+###############################################################################
