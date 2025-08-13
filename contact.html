@@ -3,16 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <!-- Exact-match title & description -->
-  <title>Contact | Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led)</title>
-  <meta name="description" content=" Get in touch with the Mobile, Alabama Spinal Cord Injury Support Group for meeting details, accommodations, and local SCI resources. Phone and email contacts for our coordinator and the Independent Living Center of Mobile."/>
+  <meta name="description" content="Contact the Mobile, AL Spinal Cord Injury Support Group for meeting info, accommodations and local SCI resources. Reach our coordinator or ILC Mobile." />
+
   <link rel="canonical" href="https://spinalinjurysupportmobileal.org/contact.html" />
-  <meta property="og:url" content="https://spinalinjurysupportmobileal.org/">
-  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://spinalinjurysupportmobileal.org/contact.html">
+  <meta property="og:title" content="Contact | Spinal Injury Support Group – Mobile, AL">
+  <meta property="og:description" content="Quick contacts for the Mobile, AL SCI Support Group—coordinator and ILC Mobile.">
+  <meta property="og:image" content="https://spinalinjurysupportmobileal.org/logo.webp">
+  <meta name="twitter:card" content="summary_large_image">
 
   <!-- Preconnect to FontAwesome -->
-  <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin />
+  <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
+
+  <!-- Critical CSS + swap-in -->
+  <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="styles.css"></noscript>
+
+  <!-- Organization JSON-LD (add your FB as sameAs) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Spinal Injury Support Group",
+    "url": "https://spinalinjurysupportmobileal.org/",
+    "logo": "https://spinalinjurysupportmobileal.org/logo.jpg",
+    "sameAs": ["https://www.facebook.com/profile.php?id=61557665836753"],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "(251) 460-0301",
+      "contactType": "Information",
+      "areaServed": "US-AL"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6750 Howell’s Ferry Road",
+      "addressLocality": "Mobile",
+      "addressRegion": "AL",
+      "postalCode": "36618",
+      "addressCountry": "US"
+    }
+  }
+  </script>
 
   <!-- Inline only critical (above-the-fold) CSS -->
   <style>
@@ -173,12 +209,14 @@
     <div class="contact-info">
       <h2>Contact Information</h2>
       <p><strong>Group Coordinator:</strong> Jerry Cochran Sr.</p>
-      <p><strong>Phone:</strong> ☎ (251) 391-6307</p>
+      <p><strong>Phone:</strong> ☎ <a href="tel:+12513916307">+1 (251) 391-6307</a></p>
 
       <p><strong>For Accommodations or Information:</strong></p>
       <p><strong>Independent Living Center of Mobile</strong></p>
       <p>Lesia Dailey</p>
-      <p><strong>Phone:</strong> ☎ (251) 525-9638 EXT. 202</p>
+      <p><strong>Phone:</strong> ☎
+        <a href="tel:+12515259638;ext=202">+1 (251) 525-9638 ext. 202</a>
+  <!-- alt syntax some phones like: tel:+12515259638,,202 --></p>
       <p>
         <strong>Email:</strong>
         <a href="mailto:lesiad@ilcmobile.org">lesiad@ilcmobile.org</a>
@@ -191,21 +229,18 @@
         <a href="mailto:cyneriaa@ilcmobile.org">cyneriaa@ilcmobile.org</a>
       </p>
 
-      <p><strong>Additional Information:</strong><br />
-        <a
-          href="http://ilcmobile.org/"
-          target="_blank"
-          rel="noopener"
-        >Visit the Independent Living Center of Mobile website</a>
+      <p><strong>Additional Information:</strong><br>
+        <a href="https://ilcmobile.org/" target="_blank" rel="noopener noreferrer">
+          Visit the Independent Living Center of Mobile website
+        </a>
       </p>
 
       <p><strong>Follow ILC Mobile on Facebook:</strong></p>
       <a
         href="https://www.facebook.com/profile.php?id=61557665836753"
         target="_blank"
-        rel="noopener"
-        aria-label="Independent Living Center of Mobile on Facebook"
-      >
+        rel="noopener noreferrer"
+        aria-label="Independent Living Center of Mobile on Facebook">
         <i class="fa-brands fa-facebook-f fa-3x"></i>
       </a>
     </div>
@@ -247,6 +282,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
