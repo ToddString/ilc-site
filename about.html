@@ -90,6 +90,10 @@
   ]
 }
 </script>  
+
+<link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="styles.css"></noscript>
+  
   <style>
 /* ------------- Global layout & colours -------------------------------- */
 body{
@@ -227,16 +231,7 @@ footer a:hover{color:#ee0a0a}
   }
 }
 </style>
-    <!-- Preload the rest of your CSS and swap it in non-blocking -->
-  <link
-    rel="preload"
-    href="styles.css"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  />
-  <noscript>
-    <link rel="stylesheet" href="styles.css" />
-  </noscript>
+
 </head>
 <body>
   <div class="container">
@@ -309,12 +304,12 @@ footer a:hover{color:#ee0a0a}
     <nav class="navigation" aria-label="Primary">
       <ul>
         <li><a href="/">Home</a></li>
+        <li><a href="about.html" aria-current="page">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="faq.html">FAQ</a></li>
       </ul>
-    </nav>
   </div>
   <!-- Footer outside main container -->
   <footer>
@@ -333,6 +328,7 @@ footer a:hover{color:#ee0a0a}
   </footer>
 </body>
 </html>
+
 
 
 
