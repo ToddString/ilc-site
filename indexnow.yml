@@ -1,0 +1,25 @@
+name: IndexNow
+on:
+  push:
+    branches: [ main ]
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify Bing (IndexNow)
+        run: |
+          curl -s -X POST "https://www.bing.com/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d '{
+              "host":"spinalinjurysupportmobileal.org",
+              "key":"6d1c5b0d08265bcf28eeba2be8899b14",
+              "keyLocation":"https://spinalinjurysupportmobileal.org/6d1c5b0d08265bcf28eeba2be8899b14.txt",
+              "urlList":[
+                "https://spinalinjurysupportmobileal.org/",
+                "https://spinalinjurysupportmobileal.org/about.html",
+                "https://spinalinjurysupportmobileal.org/contact.html",
+                "https://spinalinjurysupportmobileal.org/gallery.html",
+                "https://spinalinjurysupportmobileal.org/resources.html",
+                "https://spinalinjurysupportmobileal.org/faq.html"
+              ]
+            }' >/dev/null || true
