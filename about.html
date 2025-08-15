@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://spinalinjurysupportmobileal.org/about.html" />
   <title>About Us | Spinal Injury Support Group – Mobile, AL</title>
   <meta name="description" content="Who we are, our mission, and how the Spinal Injury Support Group in Mobile, Alabama helps individuals and families living with SCI." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
   <meta name="theme-color" content="#0d4bf7" />
-
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
@@ -30,30 +28,68 @@
   <meta name="twitter:image" content="https://spinalinjurysupportmobileal.org/logo.webp" />
 
   <!-- Organization schema -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"Spinal Injury Support Group",
-    "url":"https://spinalinjurysupportmobileal.org/",
-    "logo":"https://spinalinjurysupportmobileal.org/logo.webp",
-    "contactPoint":{
-      "@type":"ContactPoint",
-      "telephone":"+1-251-460-0301",
-      "contactType":"information",
-      "areaServed":"US-AL"
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Spinal Injury Support Group",
+      "url": "https://spinalinjurysupportmobileal.org/",
+      "logo": "https://spinalinjurysupportmobileal.org/logo.webp",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-251-460-0301",
+        "contactType": "information",
+        "areaServed": "US-AL"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6750 Howells Ferry Road",
+        "addressLocality": "Mobile",
+        "addressRegion": "AL",
+        "postalCode": "36618",
+        "addressCountry": "US"
+      }
     },
-    "address":{
-      "@type":"PostalAddress",
-      "streetAddress":"6750 Howells Ferry Road",
-      "addressLocality":"Mobile",
-      "addressRegion":"AL",
-      "postalCode":"36618",
-      "addressCountry":"US"
+    {
+      "@type": "WebSite",
+      "@id": "https://spinalinjurysupportmobileal.org/#website",
+      "name": "Spinal Injury Support Group – Mobile, Alabama",
+      "url": "https://spinalinjurysupportmobileal.org/"
+    },
+    {
+      "@type": "AboutPage",
+      "@id": "https://spinalinjurysupportmobileal.org/about.html#aboutpage",
+      "url": "https://spinalinjurysupportmobileal.org/about.html",
+      "name": "About Us | Spinal Injury Support Group – Mobile, AL",
+      "isPartOf": { "@id": "https://spinalinjurysupportmobileal.org/#website" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://spinalinjurysupportmobileal.org/logo.webp"
+      },
+      "description": "Who we are, our mission, and how the Spinal Injury Support Group in Mobile, Alabama helps individuals and families living with SCI."
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://spinalinjurysupportmobileal.org/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "About",
+          "item": "https://spinalinjurysupportmobileal.org/about.html"
+        }
+      ]
     }
-  }
-  </script>
-  
+  ]
+}
+</script>  
   <style>
 /* ------------- Global layout & colours -------------------------------- */
 body{
@@ -207,28 +243,31 @@ footer a:hover{color:#ee0a0a}
     <h1>About the Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led)</h1>
     <h2>Sponsored by:</h2>
     <div class="logo">
-      <img src="logo.jpg" width="150" height="150"
+      <img src="logo.webp" width="150" height="150"
         alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" />
     </div>
-    <!-- About Section -->
+
     <div class="card-box">
       <h2>About Us</h2>
-      <p>We are members of the Mobile, Alabama community who understand the daily challenges of living with a spinal cord injury
-        injuries. Our peer‑led group supports SCI survivors and their caregivers through fellowship, education, and
-        advocacy.</p>
-      <p>Our mission is to create a welcoming environment where individuals can share experiences, learn to cope
-        strategies and find hope and strength together. We recognize that people who haven't experienced a Spinal Cord
-        Injury can’t fully understand its impact—that’s why our lived experience is so valuable.</p>
+      <p>We are members of the Mobile, Alabama community who understand the daily challenges of living with
+        spinal cord injuries. Our peer-led group supports SCI survivors and their caregivers through
+        fellowship, education, and advocacy.</p>
+        
+      <p>Our mission is to create a welcoming environment where individuals can share experiences, learn
+        coping strategies, and find hope and strength together. We recognize that people who haven't
+        experienced a spinal cord injury can’t fully understand its impact—that’s why our lived experience
+        is so valuable.</p>
     </div>
+      
     <!-- Image Gallery -->
-     <div class="image-gallery">
+    <div class="image-gallery">
       <div class="image-frame">
-        <img src="img/320/5.webp"
-        srcset="img/320/5.webp 320w, img/640/5.webp 640w"
-        sizes="(max-width:600px) 100vw, 400px"
-        width="400" height="300" loading="lazy"
+      <img src="img/320/5.webp"
+      srcset="img/320/5.webp 320w, img/640/5.webp 640w"
+      sizes="(max-width:600px) 100vw, 400px"
+      width="400" height="300" loading="lazy"
         alt="Volunteers and Mobile Wave Transit staff at wheelchair-basketball fundraiser">
-      </div>
+    </div>
       <div class="image-frame">
         <img src="img/320/1.webp"
         srcset="img/320/1.webp 320w, img/640/1.webp 640w"
@@ -267,24 +306,24 @@ footer a:hover{color:#ee0a0a}
     </div>
 
     <!-- Navigation Section -->
-    <nav class="navigation">
+    <nav class="navigation" aria-label="Primary">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="faq.html">FAQ</a></li>
+        <li style="display:none"></li>
       </ul>
     </nav>
-  </div>
 
   <!-- Footer outside main container -->
-<footer>
+    <footer>
         <p><strong>Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led) is sponsored by:<br>
             The Independent Living Center of Mobile</strong></p>
             <p>6750 Howells Ferry Road<br>
                 Mobile, AL 36618</p>
-            <p>Jerry Cochran Sr. ☎ (251) 391‑6307</p>
+            <p>Jerry Cochran Sr. ☎ <a href="tel:+12513916307">(251) 391-6307</a></p>
             <p><strong>Email:</strong></p>
             <p>
                 <a href="mailto:lesiad@ilcmobile.org">Lesia Dailey &nbsp;•&nbsp; lesiad@ilcmobile.org</a>
@@ -295,6 +334,7 @@ footer a:hover{color:#ee0a0a}
         </footer>
 </body>
 </html>
+
 
 
 
