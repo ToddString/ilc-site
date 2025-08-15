@@ -15,7 +15,7 @@
   <meta property="og:description" content="Quick contacts for the Mobile, AL SCI Support Group—coordinator and ILC Mobile.">
   <meta property="og:image" content="https://spinalinjurysupportmobileal.org/logo.webp">
   <meta name="twitter:card" content="summary_large_image">
-
+  <meta name="theme-color" content="#0d4bf7">
   <!-- Preconnect to FontAwesome -->
   <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
 
@@ -24,30 +24,59 @@
   <noscript><link rel="stylesheet" href="styles.css"></noscript>
 
   <!-- Organization JSON-LD (add your FB as sameAs) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Spinal Injury Support Group",
-    "url": "https://spinalinjurysupportmobileal.org/",
-    "logo": "https://spinalinjurysupportmobileal.org/logo.jpg",
-    "sameAs": ["https://www.facebook.com/profile.php?id=61557665836753"],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "(251) 460-0301",
-      "contactType": "Information",
-      "areaServed": "US-AL"
+ <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "Spinal Injury Support Group",
+      "url": "https://spinalinjurysupportmobileal.org/",
+      "logo": "https://spinalinjurysupportmobileal.org/logo.webp",
+      "sameAs": ["https://www.facebook.com/profile.php?id=61557665836753"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-251-460-0301",
+        "contactType": "information",
+        "areaServed": "US-AL"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6750 Howells Ferry Road",
+        "addressLocality": "Mobile",
+        "addressRegion": "AL",
+        "postalCode": "36618",
+        "addressCountry": "US"
+      }
     },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "6750 Howell’s Ferry Road",
-      "addressLocality": "Mobile",
-      "addressRegion": "AL",
-      "postalCode": "36618",
-      "addressCountry": "US"
+    {
+      "@type": "WebSite",
+      "@id": "https://spinalinjurysupportmobileal.org/#website",
+      "name": "Spinal Injury Support Group – Mobile, Alabama",
+      "url": "https://spinalinjurysupportmobileal.org/"
+    },
+    {
+      "@type": "ContactPage",
+      "@id": "https://spinalinjurysupportmobileal.org/contact.html#contactpage",
+      "url": "https://spinalinjurysupportmobileal.org/contact.html",
+      "name": "Contact | Spinal Injury Support Group – Mobile, AL",
+      "isPartOf": { "@id": "https://spinalinjurysupportmobileal.org/#website" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://spinalinjurysupportmobileal.org/logo.webp"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spinalinjurysupportmobileal.org/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://spinalinjurysupportmobileal.org/contact.html" }
+        ]
+      },
+      "description": "Get in touch for meeting times, locations, and one-on-one support."
     }
-  }
-  </script>
+  ]
+}
+</script>
 
   <!-- Inline only critical (above-the-fold) CSS -->
   <style>
@@ -152,37 +181,21 @@
     footer p{margin:5px 0;font-size:16px;}
     footer a{color:#0d4bf7;text-decoration:none;font-weight:bold;}
     footer a:hover{color:#ee0a0a;}
-  </style>
-
-  <!-- Preload the rest of your CSS and swap it in non-blocking -->
-  <link rel="preload" href="styles.css" as="style"
-      onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="styles.css">
-</noscript>
-  <!-- JSON-LD Organization markup -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Spinal Injury Support Group",
-    "url": "https://spinalinjurysupportmobileal.org/",
-    "logo": "https://spinalinjurysupportmobileal.org/logo.jpg",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "(251) 460-0301",
-      "contactType": "Information",
-      "areaServed": "US-AL"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "6750 Howell’s Ferry Road",
-      "addressLocality": "Mobile",
-      "addressRegion": "AL",
-      "postalCode": "36618",
-      "addressCountry": "US"
+    /* Keep nav + footer typography consistent site-wide */
+    .navigation, .navigation *, footer, footer * { 
+      font-family: inherit; 
     }
-  }
-  </script>
+    .navigation a, footer a { 
+      font-weight: 700; 
+      text-decoration: none; 
+    }
+    .navigation a:focus-visible, footer a:focus-visible {
+      outline: 3px solid #0d4bf7; 
+      outline-offset: 2px; 
+      border-radius: 4px;
+    }
+  </style>
+  
   <!-- Defer FontAwesome -->
   <script
     defer
@@ -243,11 +256,12 @@
         <i class="fa-brands fa-facebook-f fa-3x"></i>
       </a>
     </div>
-
-    <nav class="navigation">
+    
+    <nav class="navigation" aria-label="Primary">
       <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="/">Home</a></li>
         <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" aria-current="page">Contact</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="faq.html">FAQ</a></li>
@@ -266,7 +280,7 @@
       6750 Howells Ferry Road<br />
       Mobile, AL 36618
     </p>
-    <p>Jerry Cochran Sr. ☎ (251) 391-6307</p>
+    <p>Jerry Cochran Sr. ☎ <a href="tel:+12513916307">(251) 391-6307</a></p>
     <p><strong>Email:</strong></p>
     <p>
       <a href="mailto:lesiad@ilcmobile.org"
@@ -281,6 +295,7 @@
   </footer>
 </body>
 </html>
+
 
 
 
