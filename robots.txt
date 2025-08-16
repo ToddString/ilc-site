@@ -1,7 +1,7 @@
-# Allow all legitimate crawlers full access
 User-agent: *
 Disallow:
 
-# robots.txt  —  crawler directives
 Sitemap: https://spinalinjurysupportmobileal.org/sitemap.xml
 Allow: /llm.txt
+
+
