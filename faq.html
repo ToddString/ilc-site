@@ -11,7 +11,7 @@
   <meta property="og:url" content="https://spinalinjurysupportmobileal.org/faq.html">
   <meta property="og:title" content="FAQ | Spinal Injury Support Group – Mobile, AL">
   <meta property="og:description" content="Answers to common questions about the Mobile, Alabama Spinal Cord Injury Support Group—meetings, costs, accessibility, transportation, and more.">
-  <meta property="og:image" content="https://spinalinjurysupportmobileal.org/logo.jpg">
+  <meta property="og:image" content="https://spinalinjurysupportmobileal.org/logo.webp">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Independent Living Center of Mobile logo">
@@ -19,210 +19,175 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="FAQ | Spinal Injury Support Group – Mobile, AL">
   <meta name="twitter:description" content="Answers to common questions about the Mobile, Alabama SCI Support Group.">
-  <meta name="twitter:image" content="https://spinalinjurysupportmobileal.org/logo.jpg">
+  <meta name="twitter:image" content="https://spinalinjurysupportmobileal.org/logo.webp">
 
   <meta name="robots" content="index,follow,max-image-preview:large">
 
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Spinal Injury Support Group",
-  "url": "https://spinalinjurysupportmobileal.org/",
-  "logo": "https://spinalinjurysupportmobileal.org/logo.jpg",
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "telephone": "(251) 460-0301",
-    "contactType": "Information",
-    "areaServed": "US-AL"
-  },
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "6750 Howell’s Ferry Road",
-    "addressLocality": "Mobile",
-    "addressRegion": "AL",
-    "postalCode": "36618",
-    "addressCountry": "US"
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Spinal Injury Support Group",
+    "url": "https://spinalinjurysupportmobileal.org/",
+    "logo": "https://spinalinjurysupportmobileal.org/logo.webp",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-251-460-0301",
+      "contactType": "Information",
+      "areaServed": "US-AL"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "6750 Howells Ferry Road",
+      "addressLocality": "Mobile",
+      "addressRegion": "AL",
+      "postalCode": "36618",
+      "addressCountry": "US"
+    }
   }
-}
-</script>  
+  </script>
+
+  <script>
+  function openFAQfromHash(){
+    const id = decodeURIComponent(location.hash.slice(1));
+    if(!id) return;
+    const el = document.getElementById(id);
+    if(el && el.tagName.toLowerCase() === 'details'){
+      el.setAttribute('open','');
+      const sum = el.querySelector('summary');
+      if (sum) sum.focus({preventScroll:true});
+      el.scrollIntoView({behavior:'smooth', block:'start'});
+    }
+  }
+  window.addEventListener('DOMContentLoaded', openFAQfromHash);
+  window.addEventListener('hashchange', openFAQfromHash);
+</script>
+
   <style>
-    body{
-      font-family:Arial,sans-serif;
-      background-color:rgba(13,62,239,.9);
-      background-attachment:fixed;
-      margin:0;padding:20px;text-align:center;line-height:1.6;
-    }
-    .container{
-      max-width:800px;margin:0 auto;background:#EBF3FD;padding:30px;
-      border-radius:10px;box-shadow:0 4px 6px rgba(0,0,0,.1);
-    }
+
+/* FAQ permalinks */
+summary .permalink{
+  font-weight: normal;
+  font-size: 14px;
+  margin-left: 8px;
+  text-decoration: none;
+  opacity: .65;
+}
+summary:hover .permalink,
+summary:focus-within .permalink{ opacity: 1; }
+
+    body{font-family:Arial,sans-serif;background-color:rgba(13,62,239,.9);background-attachment:fixed;margin:0;padding:20px;text-align:center;line-height:1.6;}
+    .container{max-width:800px;margin:0 auto;background:#EBF3FD;padding:30px;border-radius:10px;box-shadow:0 4px 6px rgba(0,0,0,.1);}
     h1{font-size:34px;margin-bottom:20px;color:#000;}
+
     details{background:#fff;border-radius:6px;margin:15px 0;box-shadow:0 2px 4px rgba(0,0,0,.1);}
-    summary{font-weight:bold;font-size:18px;padding:15px;cursor:pointer;color:#0d4bf7;outline:none;}
+    summary{font-weight:bold;font-size:18px;padding:15px;cursor:pointer;color:#0d4bf7;}
     details[open] summary{color:#ee0a0a;}
     details p{padding:0 15px 15px;font-size:16px;color:#333;text-align:left;}
-    /* simple link styling */
+
     a{color:#0d4bf7;text-decoration:none;font-weight:bold;}
     a:hover{color:#ee0a0a;}
 
-    /* footer (reuse global style) */
-    footer{
-        width:calc(100% + 40px);   /* extend past 20 px side‑padding */
-        margin:20px -20px -20px;   /* top 20px  |  left -20px  |  bottom -20px  |  right -20px */
-        /*              ↑ pulls footer downward to cover blue strip */
-        background:#EBF3FD;
-        padding:20px 10px;
-        border-top:3px solid #0d4bf7;
-        box-shadow:0 2px 6px rgba(0,0,0,.15);
-        text-align:center;
-        border-radius:0;
-        color:#333;
-        }
-        footer p{margin:5px 0;font-size:16px;}
-        footer a{color:#0d4bf7;text-decoration:none;font-weight:bold;}
-        footer a:hover{color:#ee0a0a;}
+    /* Footer (full-bleed to match site) */
+    footer{width:calc(100% + 40px);margin:20px -20px -20px;background:#EBF3FD;padding:20px 10px;border-top:3px solid #0d4bf7;box-shadow:0 2px 6px rgba(0,0,0,.15);text-align:center;border-radius:0;color:#333;}
+    footer p{margin:5px 0;font-size:16px;}
+    footer a{color:#0d4bf7;text-decoration:none;font-weight:bold;}
+    footer a:hover{color:#ee0a0a;}
 
-    /* Add navigation styling to match other pages */
-    .navigation ul {
-        list-style: none;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        margin: 20px 0;
-    }
-    .navigation li {
-        background: #fff;
-        border: 1px solid #000;
-        padding: 10px 15px;
-        box-shadow: 0 2px 4px rgba(0,0,0,.1);
-    }
-    .navigation li:not(:last-child) {
-        border-right: none;
-    }
-    .navigation a {
-        text-decoration: none;
-        color: #0d4bf7;
-        font-weight: bold;
-        transition: color .3s;
-    }
-    .navigation a:hover {
-        color: #ee0a0a;
-    }
+    /* Navigation */
+    .navigation ul{list-style:none;padding:0;display:flex;justify-content:center;margin:20px 0;}
+    .navigation li{background:#fff;border:1px solid #000;padding:10px 15px;box-shadow:0 2px 4px rgba(0,0,0,.1);}
+    .navigation li:not(:last-child){border-right:none;}
+    .navigation a{color:#0d4bf7;font-weight:bold;transition:color .3s;}
+    .navigation a:hover{color:#ee0a0a;}
 
-    /* Add logo styling */
-    .logo {
-        margin-bottom: 20px;
-    }
-    .logo img {
-        border-radius: 5px;
-    }
+    .logo{margin-bottom:20px;}
+    .logo img{border-radius:5px;}
 
-    /* Mobile styles */
-    @media (max-width: 600px) {
-        .container {
-            padding: 15px;
-        }
-
-        .navigation ul {
-            flex-direction: column;
-            align-items: stretch;
-        }
-
-        .navigation li {
-            border-right: 1px solid #000;
-            border-radius: 5px;
-            margin-bottom: 5px;
-            width: 100%;
-            text-align: center;
-            box-sizing: border-box;
-        }
-
-        .navigation li:not(:last-child) {
-            border-right: 1px solid #000;
-            border-bottom: 1px solid #000;
-        }
+    @media (max-width:600px){
+      .container{padding:15px;}
+      .navigation ul{flex-direction:column;align-items:stretch;}
+      .navigation li{border-right:1px solid #000;border-radius:5px;margin-bottom:5px;width:100%;text-align:center;box-sizing:border-box;}
+      .navigation li:not(:last-child){border-right:1px solid #000;border-bottom:1px solid #000;}
     }
   </style>
-   <!-- Preload the rest of your CSS and swap it in non-blocking -->
-  <link
-    rel="preload"
-    href="styles.css"
-    as="style"
-    onload="this.onload=null;this.rel='stylesheet'"
-  />
-  <noscript>
-    <link rel="stylesheet" href="styles.css" />
-  </noscript>
-  
+
+  <!-- Preload your main stylesheet and swap non-blocking -->
+  <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+  <noscript><link rel="stylesheet" href="styles.css"/></noscript>
 </head>
+
 <body>
   <div class="container">
     <h1>Frequently Asked Questions — Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led)</h1>
     <h2>Sponsored by:</h2>
-      <div class="logo">
-     <img src="logo.jpg" width="150" height="150"
-      alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" />
+    <div class="logo">
+      <img src="logo.jpg" width="150" height="150" alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" />
     </div>
 
     <h2>Frequently Asked Questions</h2>
 
-    <nav class="navigation">
+    <nav class="navigation" aria-label="Primary">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="resources.html">Resources</a></li>
+        <li><a href="faq.html" aria-current="page">FAQ</a></li>
       </ul>
     </nav>
 
-    <details>
-      <summary>When and where does the support group meet?</summary>
+    <details id="faq-when-where">
+      <summary>When and where does the support group meet?
+        <a class="permalink" href="#faq-when-where" aria-label="Link to this question">🔗</a>
+      </summary>
       <p>We meet on the <strong>fourth Monday of every month</strong> from 1:00&nbsp;PM – 2:30&nbsp;PM at the Independent Living Center of Mobile, 6750 Howells Ferry Road, Mobile, AL 36618.</p>
     </details>
-
-    <details>
-      <summary>Does it cost anything to attend?</summary>
-      <p>No. Our meetings and activities are <strong>completely free</strong> for spinal cord injury survivors, family members and caregivers. Light refreshments are provided at no charge.</p>
+    
+    <details id="faq-cost">
+      <summary>Does it cost anything to attend?
+        <a class="permalink" href="#faq-cost" aria-label="Link to this question">🔗</a>
+      </summary>
+      <p>No. Our meetings and activities are <strong>completely free</strong> for spinal cord injury survivors, family members, and caregivers. Light refreshments are provided at no charge.</p>
+    </details>
+    <details id="faq-accessible">
+      <summary>Is the venue wheelchair accessible?
+        <a class="permalink" href="#faq-accessible" aria-label="Link to this question">🔗</a>
+      </summary>
+      <p>Yes. The Independent Living Center offers a wheelchair-accessible entrance, ramps, accessible restrooms, and dedicated parking.</p>
     </details>
 
-    <details>
-      <summary>Is the venue wheelchair accessible?</summary>
-      <p>Yes. The Independent Living Center offers a wheelchair‑accessible entrance, ramps, accessible restrooms and dedicated parking.</p>
+    <details id="faq-transportation">
+      <summary>How can I get there if I don't drive?
+        <a class="permalink" href="#faq-transportation" aria-label="Link to this question">🔗</a>
+      </summary>
+      <p>Members often use the <strong>Wave Transit Mobility Assistance Program</strong>. Call Wave Transit at <a href="tel:+12513446600">(251) 344-6600</a> to schedule a ride, or <a href="contact.html">contact us</a> and we can help arrange shared transport.</p>
     </details>
-
-    <details>
-      <summary>How can I get there if I don't drive?</summary>
-      <p>Members often use the <strong>Wave Transit Mobility Assistance Program</strong>.  Call Wave Transit at (251) 344‑6600 to schedule a ride, or contact us and we can help arrange shared transport.</p>
+    <details id="faq-activities">
+      <summary>What kinds of activities does the group organize?
+        <a class="permalink" href="#faq-activities" aria-label="Link to this question">🔗</a>
+      </summary>
+      <p>Besides monthly peer meetings, we schedule outings such as dining at local restaurants, cheering on wheelchair-basketball games and other adaptive sports, and participating in local or state demonstrations supporting the Americans with Disabilities Act.</p>
     </details>
-
-    <details>
-      <summary>What kinds of activities does the group organise?</summary>
-      <p>Besides monthly peer meetings, we schedule outings such as dining at local restaurants, cheering on wheelchair‑basketball games and other adaptive sports, and participating in local or state demonstrations supporting the Americans with Disabilities Act.</p>
-    </details>
-
-    <details>
-      <summary>Who can I contact for more information?</summary>
-      <p>Email <a href="mailto:lesiad@ilcmobile.org">Lesia Dailey</a> or <a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin</a>, or call our coordinator Jerry Cochran Sr. at (251) 391‑6307.</p>
+    
+    <details id="faq-contact">
+      <summary>Who can I contact for more information?
+        <a class="permalink" href="#faq-contact" aria-label="Link to this question">🔗</a>
+      </summary>
+      <p>Email <a href="mailto:lesiad@ilcmobile.org">lesiad@ilcmobile.org</a> or <a href="mailto:cyneriaa@ilcmobile.org">cyneriaa@ilcmobile.org</a>, or call our coordinator Jerry Cochran Sr. at <a href="tel:+12513916307">(251) 391-6307</a>.</p>
     </details>
   </div>
 
   <!-- footer -->
- <footer>
-        <p><strong>The Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led) is sponsored by:<br>
-            The Independent Living Center of Mobile</strong></p>
-            <p>6750 Howells Ferry Road<br>
-                Mobile, AL 36618</p>
-            <p>Jerry Cochran Sr. ☎ (251) 391‑6307</p>
-            <p><strong>Email:</strong></p>
-            <p>
-                <a href="mailto:lesiad@ilcmobile.org">Lesia Dailey &nbsp;•&nbsp; lesiad@ilcmobile.org</a>
-            </p>
-            <p>
-                <a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin &nbsp;•&nbsp; cyneriaa@ilcmobile.org</a>
-            </p>
-        </footer>
+  <footer role="contentinfo">
+    <p><strong>The Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led) is sponsored by:<br>The Independent Living Center of Mobile</strong></p>
+    <p>6750 Howells Ferry Road<br>Mobile, AL 36618</p>
+    <p>Jerry Cochran Sr. ☎ <a href="tel:+12513916307">(251) 391-6307</a></p>
+    <p><strong>Email:</strong></p>
+    <p><a href="mailto:lesiad@ilcmobile.org">Lesia Dailey &nbsp;•&nbsp; lesiad@ilcmobile.org</a></p>
+    <p><a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin &nbsp;•&nbsp; cyneriaa@ilcmobile.org</a></p>
+  </footer>
 
   <!-- Structured data: FAQPage -->
   <script type="application/ld+json">
@@ -243,7 +208,7 @@
         "name": "Does it cost anything to attend?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Our meetings and activities are completely free for spinal cord injury survivors, family members and caregivers."
+          "text": "No. Our meetings and activities are completely free for spinal cord injury survivors, family members, and caregivers."
         }
       },
       {
@@ -251,7 +216,7 @@
         "name": "Is the venue wheelchair accessible?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. The Independent Living Center offers a wheelchair-accessible entrance, ramps, accessible restrooms and dedicated parking."
+          "text": "Yes. The Independent Living Center offers a wheelchair-accessible entrance, ramps, accessible restrooms, and dedicated parking."
         }
       },
       {
@@ -264,10 +229,10 @@
       },
       {
         "@type": "Question",
-        "name": "What kinds of activities does the group organise?",
+        "name": "What kinds of activities does the group organize?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We organise dining at local restaurants, attending wheelchair-basketball games and other adaptive sports, and joining local or state demonstrations in support of the ADA."
+          "text": "We schedule peer meetings, meals at local restaurants, attendance at wheelchair-basketball games and other adaptive sports, and participation in ADA-related advocacy events."
         }
       },
       {
@@ -283,10 +248,3 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
