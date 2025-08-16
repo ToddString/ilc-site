@@ -34,15 +34,26 @@
     .navigation a{text-decoration:none;color:#0d4bf7;font-weight:bold;transition:color .3s;}
     .navigation a:hover{color:#ee0a0a;}
 
-    .navigation li > a[aria-current="page"]{
+    /* Current page highlight */
+    .navigation li > a[aria-current="page"] {
       text-decoration: underline;
-      @media (max-width:600px){
-      .container{padding:15px;}
-      .navigation ul{flex-direction:column;align-items:stretch;}
-      .navigation li{border-right:1px solid #000;border-radius:5px;margin-bottom:5px;width:100%;text-align:center;box-sizing:border-box;}
-      .navigation li:not(:last-child){border-right:1px solid #000;border-bottom:1px solid #000;}
     }
-
+    /* Mobile styles */
+    @media (max-width:600px){
+    .container{padding:15px;}
+    .navigation ul{flex-direction:column;align-items:stretch;}
+    .navigation li{
+      border-right:1px solid #000;
+      border-radius:5px;
+      margin-bottom:5px;
+      width:100%;
+      text-align:center;
+      box-sizing:border-box;
+    }
+    .navigation li:not(:last-child){
+      border-right:1px solid #000;
+      border-bottom:1px solid #000;
+    }}
     .gallery-title{font-size:18px;color:#000;margin-top:20px;}
     .gallery-description{font-size:16px;color:#000;margin-bottom:20px;}
 
@@ -275,6 +286,7 @@
   </script>
 </body>
 </html>
+
 
 
 
