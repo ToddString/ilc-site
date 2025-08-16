@@ -60,6 +60,15 @@
     footer p{margin:5px 0;font-size:16px;}
     footer a{color:#0d4bf7;text-decoration:none;font-weight:bold;}
     footer a:hover{color:#ee0a0a;}
+    /* Navigation – match sitewide */
+    .navigation ul{
+      list-style:none;
+      padding:0;
+      display:flex;
+      justify-content:center;
+      margin:20px auto;
+      max-width:400px; /* keep the pill group compact */
+    }
   </style>
 </head>
 
@@ -73,16 +82,16 @@
     <h2 style="font-size:18px;color:#000;margin-bottom:15px;">Photo Gallery</h2>
     <h3 class="gallery-description">Welcome! Photos from our SCI peer meetings, wheelchair-basketball games, community outreach, and advocacy events.</h3>
 
-    <nav class="navigation" aria-label="Primary">
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="resources.html">Resources</a></li>
-        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-      </ul>
-    </nav>
+   <nav class="navigation" aria-label="Primary">
+     <ul>
+       <li><a href="/">Home</a></li>
+       <li><a href="about.html">About</a></li>
+       <li><a href="contact.html">Contact</a></li>
+       <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+       <li><a href="resources.html">Resources</a></li>
+       <li><a href="faq.html">FAQ</a></li>
+     </ul>
+   </nav>
 
     <!-- 2025 Events -->
     <h3 class="gallery-title">2025 Events</h3>
@@ -263,4 +272,5 @@
   </script>
 </body>
 </html>
+
 
