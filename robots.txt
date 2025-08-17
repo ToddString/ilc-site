@@ -1,7 +1,8 @@
 User-agent: *
-Disallow:
+Allow: /
 
 Sitemap: https://spinalinjurysupportmobileal.org/sitemap.xml
-Allow: /llm.txt
+
+
 
 
