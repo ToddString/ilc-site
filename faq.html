@@ -1,11 +1,26 @@
 <!DOCTYPE html>
+<!-- Declares that the document uses HTML5 -->
+
 <html lang="en">
+<!-- Root HTML element; language declared as English -->
+
 <head>
   <meta charset="UTF-8" />
+  <!-- Sets character encoding to UTF‑8 for wide compatibility -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Enables responsive layout on various screen sizes -->
+
   <link rel="canonical" href="https://spinalinjurysupportmobileal.org/faq.html" />
+  <!-- Preferred URL for search engines to avoid duplicate content -->
   <title>FAQ | Spinal Injury Support Group – Mobile, AL</title>
+  <!-- Page title displayed in browser tab and search results -->
   <meta name="description" content="Answers to common questions about meetings, accessibility, transportation, and finding spinal cord injury support in the Mobile area." />
+  <!-- Meta description for SEO -->
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <!-- Allow indexing and link following, enable large image preview -->
+
+  <!-- Open Graph -->
+  <!-- Metadata for enhancing previews on social media platforms -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Spinal Injury Support Group – Mobile, AL">
   <meta property="og:url" content="https://spinalinjurysupportmobileal.org/faq.html">
@@ -16,13 +31,15 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Independent Living Center of Mobile logo">
 
+  <!-- Twitter -->
+  <!-- Metadata for Twitter card previews -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="FAQ | Spinal Injury Support Group – Mobile, AL">
   <meta name="twitter:description" content="Answers to common questions about the Mobile, Alabama SCI Support Group.">
   <meta name="twitter:image" content="https://spinalinjurysupportmobileal.org/logo.webp">
 
-  <meta name="robots" content="index,follow,max-image-preview:large">
-
+  <!-- Organization schema -->
+  <!-- JSON-LD structured data providing details about the organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -47,110 +64,73 @@
   }
   </script>
 
+  <!-- Open FAQ item when visiting a #hash -->
+  <!-- JavaScript to expand a specific FAQ when linked via hash (#) -->
   <script>
-  function openFAQfromHash(){
-    const id = decodeURIComponent(location.hash.slice(1));
-    if(!id) return;
-    const el = document.getElementById(id);
-    if(el && el.tagName.toLowerCase() === 'details'){
-      el.setAttribute('open','');
-      const sum = el.querySelector('summary');
-      if (sum) sum.focus({preventScroll:true});
-      el.scrollIntoView({behavior:'smooth', block:'start'});
+    function openFAQfromHash(){
+      const id = decodeURIComponent(location.hash.slice(1));
+      if(!id) return;
+      const el = document.getElementById(id);
+      if(el && el.tagName.toLowerCase() === 'details'){
+        el.setAttribute('open','');
+        const sum = el.querySelector('summary');
+        if (sum) sum.focus({preventScroll:true});
+        el.scrollIntoView({behavior:'smooth', block:'start'});
+      }
     }
-  }
-  window.addEventListener('DOMContentLoaded', openFAQfromHash);
-  window.addEventListener('hashchange', openFAQfromHash);
-</script>
+    window.addEventListener('DOMContentLoaded', openFAQfromHash);
+    window.addEventListener('hashchange', openFAQfromHash);
+  </script>
 
-  <style>
-
-/* FAQ permalinks */
-summary .permalink{
-  font-weight: normal;
-  font-size: 14px;
-  margin-left: 8px;
-  text-decoration: none;
-  opacity: .65;
-}
-summary:hover .permalink,
-summary:focus-within .permalink{ opacity: 1; }
-
-    body{font-family:Arial,sans-serif;background-color:rgba(13,62,239,.9);background-attachment:fixed;margin:0;padding:20px;text-align:center;line-height:1.6;}
-    .container{max-width:800px;margin:0 auto;background:#EBF3FD;padding:30px;border-radius:10px;box-shadow:0 4px 6px rgba(0,0,0,.1);}
-    h1{font-size:34px;margin-bottom:20px;color:#000;}
-
-    details{background:#fff;border-radius:6px;margin:15px 0;box-shadow:0 2px 4px rgba(0,0,0,.1);}
-    summary{font-weight:bold;font-size:18px;padding:15px;cursor:pointer;color:#0d4bf7;}
-    details[open] summary{color:#ee0a0a;}
-    details p{padding:0 15px 15px;font-size:16px;color:#333;text-align:left;}
-
-    a{color:#0d4bf7;text-decoration:none;font-weight:bold;}
-    a:hover{color:#ee0a0a;}
-
-    /* Footer (full-bleed to match site) */
-    footer{width:calc(100% + 40px);margin:20px -20px -20px;background:#EBF3FD;padding:20px 10px;border-top:3px solid #0d4bf7;box-shadow:0 2px 6px rgba(0,0,0,.15);text-align:center;border-radius:0;color:#333;}
-    footer p{margin:5px 0;font-size:16px;}
-    footer a{color:#0d4bf7;text-decoration:none;font-weight:bold;}
-    footer a:hover{color:#ee0a0a;}
-
-    /* Navigation */
-    .navigation ul{list-style:none;padding:0;display:flex;justify-content:center;margin:20px 0;}
-    .navigation li{background:#fff;border:1px solid #000;padding:10px 15px;box-shadow:0 2px 4px rgba(0,0,0,.1);}
-    .navigation li:not(:last-child){border-right:none;}
-    .navigation a{color:#0d4bf7;font-weight:bold;transition:color .3s;}
-    .navigation a:hover{color:#ee0a0a;}
-
-    .logo{margin-bottom:20px;}
-    .logo img{border-radius:5px;}
-
-    @media (max-width:600px){
-      .container{padding:15px;}
-      .navigation ul{flex-direction:column;align-items:stretch;}
-      .navigation li{border-right:1px solid #000;border-radius:5px;margin-bottom:5px;width:100%;text-align:center;box-sizing:border-box;}
-      .navigation li:not(:last-child){border-right:1px solid #000;border-bottom:1px solid #000;}
-    }
-  </style>
-
-  <!-- Preload your main stylesheet and swap non-blocking -->
-  <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
-  <noscript><link rel="stylesheet" href="styles.css"/></noscript>
+  <!-- Site styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- External CSS stylesheet linking -->
 </head>
 
 <body>
-  <div class="container">
-    <h1>Frequently Asked Questions — Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led)</h1>
+  <main class="container faq-list">
+  <!-- Main content container with FAQ-specific styling -->
+    <h1>Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led)</h1>
+    <!-- Page header highlighting peer-led nature of group -->
+
     <h2>Sponsored by:</h2>
+    <!-- Sponsor section heading -->
     <div class="logo">
-      <img src="logo.jpg" width="150" height="150" alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" />
+      <img src="logo.webp" width="150" height="150" alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" />
+      <!-- Sponsor logo with descriptive alt text -->
     </div>
 
     <h2>Frequently Asked Questions</h2>
+    <!-- Section title for FAQ list -->
 
     <nav class="navigation" aria-label="Primary">
+    <!-- Main navigation menu -->
       <ul>
-        <li><a href="/">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="faq.html" aria-current="page">FAQ</a></li>
+        <li><a href="people4people.html">People4People</a></li>
       </ul>
     </nav>
 
+    <!-- Individual FAQ entries using <details> for collapsible questions -->
     <details id="faq-when-where">
       <summary>When and where does the support group meet?
         <a class="permalink" href="#faq-when-where" aria-label="Link to this question">🔗</a>
       </summary>
       <p>We meet on the <strong>fourth Monday of every month</strong> from 1:00&nbsp;PM – 2:30&nbsp;PM at the Independent Living Center of Mobile, 6750 Howells Ferry Road, Mobile, AL 36618.</p>
     </details>
-    
+
     <details id="faq-cost">
       <summary>Does it cost anything to attend?
         <a class="permalink" href="#faq-cost" aria-label="Link to this question">🔗</a>
       </summary>
       <p>No. Our meetings and activities are <strong>completely free</strong> for spinal cord injury survivors, family members, and caregivers. Light refreshments are provided at no charge.</p>
     </details>
+
     <details id="faq-accessible">
       <summary>Is the venue wheelchair accessible?
         <a class="permalink" href="#faq-accessible" aria-label="Link to this question">🔗</a>
@@ -164,32 +144,41 @@ summary:focus-within .permalink{ opacity: 1; }
       </summary>
       <p>Members often use the <strong>Wave Transit Mobility Assistance Program</strong>. Call Wave Transit at <a href="tel:+12513446600">(251) 344-6600</a> to schedule a ride, or <a href="contact.html">contact us</a> and we can help arrange shared transport.</p>
     </details>
+
     <details id="faq-activities">
       <summary>What kinds of activities does the group organize?
         <a class="permalink" href="#faq-activities" aria-label="Link to this question">🔗</a>
       </summary>
       <p>Besides monthly peer meetings, we schedule outings such as dining at local restaurants, cheering on wheelchair-basketball games and other adaptive sports, and participating in local or state demonstrations supporting the Americans with Disabilities Act.</p>
     </details>
-    
+
     <details id="faq-contact">
       <summary>Who can I contact for more information?
         <a class="permalink" href="#faq-contact" aria-label="Link to this question">🔗</a>
       </summary>
       <p>Email <a href="mailto:lesiad@ilcmobile.org">lesiad@ilcmobile.org</a> or <a href="mailto:cyneriaa@ilcmobile.org">cyneriaa@ilcmobile.org</a>, or call our coordinator Jerry Cochran Sr. at <a href="tel:+12513916307">(251) 391-6307</a>.</p>
     </details>
-  </div>
+  </main>
 
-  <!-- footer -->
-  <footer role="contentinfo">
-    <p><strong>The Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led) is sponsored by:<br>The Independent Living Center of Mobile</strong></p>
+  <footer class="site-footer" role="contentinfo">
+  <!-- Footer with sponsor and contact details -->
+    <p><strong>The Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led) is sponsored by:<br>
+      The Independent Living Center of Mobile</strong></p>
     <p>6750 Howells Ferry Road<br>Mobile, AL 36618</p>
     <p>Jerry Cochran Sr. ☎ <a href="tel:+12513916307">(251) 391-6307</a></p>
     <p><strong>Email:</strong></p>
-    <p><a href="mailto:lesiad@ilcmobile.org">Lesia Dailey &nbsp;•&nbsp; lesiad@ilcmobile.org</a></p>
-    <p><a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin &nbsp;•&nbsp; cyneriaa@ilcmobile.org</a></p>
+    <p>
+      <a href="mailto:lesiad@ilcmobile.org">Lesia Dailey</a> &nbsp;•&nbsp;
+      <a href="mailto:lesiad@ilcmobile.org">lesiad@ilcmobile.org</a>
+    </p>
+    <p>
+      <a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin</a> &nbsp;•&nbsp;
+      <a href="mailto:cyneriaa@ilcmobile.org">cyneriaa@ilcmobile.org</a>
+    </p>
   </footer>
 
   <!-- Structured data: FAQPage -->
+  <!-- JSON-LD for FAQ entries to improve search engine understanding -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -248,4 +237,3 @@ summary:focus-within .permalink{ opacity: 1; }
   </script>
 </body>
 </html>
-
