@@ -20,6 +20,7 @@ jobs:
                 "https://spinalinjurysupportmobileal.org/contact.html",
                 "https://spinalinjurysupportmobileal.org/gallery.html",
                 "https://spinalinjurysupportmobileal.org/resources.html",
-                "https://spinalinjurysupportmobileal.org/faq.html"
+                "https://spinalinjurysupportmobileal.org/faq.html",
+                "https://spinalinjurysupportmobileal.org/people4people.html"
               ]
             }' >/dev/null || true
