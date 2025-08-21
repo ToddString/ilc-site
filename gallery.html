@@ -1,14 +1,28 @@
 <!DOCTYPE html>
+<!-- Declares this document as HTML5 -->
+
 <html lang="en">
+<!-- Root HTML element with language set to English -->
+
 <head>
   <!-- Core meta -->
   <meta charset="UTF-8" />
+  <!-- Specifies UTF‑8 character encoding for broad support -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Ensures responsive layout on mobile devices -->
+
   <!-- SEO -->
   <link rel="canonical" href="https://spinalinjurysupportmobileal.org/gallery.html" />
+  <!-- Indicates the preferred version of the URL for search engines -->
   <title>Gallery | Spinal Injury Support Group – Mobile, AL</title>
+  <!-- Page title shown in browser tabs and search results -->
   <meta name="description" content="Photos from meetings and community events with the Spinal Injury Support Group in Mobile, Alabama." />
+  <!-- Meta description for SEO purposes -->
+  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <!-- Directs search engines to index and follow, and allow large image previews -->
+
   <!-- Open Graph -->
+  <!-- Metadata for rich previews on social media platforms -->
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Spinal Injury Support Group – Mobile, AL" />
   <meta property="og:url" content="https://spinalinjurysupportmobileal.org/gallery.html" />
@@ -18,116 +32,79 @@
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Independent Living Center of Mobile logo" />
+
   <!-- Twitter -->
+  <!-- Metadata for Twitter card previews -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Photo Gallery | Spinal Injury Support Group – Mobile, Alabama" />
   <meta name="twitter:description" content="Photos from SCI peer meetings, wheelchair-basketball games, and disability-rights rallies in Mobile, Alabama." />
   <meta name="twitter:image" content="https://spinalinjurysupportmobileal.org/logo.webp" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
 
-  <style>
-    body{font-family:Arial,sans-serif;background:rgba(13,62,239,.9);margin:0;padding:20px;text-align:center;line-height:1.6;}
-    .container{max-width:1000px;margin:0 auto;background:#EBF3FD;padding:30px;border-radius:10px;box-shadow:0 4px 6px rgba(0,0,0,.1);}
-    .navigation ul{list-style:none;padding:0;display:flex;justify-content:center;margin:20px auto;max-width:400px;}
-    .navigation li{background:#fff;border:1px solid #000;padding:10px 15px;box-shadow:0 2px 4px rgba(0,0,0,.1);}
-    .navigation li:not(:last-child){border-right:none;}
-    .navigation a{text-decoration:none;color:#0d4bf7;font-weight:bold;transition:color .3s;}
-    .navigation a:hover{color:#ee0a0a;}
-
-    /* Current page highlight */
-    .navigation li > a[aria-current="page"] {
-      text-decoration: underline;
-    }
-    /* Mobile styles */
-    @media (max-width:600px){
-    .container{padding:15px;}
-    .navigation ul{flex-direction:column;align-items:stretch;}
-    .navigation li{
-      border-right:1px solid #000;
-      border-radius:5px;
-      margin-bottom:5px;
-      width:100%;
-      text-align:center;
-      box-sizing:border-box;
-    }
-    .navigation li:not(:last-child){
-      border-right:1px solid #000;
-      border-bottom:1px solid #000;
-    }}
-    .gallery-title{font-size:18px;color:#000;margin-top:20px;}
-    .gallery-description{font-size:16px;color:#000;margin-bottom:20px;}
-
-    .gallery-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;margin-top:30px;}
-    .image-card{background:#fff;border-radius:8px;padding:15px;box-shadow:0 2px 4px rgba(0,0,0,.1);}
-    .image-card img{width:100%;height:280px;object-fit:cover;object-position:center top;border-radius:5px;cursor:pointer;}
-    .image-caption{font-size:12px;color:#666;margin:5px 0;}
-
-    .coming-soon{text-align:center;margin-top:30px;}
-    .coming-soon p{color:#666;margin-top:10px;}
-
-    #imageModal{display:none;position:fixed;z-index:1000;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.9);}
-    #modalImage{margin:auto;display:block;max-width:90%;max-height:90%;object-fit:contain}
-    .closeModal{position:absolute;top:15px;right:35px;color:#f1f1f1;font-size:40px;font-weight:bold;cursor:pointer;}
-
-    /* Footer (full-bleed to match other pages) */
-    footer{width:calc(100% + 40px);margin:20px -20px -20px;background:#EBF3FD;padding:20px 10px;border-top:3px solid #0d4bf7;box-shadow:0 2px 6px rgba(0,0,0,.15);text-align:center;border-radius:0;color:#333;}
-    footer p{margin:5px 0;font-size:16px;}
-    footer a{color:#0d4bf7;text-decoration:none;font-weight:bold;}
-    footer a:hover{color:#ee0a0a;}
-    /* Navigation – match sitewide */
-    
-  </style>
+  <!-- Site styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Links the external stylesheet for consistent styling across site -->
 </head>
 
-<body>
-  <div class="container">
-    <h1 style="font-size:29px;color:#000;margin-bottom:20px;">Photo Gallery — Spinal Injury Support Group in Mobile, Alabama</h1>
+<body class="use-modal">
+<!-- Body uses 'use-modal' class to enable click-to-enlarge image modal functionality -->
+
+  <main class="container" style="max-width:1000px">
+  <!-- Main content area, centered with max width for layout consistency -->
+    <h1>Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led)</h1>
+    <!-- Page heading introducing the group -->
 
     <h2>Sponsored by:</h2>
-    <img src="logo.jpg" width="150" height="150" alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" loading="lazy" decoding="async" />
+    <!-- Subheading introducing sponsor section -->
+    <div class="logo">
+      <img src="logo.webp" width="150" height="150" alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" loading="lazy" decoding="async" />
+      <!-- Sponsor logo, optimized for lazy loading and decoding -->
+    </div>
 
-    <h2 style="font-size:18px;color:#000;margin-bottom:15px;">Photo Gallery</h2>
-    <h3 class="gallery-description">Welcome! Photos from our SCI peer meetings, wheelchair-basketball games, community outreach, and advocacy events.</h3>
+    <nav class="navigation" aria-label="Primary">
+    <!-- Main navigation menu -->
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="people4people.html">People4People</a></li>
+      </ul>
+    </nav>
 
-   <nav class="navigation" aria-label="Primary">
-     <ul>
-       <li><a href="/">Home</a></li>
-       <li><a href="about.html">About</a></li>
-       <li><a href="contact.html">Contact</a></li>
-       <li><a href="gallery.html" aria-current="page">Gallery</a></li>
-       <li><a href="resources.html">Resources</a></li>
-       <li><a href="faq.html">FAQ</a></li>
-     </ul>
-   </nav>
+    <!--Gallery 2025 Events-->
+    <h2>Gallery Page</h2>
+    <!-- Section heading for the gallery -->
 
-    <!-- 2025 Events -->
     <h3 class="gallery-title">2025 Events</h3>
     <p class="gallery-description">From meetings at Loaves &amp; Fishes Family Restaurant to gatherings at the Independent Living Center of Mobile.</p>
+    <!-- Brief description of the gallery content -->
+
     <div class="gallery-grid">
+    <!-- Grid layout containing image cards for 2025 -->
       <div class="image-card">
-        <img src="ilcscimeeting1.JPG" alt="July 2025 SCI support meeting at the Independent Living Center of Mobile." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="ilcscimeeting1.JPG" alt="July 2025 SCI support meeting at the Independent Living Center of Mobile." loading="lazy" decoding="async" />
         <p class="image-caption">July 2025 — SCI support meeting at the Independent Living Center of Mobile</p>
       </div>
       <div class="image-card">
-        <img src="ilcscimeeting2.JPG" alt="Attendees at the July 2025 SCI meeting at the Independent Living Center of Mobile." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="ilcscimeeting2.JPG" alt="Attendees at the July 2025 SCI meeting at the Independent Living Center of Mobile." loading="lazy" decoding="async" />
         <p class="image-caption">Another view of the July 2025 meeting at ILC Mobile</p>
       </div>
       <div class="image-card">
-        <img src="tpov.JPG" alt="Participants talking during the July 2025 SCI meeting at ILC Mobile." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="tpov.JPG" alt="Participants talking during the July 2025 SCI meeting at ILC Mobile." loading="lazy" decoding="async" />
         <p class="image-caption">Conversation during the July 2025 meeting</p>
       </div>
       <div class="image-card">
-        <img src="tpov2.JPG" alt="Group photo at the July 2025 SCI meeting at ILC Mobile." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="tpov2.JPG" alt="Group photo at the July 2025 SCI meeting at ILC Mobile." loading="lazy" decoding="async" />
         <p class="image-caption">Group photo — July 2025 meeting</p>
       </div>
       <div class="image-card">
-        <!-- If possible, rename the actual file to remove spaces: may-2025-loaves-fishes-1.jpg -->
-        <img src="May%20meeting%20Loaves%20Fishes.JPG" alt="May 2025 SCI support meeting at Loaves &amp; Fishes Family Restaurant in Wilmer, Alabama." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="May%20meeting%20Loaves%20Fishes.JPG" alt="May 2025 SCI support meeting at Loaves &amp; Fishes Family Restaurant in Wilmer, Alabama." loading="lazy" decoding="async" />
         <p class="image-caption">May 2025 — Loaves &amp; Fishes Family Restaurant</p>
       </div>
       <div class="image-card">
-        <!-- If possible, rename the actual file to remove spaces: may-2025-loaves-fishes-2.jpg -->
-        <img src="May%20meeting%20at%20Loaves%20Fishes2.JPG" alt="Opposite angle of the May 2025 SCI peer meeting at Loaves &amp; Fishes in Wilmer, Alabama." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="May%20meeting%20at%20Loaves%20Fishes2.JPG" alt="Opposite angle of the May 2025 SCI peer meeting at Loaves &amp; Fishes in Wilmer, Alabama." loading="lazy" decoding="async" />
         <p class="image-caption">Another angle — May 2025 Loaves &amp; Fishes</p>
       </div>
     </div>
@@ -135,65 +112,68 @@
     <!-- 2019 Events -->
     <h3 class="gallery-title">2019 Events</h3>
     <p class="gallery-description">Meetings, wheelchair-basketball games, community outreach, and social gatherings from 2019.</p>
+    <!-- Description for gallery section from 2019 -->
+
     <div class="gallery-grid">
+    <!-- Grid for 2019 image collection -->
       <div class="image-card">
-        <img src="retire4.JPG" alt="People for People meeting at Moe's Original BBQ, Mobile, Alabama — June 19, 2019." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="retire4.JPG" alt="People for People meeting at Moe's Original BBQ, Mobile, Alabama — June 19, 2019." loading="lazy" decoding="async" />
         <p class="image-caption">People for People — Moe's Original BBQ — 6/19/2019</p>
       </div>
       <div class="image-card">
-        <img src="adaceleb.png" alt="Mobile City Council ADA Proclamation — July 30, 2019." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="adaceleb.png" alt="Mobile City Council ADA Proclamation — July 30, 2019." loading="lazy" decoding="async" />
         <p class="image-caption">Mobile City Council — ADA Proclamation — 7/30/2019</p>
       </div>
       <div class="image-card">
-        <img src="adaceleb.JPG" alt="Council chamber during ADA Proclamation — July 30, 2019." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="adaceleb.JPG" alt="Council chamber during ADA Proclamation — July 30, 2019." loading="lazy" decoding="async" />
         <p class="image-caption">ADA Proclamation — 7/30/2019</p>
       </div>
       <div class="image-card">
-        <img src="Citycm.JPG" alt="Attendees at ADA Proclamation — July 30, 2019." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="Citycm.JPG" alt="Attendees at ADA Proclamation — July 30, 2019." loading="lazy" decoding="async" />
         <p class="image-caption">ADA Proclamation — 7/30/2019</p>
       </div>
       <div class="image-card">
-        <img src="adaceleb0.png" alt="Group photo after ADA Proclamation — July 30, 2019." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="adaceleb0.png" alt="Group photo after ADA Proclamation — July 30, 2019." loading="lazy" decoding="async" />
         <p class="image-caption">Group photo — ADA Proclamation</p>
       </div>
       <div class="image-card">
-        <img src="Wheelchair basketball event.JPG" alt="Mobile Patriots wheelchair basketball game at James Seals Park &amp; Community Center — August 4, 2019." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="Wheelchair basketball event.JPG" alt="Mobile Patriots wheelchair basketball game at James Seals Park &amp; Community Center — August 4, 2019." loading="lazy" decoding="async" />
         <p class="image-caption">Mobile Patriots — James Seals Park — 8/4/2019</p>
       </div>
       <div class="image-card">
-        <img src="Wheelchair basketball event0.JPG" alt="Mobile Patriots wheelchair basketball game — August 4, 2019." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="Wheelchair basketball event0.JPG" alt="Mobile Patriots wheelchair basketball game — August 4, 2019." loading="lazy" decoding="async" />
         <p class="image-caption">Mobile Patriots — 8/4/2019</p>
       </div>
       <div class="image-card">
-        <img src="Wheelchair basketball event2.JPG" alt="Wheelchair basketball play — August 4, 2019." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="Wheelchair basketball event2.JPG" alt="Wheelchair basketball play — August 4, 2019." loading="lazy" decoding="async" />
         <p class="image-caption">Game play — 8/4/2019</p>
       </div>
       <div class="image-card">
-        <img src="Wheelchair basketball event3.JPG" alt="Players on court — August 4, 2019." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="Wheelchair basketball event3.JPG" alt="Players on court — August 4, 2019." loading="lazy" decoding="async" />
         <p class="image-caption">On the court — 8/4/2019</p>
       </div>
       <div class="image-card">
-        <img src="group members.JPG" alt="Group member and a referee at Mobile Patriots game — August 4, 2019." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="group members.JPG" alt="Group member and a referee at Mobile Patriots game — August 4, 2019." loading="lazy" decoding="async" />
         <p class="image-caption">Group member &amp; referee — 8/4/2019</p>
       </div>
       <div class="image-card">
-        <img src="ilcwheelchairgame0.JPG" alt="Independent Living Center staff booth at Mobile Patriots game — August 4, 2019." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="ilcwheelchairgame0.JPG" alt="Independent Living Center staff booth at Mobile Patriots game — August 4, 2019." loading="lazy" decoding="async" />
         <p class="image-caption">ILC staff booth — 8/4/2019</p>
       </div>
       <div class="image-card">
-        <img src="ilcwheelchairgame1.jpeg" alt="ILC staff at booth during Mobile Patriots game — August 4, 2019." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="ilcwheelchairgame1.jpeg" alt="ILC staff at booth during Mobile Patriots game — August 4, 2019." loading="lazy" decoding="async" />
         <p class="image-caption">ILC staff — 8/4/2019</p>
       </div>
       <div class="image-card">
-        <img src="retire1.JPG" alt="Quo Williams retirement party at a Mexican restaurant." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="retire1.JPG" alt="Quo Williams retirement party at a Mexican restaurant." loading="lazy" decoding="async" />
         <p class="image-caption">Quo Williams retirement party</p>
       </div>
       <div class="image-card">
-        <img src="retire2.JPG" alt="Friends celebrating Quo Williams' retirement." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="retire2.JPG" alt="Friends celebrating Quo Williams' retirement." loading="lazy" decoding="async" />
         <p class="image-caption">Retirement celebration</p>
       </div>
       <div class="image-card">
-        <img src="retire3.JPG" alt="Group photo at Quo Williams' retirement party." loading="lazy" decoding="async" onclick="openModal(this)" />
+        <img src="retire3.JPG" alt="Group photo at Quo Williams' retirement party." loading="lazy" decoding="async" />
         <p class="image-caption">Group photo — retirement party</p>
       </div>
     </div>
@@ -201,146 +181,150 @@
     <!-- 2018 Events -->
     <h3 class="gallery-title">2018 Events</h3>
     <p class="gallery-description">In 2018, disability rights advocates gathered in Montgomery, Alabama, for “The People Can’t Wait” demonstration—calling for access, equity, and independent living.</p>
+
     <div class="gallery-grid">
-    <div class="image-card">
+     <div class="image-card">
   <img src="IMG_2299.JPG" alt="Demonstrators at 'The People Can't Wait' rally, Montgomery, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Rally demonstrators &mdash; 2018</p>
+  <p class="image-caption">Rally demonstrators — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2300.JPG" alt="Advocates holding signs at the rally, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Holding signs &mdash; 2018</p>
+  <p class="image-caption">Holding signs — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2301.JPG" alt="Speakers addressing the crowd, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Speakers address &mdash; 2018</p>
+  <p class="image-caption">Speakers address — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2302.JPG" alt="Marchers moving through Montgomery streets, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Street march &mdash; 2018</p>
+  <p class="image-caption">Street march — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2303.JPG" alt="Participants with banners at the rally, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Banner group &mdash; 2018</p>
+  <p class="image-caption">Banner group — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2304.JPG" alt="Group assembling near the capitol, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Near capitol &mdash; 2018</p>
+  <p class="image-caption">Near capitol — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2305.JPG" alt="Crowd view, 'The People Can't Wait' 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Crowd view &mdash; 2018</p>
+  <p class="image-caption">Crowd view — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2306.JPG" alt="Rally participants listening to speakers, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Listening crowd &mdash; 2018</p>
+  <p class="image-caption">Listening crowd — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2307.JPG" alt="Advocates gathered with signs, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Advocates gather &mdash; 2018</p>
+  <p class="image-caption">Advocates gather — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2308.JPG" alt="Wide view of the rally near the capitol, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Capitol rally &mdash; 2018</p>
+  <p class="image-caption">Capitol rally — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2309.JPG" alt="Interviews and conversations at the event, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Interviews happening &mdash; 2018</p>
+  <p class="image-caption">Interviews happening — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2310.JPG" alt="Participants gathered on the steps, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">On steps &mdash; 2018</p>
+  <p class="image-caption">On steps — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2311.JPG" alt="Close-up of rally signs, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Rally signs &mdash; 2018</p>
+  <p class="image-caption">Rally signs — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2312.JPG" alt="Speakers at podium, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Podium speech &mdash; 2018</p>
+  <p class="image-caption">Podium speech — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2313.JPG" alt="Participants posing for a group photo, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Group photo &mdash; 2018</p>
+  <p class="image-caption">Group photo — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2314.JPG" alt="Advocates and allies at the rally, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Allies rally &mdash; 2018</p>
+  <p class="image-caption">Allies rally — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2315.JPG" alt="Handmade signs highlighting accessibility, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Accessibility signs &mdash; 2018</p>
+  <p class="image-caption">Accessibility signs — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2316.JPG" alt="Crowd cheering during speeches, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Cheering crowd &mdash; 2018</p>
+  <p class="image-caption">Cheering crowd — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2317.JPG" alt="Volunteers coordinating at the event, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Volunteers coordinate &mdash; 2018</p>
+  <p class="image-caption">Volunteers coordinate — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2318.JPG" alt="Participants resting between activities, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Resting between &mdash; 2018</p>
+  <p class="image-caption">Resting between — 2018</p>
 </div>
 <div class="image-card">
   <img src="IMG_2319.JPG" alt="Closing moments of the rally, 2018." loading="lazy" decoding="async">
-  <p class="image-caption">Closing moments &mdash; 2018</p>
+  <p class="image-caption">Closing moments — 2018</p>
 </div>
-
-    </div>
-
-    <!-- Transit Awareness Day 2013 -->
-    <h3 class="gallery-title">Transit Awareness Day 2013</h3>
-    <p class="gallery-description">Presented by Wave Transit System and the Prichard Housing Authority. The Mobile Patriots wheelchair basketball team played an exhibition before a charity game benefiting the March of Dimes.</p>
-    <div class="gallery-grid">
-      <div class="image-card"><img src="Ladies of Wave Transit0.JPG" alt="Two Wave Transit representatives at Transit Awareness Day 2013." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Wave Transit representatives</p></div>
-      <div class="image-card"><img src="Ladies of Wave Transit1.JPG" alt="Two more Wave Transit representatives at the event." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Wave Transit representatives</p></div>
-      <div class="image-card"><img src="Ladies of Wave Transit3.JPG" alt="Wave Transit staff posing for a picture." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Wave Transit staff</p></div>
-      <div class="image-card"><img src="Brian.JPG" alt="Brian Johnson with an Alpha Phi Alpha member." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Brian Johnson with Alpha Phi Alpha member</p></div>
-      <div class="image-card"><img src="Pat Peterson0.JPG" alt="Pat Peterson of the Mobile Patriots wheelchair basketball team." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Pat Peterson — Mobile Patriots</p></div>
-      <div class="image-card"><img src="Wheelchairbasketball1.JPG" alt="Mobile Patriots wheelchair basketball team in action." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Mobile Patriots in action</p></div>
-      <div class="image-card"><img src="Wheelchairbasketball2.JPG" alt="Another play by the Mobile Patriots team." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Game play</p></div>
-      <div class="image-card"><img src="Wheelchairbasketball3.JPG" alt="Mobile Patriots players during the game." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">On the court</p></div>
-      <div class="image-card"><img src="Wheelchairbasketball4.JPG" alt="Players maneuvering on the court." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Court action</p></div>
-      <div class="image-card"><img src="Wheelchairbasketball5.JPG" alt="Shot attempt during the exhibition game." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Shot attempt</p></div>
-      <div class="image-card"><img src="Wheelchairbasketball6.JPG" alt="Fast break by the Mobile Patriots." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Fast break</p></div>
-      <div class="image-card"><img src="Jim Flora Brian Johnson0.JPG" alt="Brian Johnson with Jim Flora and Mr. White." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Brian Johnson, Jim Flora, and Mr. White</p></div>
-      <div class="image-card"><img src="ilc bus driver.JPG" alt="Bus driver Jim Williams smiling at the event." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Jim Williams</p></div>
-      <div class="image-card"><img src="ilc staff.JPG" alt="Jim Williams and a spectator." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Jim Williams with a spectator</p></div>
-      <div class="image-card"><img src="ilc staff1.JPG" alt="Jim Williams with two spectators." loading="lazy" decoding="async" onclick="openModal(this)"><p class="image-caption">Jim Williams with two spectators</p></div>
-    </div>
+</div>
 
     <div class="coming-soon">
       <h3>More photos are coming soon from other events our group has participated in.</h3>
       <p>Stay tuned for updates!</p>
     </div>
-  </div><!-- /.container -->
+  </main>
 
-  <footer role="contentinfo">
-    <p><strong>The Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led) is sponsored by:<br>The Independent Living Center of Mobile</strong></p>
+  <footer class="site-footer" role="contentinfo">
+    <!-- Footer containing sponsorship and contact details -->
+    <p><strong>The Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led) is sponsored by:<br>
+      The Independent Living Center of Mobile</strong></p>
     <p>6750 Howells Ferry Road<br>Mobile, AL 36618</p>
     <p>Jerry Cochran Sr. ☎ <a href="tel:+12513916307">(251) 391-6307</a></p>
     <p><strong>Email:</strong></p>
-    <p><a href="mailto:lesiad@ilcmobile.org">Lesia Dailey &nbsp;•&nbsp; lesiad@ilcmobile.org</a></p>
-    <p><a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin &nbsp;•&nbsp; cyneriaa@ilcmobile.org</a></p>
+    <p>
+      <a href="mailto:lesiad@ilcmobile.org">Lesia Dailey</a> &nbsp;•&nbsp;
+      <a href="mailto:lesiad@ilcmobile.org">lesiad@ilcmobile.org</a>
+    </p>
+    <p>
+      <a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin</a> &nbsp;•&nbsp;
+      <a href="mailto:cyneriaa@ilcmobile.org">cyneriaa@ilcmobile.org</a>
+    </p>
   </footer>
 
-  <!-- Simple modal controls (Esc to close, click bg to close) -->
-  <div id="imageModal" role="dialog" aria-modal="true" aria-label="Image preview">
-    <span class="closeModal" onclick="closeModal()" aria-label="Close">&times;</span>
-    <img id="modalImage" alt="Enlarged view" />
+  <!-- Shared Modal -->
+  <!-- Modal container for enlarged image viewing -->
+  <div id="imgModal" class="modal" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <span class="modal-close" id="modalClose" aria-label="Close">&times;</span>
+    <img class="modal-content" id="modalImg" alt="Enlarged view" />
   </div>
 
   <script>
-    function openModal(img){ 
-      document.getElementById('imageModal').style.display='block';
-      document.getElementById('modalImage').src=img.src;
+    // Open on click (only for pages that opt‑in with .use‑modal on body)
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
+    const closeBtn = document.getElementById('modalClose');
+
+    document.querySelectorAll('.use-modal .image-card img, .use-modal .image-frame img')
+      .forEach(img => {
+        img.addEventListener('click', () => {
+          modal.style.display = 'block';
+          modalImg.src = img.currentSrc || img.src;
+          modalImg.alt = img.alt || 'Enlarged view';
+          modal.setAttribute('aria-hidden', 'false');
+        });
+      });
+
+    function closeModal() {
+      modal.style.display = 'none';
+      modalImg.removeAttribute('src');
+      modal.setAttribute('aria-hidden', 'true');
     }
-    function closeModal(){ document.getElementById('imageModal').style.display='none'; }
-    // close on Esc or background click
-    document.addEventListener('keydown',e=>{ if(e.key==='Escape') closeModal(); });
-    document.getElementById('imageModal').addEventListener('click',e=>{ if(e.target.id==='imageModal') closeModal(); });
-  // Auto-highlight current page in the nav
+    closeBtn.addEventListener('click', closeModal);
+    window.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+    window.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // Auto-highlight current page in the nav
     document.querySelectorAll('.navigation a').forEach(a => {
       const href = a.getAttribute('href');
       if (href && location.pathname.endsWith(href)) {
@@ -348,11 +332,6 @@
       }
     });
   </script>
+  <!-- End of modal and auto-nav script -->
 </body>
 </html>
-
-
-
-
-
-
