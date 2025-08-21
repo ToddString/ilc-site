@@ -18,6 +18,25 @@ body {
 
 /* Make main content area expand to fill available space between header and footer */
 main { flex: 1; }
+/* ---- Mobile hardening & overflow fixes ---- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;           /* prevent white stripe / sideways scroll */
+}
+
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
+  display: block;               /* stops inline gaps and stray overflow */
+}
+
+/* Long links/text should wrap instead of stretching the layout */
+.container, .card-box, .banner-strip, .navigation {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
 
 /* -------------------- CONTAINER -------------------- */
 .container {
@@ -360,16 +379,29 @@ h2,
 /* -------------------- RESPONSIVE -------------------- */
 /* Mobile/tablet styles for screens 600px and smaller */
 @media (max-width: 600px) {
-  .container { padding: 15px; } /* Reduce container padding on small screens */
+  .container { padding: 15px; }
 
-  .navigation ul { flex-direction: column; align-items: stretch; } /* Stack navigation vertically, stretch to full width */
-
-  .navigation li {
-    border-right: 1px solid #000; /* Add right border back for vertical layout */
-    border-radius: 5px; /* Add border radius to individual nav items */
-    margin-bottom: 5px; /* Add space between stacked nav items */
-    width: 100%; /* Make nav items full width */
-    text-align: center; /* Center text within nav items */
+  .navigation ul{
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;              /* space between items */
+    margin: 20px 0;
+    padding-left: 0;
   }
-  .navigation li:not(:last-child) { border-bottom: 1px solid #000; } /* Add bottom border between stacked items */
+
+  /* Add this: make each link fill the row (bigger tap target) */
+  .navigation a{
+    display: block;
+    padding: 10px 14px;    /* optional, keeps the button feel */
+  }
+
+  .navigation li{
+    border-right: 1px solid #000;
+    border-radius: 5px;
+    margin-bottom: 0;      /* gap handles spacing now */
+    width: 100%;
+    text-align: center;
+  }
+
+  .navigation li:not(:last-child){ border-bottom: 1px solid #000; }
 }
