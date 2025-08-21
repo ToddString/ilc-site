@@ -1,230 +1,375 @@
-/* --------------------  GLOBAL ELEMENTS  -------------------- */
-.logo img {
-  width: 150px;
-  height: 150px;
-  border-radius: 5px;
+/* -------------------- GLOBAL ELEMENTS -------------------- */
+/* Reset default browser spacing for html and body elements */
+html, body {
+  height: 100%; /* Make html and body take full viewport height */
+  margin: 0; /* Remove default browser margins */
+  padding: 0; /* Remove default browser padding */
 }
 
-/* Headings that appear below the fold */
-h3, h4, h5, h6 {
-  color: #000;
-  margin-top: 1.5rem;
-  margin-bottom: 0.75rem;
+body {
+  background: rgba(13,62,239,.9); /* Set blue background with 90% opacity */
+  font-family: sans-serif; /* Use system sans-serif font stack */
+  display: flex; /* Enable flexbox layout */
+  flex-direction: column; /* Stack flex items vertically */
+  min-height: 100vh; /* Ensure body is at least full viewport height */
+  text-align: center; /* Center-align all text by default for headings/sitewide text */
+  line-height:1.6; /* Set line height to 1.6 for better readability */
 }
 
-/* --------------------  CONTACT BOX  -------------------- */
-.contact-info {
-  background: #fff;
-  padding: 25px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  margin: 20px auto;
-  text-align: center;
+/* Make main content area expand to fill available space between header and footer */
+main { flex: 1; }
+
+/* -------------------- CONTAINER -------------------- */
+.container {
+  max-width: 900px; /* Limit container width to 900px for optimal reading */
+  margin: 0 auto; /* Center the container horizontally */
+  background: #EBF3FD; /* Light blue background color */
+  padding: 30px; /* Add 30px padding on all sides */
+  border-radius: 10px; /* Round the corners with 10px radius */
+  box-shadow: 0 4px 6px rgba(0,0,0,.1); /* Add subtle shadow (x-offset, y-offset, blur, color) */
+  margin-bottom: 50px; /* Add 50px space between container and footer */
 }
 
-.contact-info p {
-  font-size: 18px;
-  color: #333;
-  margin: 10px 0;
+/* -------------------- FOOTER -------------------- */
+.site-footer {
+  width: 100%; /* Make footer span full width of viewport */
+  background: #EBF3FD; /* Light blue background matching container */
+  padding: 30px 20px; /* 30px top/bottom padding, 20px left/right padding */
+  border-top: 3px solid #0d4bf7; /* Add 3px solid blue border at top of footer */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Add shadow above footer */
+  color: #333; /* Dark gray text color */
+  text-align: center; /* Center-align footer text */
+}
+.site-footer p {
+  max-width: 900px; /* Limit paragraph width to match container */
+  margin: 10px auto; /* 10px top/bottom margin, center horizontally */
+  font-size: 16px; /* Set font size to 16px */
+  line-height: 1.5; /* Set line height for readability */
+}
+.site-footer a {
+  color: #0d4bf7; /* Blue color for footer links */
+  text-decoration: none; /* Remove underlines from links */
+  font-weight: bold; /* Make links bold */
+}
+.site-footer a:hover {
+  color: #ee0a0a; /* Change to red color on hover */
+  text-decoration: underline; /* Add underline on hover */
 }
 
-.contact-info a {
-  color: rgba(13,62,239,0.9);
-  text-decoration: none;
-  transition: color 0.3s;
+/* -------------------- ABOUT PAGE BANNER -------------------- */
+.banner-strip {
+  background: #fff; /* White background */
+  border-radius: 6px; /* Rounded corners with 6px radius */
+  padding: 0.75rem 1rem; /* 12px top/bottom, 16px left/right padding */
+  margin: 1.5rem 0; /* 24px top/bottom margin, 0 left/right */
+  box-shadow: 0 1px 4px rgba(0,0,0,.06); /* Very subtle shadow */
+  text-align: center; /* Center-align text inside banner */
+}
+.banner-strip .highlight-text {
+  color: #BF0000; /* Red color for highlighted text */
+  font-weight: bold; /* Make highlighted text bold */
+  margin: .35rem 0; /* Small margin above and below highlighted text */
 }
 
-.contact-info a:hover {
-  color: #ee0a0a;
-  text-decoration: underline;
+/* Variants used on Resources page */
+.banner-rich {
+  color: #000; /* Black text color */
+  padding: 16px 22px; /* 16px top/bottom, 22px left/right padding */
+  margin: 0 0 22px 0; /* 0 top, 0 right, 22px bottom, 0 left margin */
+  border-radius: 8px; /* Rounded corners with 8px radius */
+  box-shadow: 0 2px 8px rgba(13,75,247,.10); /* Blue-tinted shadow */
+  font-size: 17px; /* Set font size to 17px */
+  font-weight: bold; /* Make text bold */
+  letter-spacing: .1px; /* Add slight letter spacing for readability */
+  max-width: 860px; /* Limit width to 860px */
+  margin-left: auto; /* Center horizontally using auto margins */
+  margin-right: auto; /* Center horizontally using auto margins */
+}
+.banner-alert {
+  color: #000; /* Black text color */
+  padding: 18px 24px; /* 18px top/bottom, 24px left/right padding */
+  margin: 22px 0 18px 0; /* 22px top, 0 right, 18px bottom, 0 left margin */
+  border-radius: 8px; /* Rounded corners with 8px radius */
+  box-shadow: 0 2px 8px rgba(13,75,247,.10); /* Blue-tinted shadow */
+  font-size: 18px; /* Set font size to 18px */
+  font-weight: bold; /* Make text bold */
+  letter-spacing: .2px; /* Add letter spacing for emphasis */
+}
+.banner-alert ul {
+  color: #BF0000; /* Red color for list items */
+  font-size: 17px; /* Set font size to 17px */
+  font-weight: normal; /* Normal font weight (not bold) */
+  line-height: 1.5; /* Line height for readability */
+  margin: 18px 0 0 28px; /* 18px top, 0 right, 0 bottom, 28px left margin */
+  padding: 0; /* Remove default padding */
+  text-align: left; /* Left-align list text */
+  list-style: disc; /* Use disc bullets for list items */
 }
 
-/* --------------------  NAVIGATION  -------------------- */
+/* -------------------- LOGO & HEADINGS -------------------- */
+.logo img { width: 150px; height: 150px; border-radius: 5px; } /* Set logo to 150x150px with rounded corners */
+h1 { font-size: 36px; color: #000; margin-bottom: 20px; } /* Main heading: 36px, black, 20px bottom margin */
+h2 { font-size: 24px; color: #000; margin-bottom: 15px; } /* Secondary heading: 24px, black, 15px bottom margin */
+h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: 0.75rem; } /* Other headings: black with consistent margins */
+
+/* Center-align these specific elements */
+.logo,
+.navigation,
+h1,
+h2,
+.site-footer { text-align: center; }
+
+/* -------------------- NAVIGATION -------------------- */
+.navigation ul {
+  list-style: none; /* Remove bullet points from list */
+  padding: 0; /* Remove default padding */
+  margin: 20px auto; /* 20px top/bottom margin, center horizontally */
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center the navigation items */
+  gap: 0; /* No gap between items (they share borders) */
+}
 .navigation li {
-  background: #fff;
-  border: 1px solid #000;
-  padding: 10px 15px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background: #fff; /* White background for nav items */
+  border: 1px solid #000; /* Black border around each item */
+  padding: 10px 15px; /* 10px top/bottom, 15px left/right padding */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow below nav items */
 }
-
-.navigation li:not(:last-child) {
-  border-right: none;
-}
-
+.navigation li:not(:last-child) { border-right: none; } /* Remove right border except for last item to avoid double borders */
 .navigation a {
-  text-decoration: none;
-  color: #0d4bf7;
-  font-weight: bold;
-  transition: color 0.3s;
+  text-decoration: none; /* Remove underlines from links */
+  color: #0d4bf7; /* Blue color for navigation links */
+  font-weight: bold; /* Make navigation text bold */
+  transition: color 0.3s; /* Smooth color transition on hover (0.3 seconds) */
+}
+.navigation a:hover { color: #ee0a0a; } /* Change to red on hover */
+.navigation a[aria-current="page"] { text-decoration: underline; } /* Underline the current page link */
+/* Focus styles for accessibility */
+.navigation a:focus-visible,
+.site-footer a:focus-visible {
+  outline: 3px solid #0d4bf7; /* Blue outline when focused via keyboard */
+  outline-offset: 2px; /* 2px space between element and outline */
+  border-radius: 4px; /* Rounded outline corners */
 }
 
-.navigation a:hover {
-  color: #ee0a0a;
-}
-
-/* --------------------  FOOTER (shared site-wide)  -------------------- */
-footer {
-  width: calc(100% + 40px);  /* extend past side padding */
-  margin: 20px -20px -20px;
-  background: #EBF3FD;
-  padding: 20px 10px;
-  border-top: 3px solid #0d4bf7;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  text-align: center;
-  border-radius: 0;
-  color: #333;
-}
-
-footer p {
-  margin: 5px 0;
-  font-size: 16px;
-}
-
-footer a {
-  color: #0d4bf7;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-footer a:hover {
-  color: #ee0a0a;
-}
-/* Keep nav + footer consistent site-wide */
-.navigation, .navigation *, footer, footer * { font-family: inherit; }
-
-.navigation a, footer a { 
-  font-weight: 700; 
-  text-decoration: none; 
-}
-
-/* Prevent purple visited links */
-.navigation a:link,
-.navigation a:visited,
-footer a:link,
-footer a:visited {
-  color: #0d4bf7;
-}
-
-.navigation a:hover,
-footer a:hover { color: #ee0a0a; }
-
-/* Optional: visible active link */
-.navigation a[aria-current="page"] { text-decoration: underline; outline-offset: 2px; }
-
-
-/* --------------------  MISC. UTILITY & COMPONENTS  -------------------- */
-/* Buttons, highlight text, cards, etc., copied from your original inline block */
-
-.highlight-text {
-  color: #f40b0b;
-  font-weight: bold;
-  text-align: center;
-}
-
-/* Cards / boxes */
+/* -------------------- CONTENT CARDS -------------------- */
 .card-box {
-  background: #fff;
-  padding: 20px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  margin: 20px 0;
-  text-align: left;
+  background: #fff; /* White background for content cards */
+  padding: 20px; /* 20px padding on all sides */
+  border-radius: 6px; /* Rounded corners with 6px radius */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Shadow for depth */
+  margin: 20px 20px; /* 20px margin on all sides */
+  text-align: center; /* Center-align text (matches index.html usage) */
+  line-height:1.6; /* Line height for readability */
 }
-
 .card-box p,
 .card-box li {
-  font-size: 16px;
-  color: #333;
+  font-size: 16px; /* Set font size for paragraphs and list items */
+  color: #333; /* Dark gray text color */
+}
+/* Slightly stronger box shadow variant for emphasis (used on Resources Overview) */
+.card-box--emphasis { box-shadow: 0 2px 8px rgba(13,75,247,.10); }
+
+/* -------------------- CONTACT PAGE: CONTACT BOX -------------------- */
+.contact-info {
+  background: #fff; /* White background for contact information box */
+  padding: 25px; /* 25px padding on all sides */
+  border-radius: 8px; /* Rounded corners with 8px radius */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Shadow for depth */
+  margin: 20px auto; /* 20px top/bottom margin, center horizontally */
+  text-align: center; /* Center-align contact information */
+}
+.contact-info p {
+  font-size: 18px; /* Slightly larger font size for contact info */
+  color: #333; /* Dark gray text color */
+  margin: 10px 0; /* 10px top/bottom margin */
+}
+.contact-info a {
+  color: rgba(13,62,239,0.9); /* Blue color with 90% opacity for contact links */
+  text-decoration: none; /* Remove underlines from links */
+  transition: color 0.3s; /* Smooth color transition on hover */
+}
+.contact-info a:hover {
+  color: #ee0a0a; /* Change to red on hover */
+  text-decoration: underline; /* Add underline on hover */
 }
 
-/* Image gallery frames (if used outside the critical area) */
-.image-frame {
-  background: #fff;
-  padding: 8px;
-  border-radius: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+/* -------------------- IMAGE PRESENTATION -------------------- */
+/* Single image cards used on index page and other pages */
+.image-card {
+  background: #fff; /* White background for image containers */
+  border-radius: 8px; /* Rounded corners with 8px radius */
+  padding: 15px; /* 15px padding around the image */
+  margin: 20px auto; /* 20px top/bottom margin, center horizontally */
+  max-width: 800px; /* Limit width to 800px */
+  box-shadow: 0 2px 4px rgba(0,0,0,.1); /* Subtle shadow for depth */
 }
+.image-card img {
+  width: 100%; /* Make images fill their container width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners on images */
+  cursor: pointer; /* Show pointer cursor on modal-enabled pages */
+}
+/* Pages that don't use modal (e.g., About page) show default cursor */
+.no-modal .image-card img { cursor: default; }
 
+/* Framed thumbnail gallery used on About page */
 .image-gallery {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 20px 0;
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the gallery items */
+  flex-wrap: wrap; /* Allow items to wrap to new lines */
+  gap: 15px; /* 15px space between gallery items */
+  margin: 20px 0; /* 20px top/bottom margin */
+}
+.image-frame {
+  background: #fff; /* White background for image frames */
+  padding: 8px; /* 8px padding around framed images */
+  border-radius: 6px; /* Rounded corners on frames */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Shadow for depth */
+}
+.image-frame img {
+  display: block; /* Remove inline spacing */
+  max-width: 100%; /* Ensure image doesn't exceed frame width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 5px; /* Rounded corners on framed images */
 }
 
-/* --------------------  IMAGE CARDS (shared)  -------------------- */
-.image-card{
-  background:#fff;
-  border-radius:8px;
-  padding:15px;
-  margin:20px auto;
-  max-width:800px;
-  box-shadow:0 2px 4px rgba(0,0,0,.1);
-}
-.image-card img{
-  width:100%;
-  height:auto;
-  border-radius:5px;
-  cursor:pointer;
+/* Pages that DO use the modal — show hand cursor on all gallery images */
+.use-modal .image-card img,
+.use-modal .image-frame img {
+  cursor: pointer; /* Show pointer cursor to indicate clickable images */
 }
 
-/* --------------------  MODAL (shared)  -------------------- */
-.modal{
-  display:none;
-  position:fixed;
-  z-index:999;
-  padding-top:60px;
-  left:0;top:0;width:100%;height:100%;
-  overflow:auto;
-  background:rgba(0,0,0,.9);
+/* -------------------- MODAL (used on pages that need it) -------------------- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed positioning relative to viewport */
+  z-index: 999; /* High z-index to appear above all other content */
+  padding-top: 60px; /* 60px padding from top of viewport */
+  left: 0; top: 0; width: 100%; height: 100%; /* Cover entire viewport */
+  overflow: auto; /* Allow scrolling if content is too large */
+  background: rgba(0,0,0,.9); /* Semi-transparent black background */
 }
-.modal-content{
-  margin:auto;
-  display:block;
-  max-width:90%;
-  max-height:80%;
-  animation:zoom .3s;
+.modal-content {
+  margin: auto; /* Center the modal content */
+  display: block; /* Display as block element */
+  max-width: 90%; /* Limit width to 90% of viewport */
+  max-height: 80%; /* Limit height to 80% of viewport */
+  animation: zoom .3s; /* Apply zoom animation over 0.3 seconds */
 }
-@keyframes zoom{
-  from{transform:scale(.7);opacity:0;}
-  to  {transform:scale(1);opacity:1;}
+/* Keyframe animation for modal entrance */
+@keyframes zoom {
+  from { transform: scale(0.7); opacity: 0; } /* Start small and transparent */
+  to   { transform: scale(1); opacity: 1; } /* End at full size and opacity */
 }
-.modal-close{
-  position:absolute;top:20px;right:35px;
-  color:#fff;font-size:40px;font-weight:bold;
-  cursor:pointer;
+.modal-close {
+  position: absolute; top: 20px; right: 35px; /* Position close button in top-right */
+  color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; /* White, large, bold X */
 }
-.modal-close:hover{color:#f00;}
+.modal-close:hover { color: #f00; } /* Turn red on hover */
 
+/* -------------------- GALLERY PAGE (grid layout & captions) -------------------- */
+.gallery-title { font-size: 18px; color: #000; margin-top: 20px; } /* Title styling for gallery sections */
+.gallery-description { font-size: 16px; color: #000; margin-bottom: 20px; } /* Description text for galleries */
 
-/* --------------------  RESPONSIVE TWEAKS  -------------------- */
+.gallery-grid {
+  /* Empty line preserved for spacing */
+  max-width: 1000px; /* Limit gallery width to 1000px */
+  margin: 0 auto; /* Center the gallery horizontally */
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns: minimum 300px, auto-fit as many as possible */
+  gap: 20px; /* 20px space between grid items */
+  margin-top: 30px; /* 30px margin above the gallery */
+}
+.gallery-grid .image-card { margin: 0; } /* Remove margin from image cards within gallery grid */
+.gallery-grid .image-card img {
+  height: 280px; /* Set fixed height of 280px for all gallery images */
+  object-fit: cover; /* Crop images to fit dimensions while maintaining aspect ratio */
+  object-position: center top; /* Position crop from center-top of image */
+}
+.image-caption {
+  font-size: 12px; /* Small font size for image captions */
+  color: #666; /* Medium gray color for captions */
+  margin: 5px 0; /* 5px top/bottom margin for captions */
+}
+
+/* -------------------- FAQ PAGE (accordion + permalinks) -------------------- */
+.faq-list summary .permalink{
+  font-weight: normal; /* Normal weight for permalink text */
+  font-size: 14px; /* Smaller font size for permalinks */
+  margin-left: 8px; /* 8px space between summary text and permalink */
+  text-decoration: none; /* Remove underline from permalink */
+  opacity: .65; /* Make permalink semi-transparent by default */
+}
+/* Show permalink more prominently on hover or focus */
+.faq-list summary:hover .permalink,
+.faq-list summary:focus-within .permalink { opacity: 1; }
+
+.faq-list details {
+  background: #fff; /* White background for FAQ items */
+  border-radius: 6px; /* Rounded corners */
+  margin: 15px 0; /* 15px top/bottom margin between FAQ items */
+  box-shadow: 0 2px 4px rgba(0,0,0,.1); /* Subtle shadow */
+}
+.faq-list summary {
+  font-weight: bold; /* Bold text for FAQ questions */
+  font-size: 18px; /* Larger font size for questions */
+  padding: 15px; /* 15px padding around clickable summary */
+  cursor: pointer; /* Show pointer cursor to indicate clickable */
+  color: #0d4bf7; /* Blue color for closed FAQ items */
+}
+.faq-list details[open] summary { color: #ee0a0a; } /* Red color when FAQ item is open */
+.faq-list details p {
+  padding: 0 15px 15px; /* No top padding, 15px left/right/bottom padding */
+  font-size: 16px; /* Font size for FAQ answers */
+  color: #333; /* Dark gray color for answer text */
+  text-align: left; /* Left-align answer text */
+}
+.faq-list a {
+  color: #0d4bf7; /* Blue color for links within FAQ answers */
+  text-decoration: none; /* Remove underlines from links */
+  font-weight: bold; /* Make links bold */
+}
+.faq-list a:hover {
+  color: #ee0a0a; /* Red color on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* -------------------- RESOURCES PAGE (scoped lists/links) -------------------- */
+.resources ul {
+  list-style: none; /* Remove bullet points from resource lists */
+  text-align: left; /* Left-align resource list text */
+  margin: 0 auto 25px; /* No top margin, center horizontally, 25px bottom margin */
+  max-width: 800px; /* Limit list width to 800px */
+  padding-left: 20px; /* 20px left padding for indentation */
+}
+.resources li {
+  margin: 8px 0; /* 8px top/bottom margin between list items */
+  font-size: 16px; /* Font size for resource items */
+  color: #333; /* Dark gray color for text */
+}
+.resources a {
+  color: #0d4bf7; /* Blue color for resource links */
+  font-weight: bold; /* Make resource links bold */
+  text-decoration: none; /* Remove underlines from links */
+}
+.resources a:hover {
+  color: #ee0a0a; /* Red color on hover */
+  text-decoration: underline; /* Add underline on hover */
+}
+
+/* -------------------- RESPONSIVE -------------------- */
+/* Mobile/tablet styles for screens 600px and smaller */
 @media (max-width: 600px) {
-  .container {
-    padding: 15px;
-  }
+  .container { padding: 15px; } /* Reduce container padding on small screens */
 
-  /* stacked nav on mobile */
-  .navigation ul {
-    flex-direction: column;
-    align-items: stretch;
-  }
+  .navigation ul { flex-direction: column; align-items: stretch; } /* Stack navigation vertically, stretch to full width */
 
   .navigation li {
-    border-right: 1px solid #000;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    width: 100%;
-    text-align: center;
-    box-sizing: border-box;
+    border-right: 1px solid #000; /* Add right border back for vertical layout */
+    border-radius: 5px; /* Add border radius to individual nav items */
+    margin-bottom: 5px; /* Add space between stacked nav items */
+    width: 100%; /* Make nav items full width */
+    text-align: center; /* Center text within nav items */
   }
-
-  .navigation li:not(:last-child) {
-    border-bottom: 1px solid #000;
-  }
-
-  .contact-info p {
-    font-size: 16px;
-  }
+  .navigation li:not(:last-child) { border-bottom: 1px solid #000; } /* Add bottom border between stacked items */
 }
-
