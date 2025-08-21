@@ -1,35 +1,28 @@
-/* -------------------- GLOBAL ELEMENTS -------------------- */
-/* Reset default browser spacing for html and body elements */
-html, body {
-  height: 100%; /* Make html and body take full viewport height */
-  margin: 0; /* Remove default browser margins */
-  padding: 0; /* Remove default browser padding */
-}
-
-body {
-  background: rgba(13,62,239,.9); /* Set blue background with 90% opacity */
-  font-family: sans-serif; /* Use system sans-serif font stack */
-  display: flex; /* Enable flexbox layout */
-  flex-direction: column; /* Stack flex items vertically */
-  min-height: 100vh; /* Ensure body is at least full viewport height */
-  text-align: center; /* Center-align all text by default for headings/sitewide text */
-  line-height:1.6; /* Set line height to 1.6 for better readability */
-}
-
-/* Make main content area expand to fill available space between header and footer */
-main { flex: 1; }
-/* ---- Mobile hardening & overflow fixes ---- */
 *, *::before, *::after { box-sizing: border-box; }
 
 html, body {
+  height: 100%;
   width: 100%;
-  overflow-x: hidden;           /* prevent white stripe / sideways scroll */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;                 /* prevent sideways scroll */
 }
 
+body {
+  background: rgba(13,62,239,.9);
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Media should never exceed the screen width */
 img, iframe, video {
   max-width: 100%;
   height: auto;
-  display: block;               /* stops inline gaps and stray overflow */
+  display: block;
 }
 
 /* Long links/text should wrap instead of stretching the layout */
@@ -38,15 +31,20 @@ img, iframe, video {
   word-break: break-word;
 }
 
-/* -------------------- CONTAINER -------------------- */
+/* allow main to fill remaining height between header & footer */
+main { flex: 1; }
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
 .container {
-  max-width: 900px; /* Limit container width to 900px for optimal reading */
-  margin: 0 auto; /* Center the container horizontally */
-  background: #EBF3FD; /* Light blue background color */
-  padding: 30px; /* Add 30px padding on all sides */
-  border-radius: 10px; /* Round the corners with 10px radius */
-  box-shadow: 0 4px 6px rgba(0,0,0,.1); /* Add subtle shadow (x-offset, y-offset, blur, color) */
-  margin-bottom: 50px; /* Add 50px space between container and footer */
+  max-width: 900px;
+  margin: 0 auto;
+  background: #EBF3FD;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,.1);
+  margin-bottom: 50px;
 }
 
 /* -------------------- FOOTER -------------------- */
@@ -380,11 +378,13 @@ h2,
 /* Mobile/tablet styles for screens 600px and smaller */
 /* put this inside your existing @media (max-width: 600px) { ... } block */
 @media (max-width: 600px) {
+  /* Add equal blue gutters on both sides of the content */
   .container{
-    padding: 15px;              /* you already have this */
-    margin: 0 12px 50px;        /* ⬅️ NEW: equal left/right gutter = 12px */
+    padding: 15px;              /* you already had this */
+    margin: 0 12px 50px;        /* ⬅️ NEW: left/right gutters */
   }
 
+  /* Mobile nav — full-width stacked buttons with big tap targets */
   .navigation ul{
     flex-direction: column;
     align-items: stretch;
@@ -392,7 +392,24 @@ h2,
     margin: 20px 0;
     padding: 0;
   }
-  .navigation li{ width: 100%; border-radius: 8px; }
-  .navigation a{ display: block; padding: 12px 16px; } /* bigger tap target */
+  .navigation li{
+    width: 100%;
+    border-radius: 8px;
+    border-right: 1px solid #000;         /* keep your border look */
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .navigation li:not(:last-child){
+    border-bottom: 1px solid #000;
+  }
+  .navigation a{
+    display: block;                        /* ⬅️ makes the whole row clickable */
+    padding: 12px 16px;                    /* bigger tap target */
+  }
+
+  /* Optional: give the footer the same side gutters on mobile */
+  /* .site-footer { margin: 0 12px; border-radius: 10px; } */
 }
+
+
 
