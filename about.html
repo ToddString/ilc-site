@@ -1,14 +1,33 @@
 <!DOCTYPE html>
+<!-- Declares the document as an HTML5 document -->
+
 <html lang="en">
+<!-- Root HTML tag with language attribute set to English -->
+
 <head>
   <meta charset="UTF-8" />
+  <!-- Sets character encoding to UTF-8 for wide character support -->
+
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Makes the layout responsive on different device sizes -->
+
   <link rel="canonical" href="https://spinalinjurysupportmobileal.org/about.html" />
+  <!-- Specifies the preferred URL for SEO -->
+
   <title>About Us | Spinal Injury Support Group – Mobile, AL</title>
+  <!-- Page title shown in browser tabs and search results -->
+
   <meta name="description" content="Who we are, our mission, and how the Spinal Injury Support Group in Mobile, Alabama helps individuals and families living with SCI." />
+  <!-- Meta description used by search engines -->
+
   <meta name="robots" content="index,follow,max-image-preview:large" />
+  <!-- Tells search engines to index this page and follow its links -->
+
   <meta name="theme-color" content="#0d4bf7" />
+  <!-- Sets the browser theme color on supported mobile browsers -->
+
   <!-- Open Graph -->
+  <!-- Metadata for social sharing previews (e.g. Facebook) -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:site_name" content="Spinal Injury Support Group – Mobile, AL" />
@@ -17,318 +36,194 @@
   <meta property="og:description" content="Who we are, our mission, and how the Spinal Injury Support Group in Mobile, Alabama helps individuals and families living with SCI." />
   <meta property="og:image" content="https://spinalinjurysupportmobileal.org/logo.webp" />
   <meta property="og:image:alt" content="Independent Living Center of Mobile logo" />
-  <!-- Optional if you know them -->
-  <!-- <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" /> -->
 
   <!-- Twitter -->
+  <!-- Metadata for Twitter sharing -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="About Us | Spinal Injury Support Group – Mobile, AL" />
   <meta name="twitter:description" content="Who we are, our mission, and how the Spinal Injury Support Group in Mobile, Alabama helps individuals and families living with SCI." />
   <meta name="twitter:image" content="https://spinalinjurysupportmobileal.org/logo.webp" />
 
-  <!-- Organization schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "name": "Spinal Injury Support Group",
-      "url": "https://spinalinjurysupportmobileal.org/",
-      "logo": "https://spinalinjurysupportmobileal.org/logo.webp",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-251-460-0301",
-        "contactType": "information",
-        "areaServed": "US-AL"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "6750 Howells Ferry Road",
-        "addressLocality": "Mobile",
-        "addressRegion": "AL",
-        "postalCode": "36618",
-        "addressCountry": "US"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://spinalinjurysupportmobileal.org/#website",
-      "name": "Spinal Injury Support Group – Mobile, Alabama",
-      "url": "https://spinalinjurysupportmobileal.org/"
-    },
-    {
-      "@type": "AboutPage",
-      "@id": "https://spinalinjurysupportmobileal.org/about.html#aboutpage",
-      "url": "https://spinalinjurysupportmobileal.org/about.html",
-      "name": "About Us | Spinal Injury Support Group – Mobile, AL",
-      "isPartOf": { "@id": "https://spinalinjurysupportmobileal.org/#website" },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://spinalinjurysupportmobileal.org/logo.webp"
-      },
-      "description": "Who we are, our mission, and how the Spinal Injury Support Group in Mobile, Alabama helps individuals and families living with SCI."
-    },
-    {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://spinalinjurysupportmobileal.org/"
+  <!-- Schema -->
+  <!-- Structured data using JSON-LD for rich search results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Spinal Injury Support Group",
+        "url": "https://spinalinjurysupportmobileal.org/",
+        "logo": "https://spinalinjurysupportmobileal.org/logo.webp",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-251-460-0301",
+          "contactType": "information",
+          "areaServed": "US-AL"
         },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "About",
-          "item": "https://spinalinjurysupportmobileal.org/about.html"
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6750 Howells Ferry Road",
+          "addressLocality": "Mobile",
+          "addressRegion": "AL",
+          "postalCode": "36618",
+          "addressCountry": "US"
         }
-      ]
-    }
-  ]
-}
-</script>  
-
-<link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="styles.css"></noscript>
-  
-  <style>
-/* ------------- Global layout & colours -------------------------------- */
-body{
-  margin:0;
-  padding:20px;
-  font-family:Arial, sans-serif;
-  background:rgba(13,62,239,.9);   /* blue background */
-  background-size:cover;
-  background-attachment:fixed;
-  text-align:center;
-  line-height:1.6;
-  color:#000;                     /* default text on blue until card loads */
-}
-
-.container{
-  max-width:900px;
-  margin:0 auto;
-  background:#EBF3FD;             /* pale-blue card */
-  padding:30px;
-  border-radius:10px;
-  box-shadow:0 4px 6px rgba(0,0,0,.1);
-}
-
-/* Headings -------------------------------------------------------------- */
-h1,h2{color:#000;margin-bottom:20px}
-h1{font-size:36px}
-h2{font-size:24px}
-
-/* Card / box ------------------------------------------------------------ */
-.card-box{
-  background:#fff;
-  padding:20px;
-  border-radius:6px;
-  box-shadow:0 2px 6px rgba(0,0,0,.15);
-  margin:20px 0;
-  text-align:left;
-}
-.card-box p,
-.card-box li{font-size:16px;color:#333}
-
-/* =====  Single pale-white banner card  ===== */
-.banner-strip{
-  background:#FFFFFF;          /* pale-white card */
-  border-radius:6px;
-  padding:0.75rem 1rem;
-  margin:1.5rem 0;             /* space above & below */
-  box-shadow:0 1px 4px rgba(0,0,0,.06);
-  text-align:center;
-}
-
-/* red lines inside the banner — no extra background */
-.banner-strip .highlight-text{
-  background:none;             /* kill any previous bg */
-  color:#BF0000;               /* WCAG-AA contrast on white */
-  font-weight:bold;
-  margin:.35rem 0;             /* tighten vertical gap */
-  padding:0;                   /* strip old padding      */
-}
-
-
-/* Image gallery --------------------------------------------------------- */
-.image-gallery{
-  display:flex;
-  justify-content:center;
-  flex-wrap:wrap;
-  gap:15px;
-  margin:20px 0;
-}
-.image-frame{
-  background:#fff;
-  padding:8px;
-  border-radius:6px;
-  box-shadow:0 2px 6px rgba(0,0,0,.15);
-}
-img{
-  max-width:100%;
-  height:auto;
-  margin:10px;
-  border-radius:5px;
-}
-
-/* Navigation ------------------------------------------------------------ */
-.navigation ul{
-  list-style:none;
-  padding:0;
-  display:flex;
-  justify-content:center;
-  margin:20px 0;
-}
-.navigation li{
-  background:#fff;
-  border:1px solid #000;
-  padding:10px 15px;
-  box-shadow:0 2px 4px rgba(0,0,0,.1);
-}
-.navigation li:not(:last-child){border-right:none}
-.navigation a{
-  text-decoration:none;
-  color:#0d4bf7;
-  font-weight:bold;
-  transition:color .3s;
-}
-.navigation a:hover{color:#ee0a0a}
-
-/* Footer --------------------------------------------------------------- */
-footer{
-  width:calc(100% + 40px);
-  margin:20px -20px -20px;
-  background:#EBF3FD;
-  padding:20px 10px;
-  border-top:3px solid #0d4bf7;
-  box-shadow:0 2px 6px rgba(0,0,0,.15);
-  text-align:center;
-  border-radius:0;
-  color:#333;
-}
-footer p{margin:5px 0;font-size:16px}
-footer a{color:#0d4bf7;text-decoration:none;font-weight:bold}
-footer a:hover{color:#ee0a0a}
-
-/* -------------------  Responsive tweaks ------------------------------ */
-@media(max-width:600px){
-  .container{padding:15px}
-  .image-gallery{flex-direction:column;align-items:center}
-
-  .navigation ul{flex-direction:column;align-items:stretch}
-  .navigation li{
-    border-right:1px solid #000;
-    border-bottom:1px solid #000;
-    border-radius:5px;
-    margin-bottom:5px;
-    width:100%;
-    text-align:center;
-    box-sizing:border-box;
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://spinalinjurysupportmobileal.org/#website",
+        "name": "Spinal Injury Support Group – Mobile, Alabama",
+        "url": "https://spinalinjurysupportmobileal.org/"
+      },
+      {
+        "@type": "AboutPage",
+        "@id": "https://spinalinjurysupportmobileal.org/about.html#aboutpage",
+        "url": "https://spinalinjurysupportmobileal.org/about.html",
+        "name": "About Us | Spinal Injury Support Group – Mobile, AL",
+        "isPartOf": { "@id": "https://spinalinjurysupportmobileal.org/#website" },
+        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://spinalinjurysupportmobileal.org/logo.webp" },
+        "description": "Who we are, our mission, and how the Spinal Injury Support Group in Mobile, Alabama helps individuals and families living with SCI."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spinalinjurysupportmobileal.org/" },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": "https://spinalinjurysupportmobileal.org/about.html" }
+        ]
+      }
+    ]
   }
-}
-</style>
+  </script>
 
+  <!-- Site styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <div class="container">
-    <h1>About the Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led)</h1>
+<body class="no-modal">
+  <!-- Body element with optional "no-modal" class -->
+
+  <main class="container">
+    <!-- Main content container -->
+
+    <h1>Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led)</h1>
+    <!-- Page headline -->
+
     <h2>Sponsored by:</h2>
+    <!-- Subheading -->
+
     <div class="logo">
       <img src="logo.webp" width="150" height="150"
-        alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" />
+           alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove" />
+      <!-- Organization logo image with alt text for accessibility -->
     </div>
 
-    <div class="card-box">
-      <h2>About Us</h2>
-      <p>We are members of the Mobile, Alabama community who understand the daily challenges of living with
-        spinal cord injuries. Our peer-led group supports SCI survivors and their caregivers through
-        fellowship, education, and advocacy.</p>
-        
-      <p>Our mission is to create a welcoming environment where individuals can share experiences, learn
-        coping strategies, and find hope and strength together. We recognize that people who haven't
-        experienced a spinal cord injury can’t fully understand its impact—that’s why our lived experience
-        is so valuable.</p>
-    </div>
-      
-    <!-- Image Gallery -->
-    <div class="image-gallery">
-      <div class="image-frame">
-      <img src="img/320/5.webp"
-      srcset="img/320/5.webp 320w, img/640/5.webp 640w"
-      sizes="(max-width:600px) 100vw, 400px"
-      width="400" height="300" loading="lazy"
-        alt="Volunteers and Mobile Wave Transit staff at wheelchair-basketball fundraiser">
-    </div>
-      <div class="image-frame">
-        <img src="img/320/1.webp"
-        srcset="img/320/1.webp 320w, img/640/1.webp 640w"
-        sizes="(max-width:600px) 100vw, 224px"
-        width="224" height="299" loading="lazy"
-        alt="Brian Johnson cheering courtside at wheelchair-basketball game">
-      </div>
-      <div class="image-frame">
-        <img src="img/320/4.webp"
-        srcset="img/320/4.webp 320w, img/640/4.webp 640w"
-        sizes="(max-width:600px) 100vw, 240px"
-        width="240" height="320" loading="lazy"
-        alt="Pat Peterson smiling during peer-support outing">
-      </div>
-      <div class="image-frame">
-        <img src="img/320/2.webp"
-        srcset="img/320/2.webp 320w, img/640/2.webp 640w"
-        sizes="(max-width:600px) 100vw, 400px"
-        width="400" height="322" loading="lazy"
-        alt="Full-court wheelchair basketball action sponsored by Mobile Wave Transit">
-      </div>
-    </div> <!-- END .image-gallery -->
-    
-   <!--  Banner strip -->
-     <div class="banner-strip">
-      <p class="highlight-text"> IF YOU HAVE A SPINAL CORD INJURY, KNOW THAT YOU ARE NOT ALONE. PLEASE JOIN US AND SEE HOW OTHERS DEAL WITH THEIR INJURY.</p>
-      <p class="highlight-text"> YOU DO HAVE A VOICE!!!</p>
-    </div>
-
-    <!-- Goals Section -->
-    <div class="card-box" style="text-align: center;">
-      <h2>Our Group Activities and Discussions Include:</h2>
-      <p>Fellowship – meet and socialize with others living with spinal injuries</p>
-      <p>Coping – develop strategies for managing conditions related to spinal injury</p>
-      <p>Dealing – discuss and plan for life after spinal injuries</p>
-    </div>
-
-    <!-- Navigation Section -->
+    <!-- Primary navigation -->
     <nav class="navigation" aria-label="Primary">
       <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="about.html" aria-current="page">About</a></li>
+        <li><a href="index.html">Home</a></li>
+        <!-- Link to homepage -->
+        <li><a aria-current="page" href="about.html">About</a></li>
+        <!-- Current page link -->
         <li><a href="contact.html">Contact</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="faq.html">FAQ</a></li>
+        <li><a href="people4people.html">People4People</a></li>
       </ul>
     </nav>
-  </div>
-  <!-- Footer outside main container -->
-  <footer>
-    <p><strong>Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led) is sponsored by:<br>
+
+    <section class="card-box">
+      <!-- Section container for About content -->
+      <h2>About Us</h2>
+      <p>We are members of the Mobile, Alabama community who understand the daily challenges of living with
+        spinal cord injuries. Our peer-led group supports SCI survivors and their caregivers through
+        fellowship, education, and advocacy.</p>
+      <p>Our mission is to create a welcoming environment where individuals can share experiences, learn
+        coping strategies, and find hope and strength together. We recognize that people who haven't
+        experienced a spinal cord injury can’t fully understand its impact—that’s why our lived experience
+        is so valuable.</p>
+    </section>
+
+    <!-- Original framed thumbnail gallery (no modal on this page) -->
+    <div class="image-gallery">
+      <!-- Image gallery container -->
+      <div class="image-frame">
+        <img
+          src="img/320/5.webp"
+          srcset="img/320/5.webp 320w, img/640/5.webp 640w"
+          sizes="(max-width:600px) 100vw, 400px"
+          width="400" height="300" loading="lazy"
+          alt="Volunteers and Mobile Wave Transit staff at wheelchair-basketball fundraiser">
+        <!-- Responsive image with lazy loading -->
+      </div>
+      <div class="image-frame">
+        <img
+          src="img/320/1.webp"
+          srcset="img/320/1.webp 320w, img/640/1.webp 640w"
+          sizes="(max-width:600px) 100vw, 224px"
+          width="224" height="299" loading="lazy"
+          alt="Brian Johnson cheering courtside at wheelchair-basketball game">
+      </div>
+      <div class="image-frame">
+        <img
+          src="img/320/4.webp"
+          srcset="img/320/4.webp 320w, img/640/4.webp 640w"
+          sizes="(max-width:600px) 100vw, 240px"
+          width="240" height="320" loading="lazy"
+          alt="Pat Peterson smiling during peer-support outing">
+      </div>
+      <div class="image-frame">
+        <img
+          src="img/320/2.webp"
+          srcset="img/320/2.webp 320w, img/640/2.webp 640w"
+          sizes="(max-width:600px) 100vw, 400px"
+          width="400" height="322" loading="lazy"
+          alt="Full-court wheelchair basketball action sponsored by Mobile Wave Transit">
+      </div>
+    </div>
+
+    <!-- Banner strip -->
+    <div class="banner-strip">
+      <!-- Section with bold motivational messages -->
+      <p class="highlight-text">IF YOU HAVE A SPINAL CORD INJURY, KNOW THAT YOU ARE NOT ALONE. PLEASE JOIN US AND SEE HOW OTHERS DEAL WITH THEIR INJURY.</p>
+      <p class="highlight-text">YOU DO HAVE A VOICE!!!</p>
+    </div>
+
+    <!-- Goals -->
+    <section class="card-box">
+      <!-- Section outlining group activities -->
+      <h2>Our Group Activities and Discussions Include:</h2>
+      <p>Fellowship – meet and socialize with others living with spinal injuries</p>
+      <p>Coping – develop strategies for managing conditions related to spinal injury</p>
+      <p>Dealing – discuss and plan for life after spinal injuries</p>
+    </section>
+  </main>
+
+  <!-- Footer outside container -->
+  <footer class="site-footer" role="contentinfo">
+    <!-- Footer content with contact info -->
+    <p><strong>The Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led) is sponsored by:<br>
       The Independent Living Center of Mobile</strong></p>
-    <p>6750 Howells Ferry Road<br>
-      Mobile, AL 36618</p>
+    <p>6750 Howells Ferry Road<br>Mobile, AL 36618</p>
     <p>Jerry Cochran Sr. ☎ <a href="tel:+12513916307">(251) 391-6307</a></p>
     <p><strong>Email:</strong></p>
     <p>
-      <a href="mailto:lesiad@ilcmobile.org">Lesia Dailey &nbsp;•&nbsp; lesiad@ilcmobile.org</a>
+      <a href="mailto:lesiad@ilcmobile.org">Lesia Dailey</a> &nbsp;•&nbsp;
+      <a href="mailto:lesiad@ilcmobile.org">lesiad@ilcmobile.org</a>
     </p>
     <p>
-      <a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin &nbsp;•&nbsp; cyneriaa@ilcmobile.org</a>
+      <a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin</a> &nbsp;•&nbsp;
+      <a href="mailto:cyneriaa@ilcmobile.org">cyneriaa@ilcmobile.org</a>
     </p>
   </footer>
 </body>
 </html>
+
+
+
+
+
+
 
 
 
