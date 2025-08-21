@@ -1,14 +1,28 @@
 <!DOCTYPE html>
+<!-- Declares the document as HTML5 -->
+
 <html lang="en">
+<!-- Root HTML element with English language set -->
+
 <head>
+  <!-- Core meta -->
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Exact-match title & description -->
+  <!-- Character encoding set to UTF-8 for broad compatibility -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Enables responsive design on all devices -->
+
+  <!-- SEO -->
   <link rel="canonical" href="https://spinalinjurysupportmobileal.org/contact.html" />
+  <!-- Canonical link tells search engines the preferred URL for this page -->
   <title>Contact | Spinal Injury Support Group – Mobile, AL</title>
+  <!-- Browser title bar and search engine title -->
   <meta name="description" content="Get in touch for meeting times, locations, and one-on-one support. Send us a message or find our contact details here." />
+  <!-- Meta description for search engines -->
   <meta name="robots" content="index,follow,max-image-preview:large" />
+  <!-- Instructs search engines to index and follow links -->
+
   <!-- Open Graph / Twitter -->
+  <!-- Metadata for social sharing -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://spinalinjurysupportmobileal.org/contact.html">
   <meta property="og:title" content="Contact | Spinal Injury Support Group – Mobile, AL">
@@ -16,230 +30,114 @@
   <meta property="og:image" content="https://spinalinjurysupportmobileal.org/logo.webp">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0d4bf7">
-  <!-- Preconnect to FontAwesome -->
+  <!-- Theme color for browsers that support it -->
+
+  <!-- Organization JSON-LD -->
+  <!-- Structured data for search engine rich results -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Spinal Injury Support Group",
+        "url": "https://spinalinjurysupportmobileal.org/",
+        "logo": "https://spinalinjurysupportmobileal.org/logo.webp",
+        "sameAs": ["https://www.facebook.com/profile.php?id=61557665836753"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-251-460-0301",
+          "contactType": "information",
+          "areaServed": "US-AL"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6750 Howells Ferry Road",
+          "addressLocality": "Mobile",
+          "addressRegion": "AL",
+          "postalCode": "36618",
+          "addressCountry": "US"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://spinalinjurysupportmobileal.org/#website",
+        "name": "Spinal Injury Support Group – Mobile, Alabama",
+        "url": "https://spinalinjurysupportmobileal.org/"
+      },
+      {
+        "@type": "ContactPage",
+        "@id": "https://spinalinjurysupportmobileal.org/contact.html#contactpage",
+        "url": "https://spinalinjurysupportmobileal.org/contact.html",
+        "name": "Contact | Spinal Injury Support Group – Mobile, AL",
+        "isPartOf": { "@id": "https://spinalinjurysupportmobileal.org/#website" },
+        "primaryImageOfPage": { "@type": "ImageObject", "url": "https://spinalinjurysupportmobileal.org/logo.webp" },
+        "breadcrumb": {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spinalinjurysupportmobileal.org/" },
+            { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://spinalinjurysupportmobileal.org/contact.html" }
+          ]
+        },
+        "description": "Get in touch for meeting times, locations, and one-on-one support."
+      }
+    ]
+  }
+  </script>
+
+  <!-- Site styles -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- External stylesheet link -->
+
+  <!-- FontAwesome (for Facebook icon) -->
   <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin>
-
-  <!-- Critical CSS + swap-in -->
-  <link rel="preload" href="styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="styles.css"></noscript>
-
-  <!-- Organization JSON-LD (add your FB as sameAs) -->
- <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "name": "Spinal Injury Support Group",
-      "url": "https://spinalinjurysupportmobileal.org/",
-      "logo": "https://spinalinjurysupportmobileal.org/logo.webp",
-      "sameAs": ["https://www.facebook.com/profile.php?id=61557665836753"],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-251-460-0301",
-        "contactType": "information",
-        "areaServed": "US-AL"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "6750 Howells Ferry Road",
-        "addressLocality": "Mobile",
-        "addressRegion": "AL",
-        "postalCode": "36618",
-        "addressCountry": "US"
-      }
-    },
-    {
-      "@type": "WebSite",
-      "@id": "https://spinalinjurysupportmobileal.org/#website",
-      "name": "Spinal Injury Support Group – Mobile, Alabama",
-      "url": "https://spinalinjurysupportmobileal.org/"
-    },
-    {
-      "@type": "ContactPage",
-      "@id": "https://spinalinjurysupportmobileal.org/contact.html#contactpage",
-      "url": "https://spinalinjurysupportmobileal.org/contact.html",
-      "name": "Contact | Spinal Injury Support Group – Mobile, AL",
-      "isPartOf": { "@id": "https://spinalinjurysupportmobileal.org/#website" },
-      "primaryImageOfPage": {
-        "@type": "ImageObject",
-        "url": "https://spinalinjurysupportmobileal.org/logo.webp"
-      },
-      "breadcrumb": {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spinalinjurysupportmobileal.org/" },
-          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://spinalinjurysupportmobileal.org/contact.html" }
-        ]
-      },
-      "description": "Get in touch for meeting times, locations, and one-on-one support."
-    }
-  ]
-}
-</script>
-
-  <!-- Inline only critical (above-the-fold) CSS -->
-  <style>
-    /* Layout & typography */
-    body {
-      font-family: Arial, sans-serif;
-      background-color: rgba(13,62,239,0.9);
-      margin: 0;
-      padding: 20px;
-      text-align: center;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 800px;
-      margin: 0 auto;
-      background: #EBF3FD;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    }
-    h1 { font-size: 36px; margin-bottom: 20px; color: #000; }
-    h2 { font-size: 24px; margin-bottom: 15px; color: #000; }
-
-    /* Logo */
-    .logo img {
-      width: 150px;
-      height: 150px;
-      border-radius: 5px;
-    }
-
-    /* Contact box */
-    .contact-info {
-      background: #fff;
-      padding: 25px;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      margin: 20px auto;
-      text-align: center;
-    }
-    .contact-info p {
-      font-size: 18px;
-      color: #333;
-      margin: 10px 0;
-    }
-    .contact-info a {
-      color: rgba(13,62,239,0.9);
-      text-decoration: none;
-      transition: color 0.3s;
-    }
-    .contact-info a:hover {
-      color: #ee0a0a;
-    }
-
-    /* Navigation */
-    .navigation ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      margin: 20px 0;
-    }
-    .navigation li {
-      background: #fff;
-      border: 1px solid #000;
-      padding: 10px 15px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .navigation li:not(:last-child) { border-right: none; }
-    .navigation a {
-      color: #0d4bf7;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    .navigation a:hover { color: #ee0a0a; }
-
-    /* Mobile adjustments */
-    @media (max-width: 600px) {
-      .container { padding: 15px; }
-      .navigation ul { flex-direction: column; }
-      .navigation li {
-        border-right: 1px solid #000;
-        border-bottom: 1px solid #000;
-        border-radius: 5px;
-        margin-bottom: 5px;
-        width: 100%;
-      }
-      .contact-info p { font-size: 16px; }
-    }
-
-    footer{
-      width:calc(100% + 40px);        /* stretch past the 20 px body padding  */
-      margin:20px -20px -20px;        /* pull left/right -20  & tuck bottom   */
-      background:#EBF3FD;             /* light-blue panel                     */
-      padding:20px 10px;              /* same inner padding as other pages    */
-      border-top:3px solid #0d4bf7;   /* blue border line                     */
-      box-shadow:0 2px 6px rgba(0,0,0,.15);
-      text-align:center;
-      border-radius:0;
-      color:#333;
-    }
-    footer p{margin:5px 0;font-size:16px;}
-    footer a{color:#0d4bf7;text-decoration:none;font-weight:bold;}
-    footer a:hover{color:#ee0a0a;}
-    /* Keep nav + footer typography consistent site-wide */
-    .navigation, .navigation *, footer, footer * { 
-      font-family: inherit; 
-    }
-    .navigation a, footer a { 
-      font-weight: 700; 
-      text-decoration: none; 
-    }
-    .navigation a:focus-visible, footer a:focus-visible {
-      outline: 3px solid #0d4bf7; 
-      outline-offset: 2px; 
-      border-radius: 4px;
-    }
-  </style>
-  
-  <!-- Defer FontAwesome -->
-  <script
-    defer
-    src="https://kit.fontawesome.com/6142fb19d3.js"
-    crossorigin="anonymous"
-  ></script>
+  <!-- Preconnect hint for faster loading of FontAwesome -->
+  <script defer src="https://kit.fontawesome.com/6142fb19d3.js" crossorigin="anonymous"></script>
+  <!-- FontAwesome icon library loaded asynchronously -->
 </head>
 
 <body>
-  <div class="container">
-    <h1>Contact the Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led)</h1>
+  <main class="container">
+    <!-- Main page content container -->
+
+    <h1>Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led)</h1>
+    <!-- Main heading -->
 
     <h2>Sponsored by:</h2>
+    <!-- Subheading for sponsor section -->
     <div class="logo">
       <img
-        src="logo.jpg"
+        src="logo.webp"
         width="150"
         height="150"
         alt="Independent Living Center of Mobile logo with wheelchair user releasing a dove"
+        loading="lazy"
+        decoding="async"
       />
+      <!-- Organization logo with performance optimizations -->
     </div>
 
-    <div class="contact-info">
-      <h2>Contact Information</h2>
+    <section class="contact-info" aria-labelledby="contact-heading">
+      <!-- Section containing all contact information -->
+      <h2 id="contact-heading">Contact Information</h2>
+
       <p><strong>Group Coordinator:</strong> Jerry Cochran Sr.</p>
       <p><strong>Phone:</strong> ☎ <a href="tel:+12513916307">+1 (251) 391-6307</a></p>
 
       <p><strong>For Accommodations or Information:</strong></p>
       <p><strong>Independent Living Center of Mobile</strong></p>
+
       <p>Lesia Dailey</p>
       <p><strong>Phone:</strong> ☎
         <a href="tel:+12515259638;ext=202">+1 (251) 525-9638 ext. 202</a>
-  <!-- alt syntax some phones like: tel:+12515259638,,202 --></p>
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:lesiad@ilcmobile.org">lesiad@ilcmobile.org</a>
+        <!-- alt syntax some phones like: tel:+12515259638,,202 -->
       </p>
+      <p><strong>Email:</strong> <a href="mailto:lesiad@ilcmobile.org">lesiad@ilcmobile.org</a></p>
 
       <p><strong>or</strong></p>
+
       <p>Cyneria Austin</p>
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:cyneriaa@ilcmobile.org">cyneriaa@ilcmobile.org</a>
-      </p>
+      <p><strong>Email:</strong> <a href="mailto:cyneriaa@ilcmobile.org">cyneriaa@ilcmobile.org</a></p>
 
       <p><strong>Additional Information:</strong><br>
         <a href="https://ilcmobile.org/" target="_blank" rel="noopener noreferrer">
@@ -248,59 +146,50 @@
       </p>
 
       <p><strong>Follow ILC Mobile on Facebook:</strong></p>
-      <a
-        href="https://www.facebook.com/profile.php?id=61557665836753"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Independent Living Center of Mobile on Facebook">
-        <i class="fa-brands fa-facebook-f fa-3x"></i>
-      </a>
-    </div>
-    
+      <p>
+        <a
+          href="https://www.facebook.com/profile.php?id=61557665836753"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Independent Living Center of Mobile on Facebook">
+          <i class="fa-brands fa-facebook-f fa-3x" aria-hidden="true"></i>
+          <!-- Facebook icon using FontAwesome -->
+          <span class="sr-only">Facebook</span>
+          <!-- Screen-reader only label for accessibility -->
+        </a>
+      </p>
+    </section>
+
     <nav class="navigation" aria-label="Primary">
+      <!-- Primary site navigation -->
       <ul>
-        <li><a href="/">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html" aria-current="page">Contact</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="faq.html">FAQ</a></li>
+        <li><a href="people4people.html">People4People</a></li>
       </ul>
     </nav>
-  </div>
+  </main>
 
-  <footer>
-    <p>
-      <strong
-        >The Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led) is sponsored by:<br />
-        The Independent Living Center of Mobile</strong
-      >
-    </p>
-    <p>
-      6750 Howells Ferry Road<br />
-      Mobile, AL 36618
-    </p>
+  <footer class="site-footer" role="contentinfo">
+    <!-- Footer content with organization details -->
+    <p><strong>The Spinal Injury Support Group in Mobile, Alabama (Free, Peer-Led) is sponsored by:<br>
+      The Independent Living Center of Mobile</strong></p>
+    <p>6750 Howells Ferry Road<br>Mobile, AL 36618</p>
     <p>Jerry Cochran Sr. ☎ <a href="tel:+12513916307">(251) 391-6307</a></p>
     <p><strong>Email:</strong></p>
     <p>
-      <a href="mailto:lesiad@ilcmobile.org"
-        >Lesia Dailey • lesiad@ilcmobile.org</a
-      >
+      <a href="mailto:lesiad@ilcmobile.org">Lesia Dailey</a> &nbsp;•&nbsp;
+      <a href="mailto:lesiad@ilcmobile.org">lesiad@ilcmobile.org</a>
     </p>
     <p>
-      <a href="mailto:cyneriaa@ilcmobile.org"
-        >Cyneria Austin • cyneriaa@ilcmobile.org</a
-      >
+      <a href="mailto:cyneriaa@ilcmobile.org">Cyneria Austin</a> &nbsp;•&nbsp;
+      <a href="mailto:cyneriaa@ilcmobile.org">cyneriaa@ilcmobile.org</a>
     </p>
   </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
 
