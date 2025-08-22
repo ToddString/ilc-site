@@ -339,6 +339,7 @@ h2,
 /* -------------------- RESOURCES PAGE (scoped lists/links) -------------------- */
 /* Scope resource list styling to content only (not the nav) */
 /* Keep list styling for content-only lists (not the nav) */
+/* Content lists on the Resources page ONLY (not the nav) */
 .resources :where(section, .card-box, .banner-strip) ul {
   list-style: square;
   text-align: left;
@@ -347,30 +348,17 @@ h2,
   padding-left: 20px;
 }
 
-/* Force the Resources nav to behave like the others */
-.resources nav.navigation ul {
-  list-style: none;
-  margin: 20px auto;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  gap: 0;
-  max-width: none;
-}
-.resources nav.navigation li { text-align: center; }
-.resources nav.navigation a  { display: block; text-align: center; padding: 12px 16px; }
-
-/* If any older rule still wins, these !important lines pin it down */
-.resources nav.navigation,
-.resources nav.navigation ul,
-.resources nav.navigation li,
-.resources nav.navigation a { text-align: center !important; }
-
+/* Mobile: make nav items full-width buttons everywhere (matches your other pages) */
 @media (max-width: 600px) {
-  .resources nav.navigation ul {
+  .navigation ul {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
     margin: 20px 0;
+  }
+  .navigation a {
+    display: block;
+    padding: 12px 16px; /* big tap target */
+    text-align: center;
   }
 }
