@@ -337,26 +337,27 @@ h2,
 }
 
 /* -------------------- RESOURCES PAGE (scoped lists/links) -------------------- */
-.resources ul {
-  list-style: none; /* Remove bullet points from resource lists */
-  text-align: left; /* Left-align resource list text */
-  margin: 0 auto 25px; /* No top margin, center horizontally, 25px bottom margin */
-  max-width: 800px; /* Limit list width to 800px */
-  padding-left: 20px; /* 20px left padding for indentation */
+/* Scope resource list styling to content only (not the nav) */
+.resources > ul,
+.resources :where(section, .card-box, .banner-strip) ul {
+  list-style: square;
+  text-align: left;
+  margin: 0 auto 25px;
+  max-width: 800px;
+  padding-left: 20px;
 }
-.resources li {
-  margin: 8px 0; /* 8px top/bottom margin between list items */
-  font-size: 16px; /* Font size for resource items */
-  color: #333; /* Dark gray color for text */
-}
-.resources a {
-  color: #0d4bf7; /* Blue color for resource links */
-  font-weight: bold; /* Make resource links bold */
-  text-decoration: none; /* Remove underlines from links */
-}
-.resources a:hover {
-  color: #ee0a0a; /* Red color on hover */
-  text-decoration: underline; /* Add underline on hover */
+
+/* Make sure the nav looks the same on the Resources page */
+.resources .navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  max-width: none;     /* cancel the 800px constraint */
+  text-align: initial; /* cancel left-align */
+  padding-left: 0;     /* remove indent */
 }
 
 /* -------------------- RESPONSIVE -------------------- */
@@ -364,33 +365,22 @@ h2,
 @media (max-width: 600px) {
   .container { 
     padding: 15px;
-    margin: 10px;  /* Added to prevent content from touching screen edges */
+    margin: 10px;   /* equal blue gutters */
     width: auto;
     border-radius: 8px;
   }
 
-  .navigation {
-    width: 100%;  /* Ensure navigation takes full available width */
-    padding: 0 10px;  /* Add some padding on the sides */
-    box-sizing: border-box;
-  }
-
-  .navigation ul {
+  /* Resources page: mobile nav should stack like other pages */
+  .resources .navigation ul {
     flex-direction: column;
     align-items: stretch;
-    width: 100%;  /* Ensure ul takes full width */
-    margin: 15px 0;  /* Adjust vertical margins */
-  }
-
-  .navigation li {
-    border: 1px solid #000;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    padding: 8px 15px;  /* Slightly reduced vertical padding */
     width: 100%;
-    box-sizing: border-box;
+    margin: 20px 0;
   }
-
+  .resources .navigation a {
+    display: block;     /* big tap target */
+    padding: 12px 16px;
+  }
   /* Adjust other content for mobile */
   .card-box {
     margin: 15px 0;  /* Reduce margins on mobile */
@@ -404,6 +394,7 @@ h2,
     box-sizing: border-box;
   }
 }
+
 
 
 
