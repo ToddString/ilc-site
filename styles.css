@@ -1,407 +1,419 @@
-/* ----------html, body {
-  height: 100%; /* Make html and body take full viewport height */
-  margin: 0; /* ---------- GLOBAL ELEMENTS -------------------- */
-/* Reset default browser spacing for html and body elements */
-Remove default browser margins */
-  padding: 0; /* Remove default browser padding */
+/* =========================================================
+   RESET & BASE
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;                 /* no sideways scroll */
 }
 
 body {
-  background: rgba(13,62,239,.9); /* Set blue background with 90% opacity */
-  font-family: sans-serif; /* Use system sans-serif font stack */
-  display: flex; /* Enable flexbox layout */
-  flex-direction: column; /* Stack flex items vertically */
-  min-height: 100vh; /* Ensure body is at least full viewport height */
-  text-align: center; /* Center-align all text by default for headings/sitewide text */
-  line-height:1.6; /* Set line height to 1.6 for better readability */
+  background: rgb(13,62,239);         /* solid blue; change to rgba(...,.9) if you prefer */
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+  line-height: 1.6;
 }
 
-/* Make main content area expand to fill available space between header and footer */
+/* let main fill space between header & footer */
 main { flex: 1; }
 
-/* -------------------- CONTAINER -------------------- */
+/* media should never overflow */
+img, iframe, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* long links/text wrap instead of stretching layout */
+.container, .card-box, .banner-strip, .navigation {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* =========================================================
+   CONTAINER
+   ========================================================= */
 .container {
   max-width: 900px;
   margin: 0 auto;
   background: #EBF3FD;
-  padding: 20px;  /* Reduced from 30px for better mobile display */
+  padding: 30px;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0,0,0,.1);
   margin-bottom: 50px;
-  width: auto;  /* Added to ensure proper sizing */
-  box-sizing: border-box;  /* Added to include padding in width calculation */
 }
 
-/* -------------------- FOOTER -------------------- */
+/* =========================================================
+   FOOTER
+   ========================================================= */
 .site-footer {
-  width: 100%; /* Make footer span full width of viewport */
-  background: #EBF3FD; /* Light blue background matching container */
-  padding: 30px 20px; /* 30px top/bottom padding, 20px left/right padding */
-  border-top: 3px solid #0d4bf7; /* Add 3px solid blue border at top of footer */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Add shadow above footer */
-  color: #333; /* Dark gray text color */
-  text-align: center; /* Center-align footer text */
+  width: 100%;
+  background: #EBF3FD;
+  padding: 30px 20px;
+  border-top: 3px solid #0d4bf7;
+  box-shadow: 0 2px 6px rgba(0,0,0,.15);
+  color: #333;
+  text-align: center;
 }
 .site-footer p {
-  max-width: 900px; /* Limit paragraph width to match container */
-  margin: 10px auto; /* 10px top/bottom margin, center horizontally */
-  font-size: 16px; /* Set font size to 16px */
-  line-height: 1.5; /* Set line height for readability */
+  max-width: 900px;
+  margin: 10px auto;
+  font-size: 16px;
+  line-height: 1.5;
 }
 .site-footer a {
-  color: #0d4bf7; /* Blue color for footer links */
-  text-decoration: none; /* Remove underlines from links */
-  font-weight: bold; /* Make links bold */
+  color: #0d4bf7;
+  text-decoration: none;
+  font-weight: bold;
 }
 .site-footer a:hover {
-  color: #ee0a0a; /* Change to red color on hover */
-  text-decoration: underline; /* Add underline on hover */
+  color: #ee0a0a;
+  text-decoration: underline;
 }
 
-/* -------------------- ABOUT PAGE BANNER -------------------- */
+/* =========================================================
+   BANNERS
+   ========================================================= */
 .banner-strip {
-  background: #fff; /* White background */
-  border-radius: 6px; /* Rounded corners with 6px radius */
-  padding: 0.75rem 1rem; /* 12px top/bottom, 16px left/right padding */
-  margin: 1.5rem 0; /* 24px top/bottom margin, 0 left/right */
-  box-shadow: 0 1px 4px rgba(0,0,0,.06); /* Very subtle shadow */
-  text-align: center; /* Center-align text inside banner */
+  background: #fff;
+  border-radius: 6px;
+  padding: .75rem 1rem;
+  margin: 1.5rem 0;
+  box-shadow: 0 1px 4px rgba(0,0,0,.06);
+  text-align: center;
 }
 .banner-strip .highlight-text {
-  color: #BF0000; /* Red color for highlighted text */
-  font-weight: bold; /* Make highlighted text bold */
-  margin: .35rem 0; /* Small margin above and below highlighted text */
+  color: #BF0000;
+  font-weight: bold;
+  margin: .35rem 0;
 }
 
-/* Variants used on Resources page */
+/* Resources page variants */
 .banner-rich {
-  color: #000; /* Black text color */
-  padding: 16px 22px; /* 16px top/bottom, 22px left/right padding */
-  margin: 0 0 22px 0; /* 0 top, 0 right, 22px bottom, 0 left margin */
-  border-radius: 8px; /* Rounded corners with 8px radius */
-  box-shadow: 0 2px 8px rgba(13,75,247,.10); /* Blue-tinted shadow */
-  font-size: 17px; /* Set font size to 17px */
-  font-weight: bold; /* Make text bold */
-  letter-spacing: .1px; /* Add slight letter spacing for readability */
-  max-width: 860px; /* Limit width to 860px */
-  margin-left: auto; /* Center horizontally using auto margins */
-  margin-right: auto; /* Center horizontally using auto margins */
+  color: #000;
+  padding: 16px 22px;
+  margin: 0 0 22px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(13,75,247,.10);
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: .1px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .banner-alert {
-  color: #000; /* Black text color */
-  padding: 18px 24px; /* 18px top/bottom, 24px left/right padding */
-  margin: 22px 0 18px 0; /* 22px top, 0 right, 18px bottom, 0 left margin */
-  border-radius: 8px; /* Rounded corners with 8px radius */
-  box-shadow: 0 2px 8px rgba(13,75,247,.10); /* Blue-tinted shadow */
-  font-size: 18px; /* Set font size to 18px */
-  font-weight: bold; /* Make text bold */
-  letter-spacing: .2px; /* Add letter spacing for emphasis */
+  color: #000;
+  padding: 18px 24px;
+  margin: 22px 0 18px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(13,75,247,.10);
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: .2px;
 }
 .banner-alert ul {
-  color: #BF0000; /* Red color for list items */
-  font-size: 17px; /* Set font size to 17px */
-  font-weight: normal; /* Normal font weight (not bold) */
-  line-height: 1.5; /* Line height for readability */
-  margin: 18px 0 0 28px; /* 18px top, 0 right, 0 bottom, 28px left margin */
-  padding: 0; /* Remove default padding */
-  text-align: left; /* Left-align list text */
-  list-style: disc; /* Use disc bullets for list items */
+  color: #BF0000;
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: 18px 0 0 28px;
+  padding: 0;
+  text-align: left;
+  list-style: disc;
 }
 
-/* -------------------- LOGO & HEADINGS -------------------- */
-.logo img { width: 150px; height: 150px; border-radius: 5px; } /* Set logo to 150x150px with rounded corners */
-h1 { font-size: 36px; color: #000; margin-bottom: 20px; } /* Main heading: 36px, black, 20px bottom margin */
-h2 { font-size: 24px; color: #000; margin-bottom: 15px; } /* Secondary heading: 24px, black, 15px bottom margin */
-h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: 0.75rem; } /* Other headings: black with consistent margins */
+/* =========================================================
+   HEADINGS & LOGO
+   ========================================================= */
+.logo img { width: 150px; height: 150px; border-radius: 5px; }
+h1 { font-size: 36px; color: #000; margin-bottom: 20px; }
+h2 { font-size: 24px; color: #000; margin-bottom: 15px; }
+h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
 
-/* Center-align these specific elements */
-.logo,
-.navigation,
-h1,
-h2,
-.site-footer { text-align: center; }
+.logo, .navigation, h1, h2, .site-footer { text-align: center; }
 
-/* -------------------- NAVIGATION -------------------- */
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 .navigation ul {
   list-style: none;
   padding: 0;
   margin: 20px auto;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 0;
-  width: 100%;
 }
-
 .navigation li {
   background: #fff;
   border: 1px solid #000;
-  margin: 0;
-  flex: 0 1 auto;
-  display: flex;
+  padding: 10px 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
-
-.navigation li:not(:last-child) {
-  border-right: none;
-}
-
+.navigation li:not(:last-child) { border-right: none; }
 .navigation a {
   text-decoration: none;
   color: #0d4bf7;
   font-weight: bold;
-  padding: 10px 15px;
-  transition: color 0.3s;
-  display: block;
-  width: 100%;
+  transition: color .3s;
+}
+.navigation a:hover { color: #ee0a0a; }
+.navigation a[aria-current="page"] { text-decoration: underline; }
+
+/* focus ring */
+.navigation a:focus-visible,
+.site-footer a:focus-visible {
+  outline: 3px solid #0d4bf7;
+  outline-offset: 2px;
+  border-radius: 4px;
 }
 
-.navigation a:hover {
-  color: #ee0a0a;
-}
-
-.navigation a[aria-current="page"] {
-  text-decoration: underline;
-}
-
-/* Mobile Navigation */
-@media (max-width: 600px) {
-  .navigation ul {
-    flex-direction: column;
-    align-items: stretch;
-    margin: 15px 0;
-  }
-
-  .navigation li {
-    width: 100%;
-    border: 1px solid #000;
-    border-radius: 5px;
-    margin-bottom: 5px;
-  }
-
-  .navigation li:not(:last-child) {
-    border-right: 1px solid #000;
-  }
-
-  .navigation a {
-    padding: 12px 16px;
-    text-align: center;
-  }
-}
-
-/* Remove any resource-specific navigation overrides */
-.resources .navigation ul {
-  list-style: none;
-  text-align: center;
-  padding: 0;
-}
-
-/* -------------------- CONTENT CARDS -------------------- */
+/* =========================================================
+   CONTENT CARDS
+   ========================================================= */
 .card-box {
-  background: #fff; /* White background for content cards */
-  padding: 20px; /* 20px padding on all sides */
-  border-radius: 6px; /* Rounded corners with 6px radius */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Shadow for depth */
-  margin: 20px 20px; /* 20px margin on all sides */
-  text-align: center; /* Center-align text (matches index.html usage) */
-  line-height:1.6; /* Line height for readability */
+  background: #fff;
+  padding: 20px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin: 20px 20px;
+  text-align: center;
 }
 .card-box p,
 .card-box li {
-  font-size: 16px; /* Set font size for paragraphs and list items */
-  color: #333; /* Dark gray text color */
+  font-size: 16px;
+  color: #333;
 }
-/* Slightly stronger box shadow variant for emphasis (used on Resources Overview) */
 .card-box--emphasis { box-shadow: 0 2px 8px rgba(13,75,247,.10); }
 
-/* -------------------- CONTACT PAGE: CONTACT BOX -------------------- */
+/* =========================================================
+   CONTACT BOX
+   ========================================================= */
 .contact-info {
-  background: #fff; /* White background for contact information box */
-  padding: 25px; /* 25px padding on all sides */
-  border-radius: 8px; /* Rounded corners with 8px radius */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Shadow for depth */
-  margin: 20px auto; /* 20px top/bottom margin, center horizontally */
-  text-align: center; /* Center-align contact information */
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  margin: 20px auto;
+  text-align: center;
 }
-.contact-info p {
-  font-size: 18px; /* Slightly larger font size for contact info */
-  color: #333; /* Dark gray text color */
-  margin: 10px 0; /* 10px top/bottom margin */
-}
+.contact-info p { font-size: 18px; color: #333; margin: 10px 0; }
 .contact-info a {
-  color: rgba(13,62,239,0.9); /* Blue color with 90% opacity for contact links */
-  text-decoration: none; /* Remove underlines from links */
-  transition: color 0.3s; /* Smooth color transition on hover */
+  color: rgba(13,62,239,0.9);
+  text-decoration: none;
+  transition: color .3s;
 }
 .contact-info a:hover {
-  color: #ee0a0a; /* Change to red on hover */
-  text-decoration: underline; /* Add underline on hover */
+  color: #ee0a0a;
+  text-decoration: underline;
 }
 
-/* -------------------- IMAGE PRESENTATION -------------------- */
-/* Single image cards used on index page and other pages */
+/* =========================================================
+   IMAGES & GALLERIES
+   ========================================================= */
 .image-card {
-  background: #fff; /* White background for image containers */
-  border-radius: 8px; /* Rounded corners with 8px radius */
-  padding: 15px; /* 15px padding around the image */
-  margin: 20px auto; /* 20px top/bottom margin, center horizontally */
-  max-width: 800px; /* Limit width to 800px */
-  box-shadow: 0 2px 4px rgba(0,0,0,.1); /* Subtle shadow for depth */
+  background: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  margin: 20px auto;
+  max-width: 800px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 .image-card img {
-  width: 100%; /* Make images fill their container width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 5px; /* Rounded corners on images */
-  cursor: pointer; /* Show pointer cursor on modal-enabled pages */
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  cursor: pointer;                    /* for modal-enabled pages */
 }
-/* Pages that don't use modal (e.g., About page) show default cursor */
 .no-modal .image-card img { cursor: default; }
 
-/* Framed thumbnail gallery used on About page */
 .image-gallery {
-  display: flex; /* Use flexbox for layout */
-  justify-content: center; /* Center the gallery items */
-  flex-wrap: wrap; /* Allow items to wrap to new lines */
-  gap: 15px; /* 15px space between gallery items */
-  margin: 20px 0; /* 20px top/bottom margin */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px 0;
 }
 .image-frame {
-  background: #fff; /* White background for image frames */
-  padding: 8px; /* 8px padding around framed images */
-  border-radius: 6px; /* Rounded corners on frames */
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* Shadow for depth */
+  background: #fff;
+  padding: 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 .image-frame img {
-  display: block; /* Remove inline spacing */
-  max-width: 100%; /* Ensure image doesn't exceed frame width */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 5px; /* Rounded corners on framed images */
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-/* Pages that DO use the modal — show hand cursor on all gallery images */
-.use-modal .image-card img,
-.use-modal .image-frame img {
-  cursor: pointer; /* Show pointer cursor to indicate clickable images */
-}
-
-/* -------------------- MODAL (used on pages that need it) -------------------- */
+/* Modal */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Fixed positioning relative to viewport */
-  z-index: 999; /* High z-index to appear above all other content */
-  padding-top: 60px; /* 60px padding from top of viewport */
-  left: 0; top: 0; width: 100%; height: 100%; /* Cover entire viewport */
-  overflow: auto; /* Allow scrolling if content is too large */
-  background: rgba(0,0,0,.9); /* Semi-transparent black background */
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0; top: 0; width: 100%; height: 100%;
+  overflow: auto;
+  background: rgba(0,0,0,.9);
 }
 .modal-content {
-  margin: auto; /* Center the modal content */
-  display: block; /* Display as block element */
-  max-width: 90%; /* Limit width to 90% of viewport */
-  max-height: 80%; /* Limit height to 80% of viewport */
-  animation: zoom .3s; /* Apply zoom animation over 0.3 seconds */
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 80%;
+  animation: zoom .3s;
 }
-/* Keyframe animation for modal entrance */
 @keyframes zoom {
-  from { transform: scale(0.7); opacity: 0; } /* Start small and transparent */
-  to   { transform: scale(1); opacity: 1; } /* End at full size and opacity */
+  from { transform: scale(0.7); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
 }
 .modal-close {
-  position: absolute; top: 20px; right: 35px; /* Position close button in top-right */
-  color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; /* White, large, bold X */
+  position: absolute; top: 20px; right: 35px;
+  color: #fff; font-size: 40px; font-weight: bold; cursor: pointer;
 }
-.modal-close:hover { color: #f00; } /* Turn red on hover */
+.modal-close:hover { color: #f00; }
 
-/* -------------------- GALLERY PAGE (grid layout & captions) -------------------- */
-.gallery-title { font-size: 18px; color: #000; margin-top: 20px; } /* Title styling for gallery sections */
-.gallery-description { font-size: 16px; color: #000; margin-bottom: 20px; } /* Description text for galleries */
+/* Gallery grid */
+.gallery-title { font-size: 18px; color: #000; margin-top: 20px; }
+.gallery-description { font-size: 16px; color: #000; margin-bottom: 20px; }
 
 .gallery-grid {
-  /* Empty line preserved for spacing */
-  max-width: 1000px; /* Limit gallery width to 1000px */
-  margin: 0 auto; /* Center the gallery horizontally */
-  display: grid; /* Use CSS Grid for layout */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns: minimum 300px, auto-fit as many as possible */
-  gap: 20px; /* 20px space between grid items */
-  margin-top: 30px; /* 30px margin above the gallery */
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
 }
-.gallery-grid .image-card { margin: 0; } /* Remove margin from image cards within gallery grid */
+.gallery-grid .image-card { margin: 0; }
 .gallery-grid .image-card img {
-  height: 280px; /* Set fixed height of 280px for all gallery images */
-  object-fit: cover; /* Crop images to fit dimensions while maintaining aspect ratio */
-  object-position: center top; /* Position crop from center-top of image */
+  height: 280px;
+  object-fit: cover;
+  object-position: center top;
 }
 .image-caption {
-  font-size: 12px; /* Small font size for image captions */
-  color: #666; /* Medium gray color for captions */
-  margin: 5px 0; /* 5px top/bottom margin for captions */
+  font-size: 12px;
+  color: #666;
+  margin: 5px 0;
 }
 
-/* -------------------- FAQ PAGE (accordion + permalinks) -------------------- */
-.faq-list summary .permalink{
-  font-weight: normal; /* Normal weight for permalink text */
-  font-size: 14px; /* Smaller font size for permalinks */
-  margin-left: 8px; /* 8px space between summary text and permalink */
-  text-decoration: none; /* Remove underline from permalink */
-  opacity: .65; /* Make permalink semi-transparent by default */
+/* =========================================================
+   FAQ (accordion + permalinks)
+   ========================================================= */
+.faq-list summary .permalink {
+  font-weight: normal;
+  font-size: 14px;
+  margin-left: 8px;
+  text-decoration: none;
+  opacity: .65;
 }
-/* Show permalink more prominently on hover or focus */
 .faq-list summary:hover .permalink,
 .faq-list summary:focus-within .permalink { opacity: 1; }
 
 .faq-list details {
-  background: #fff; /* White background for FAQ items */
-  border-radius: 6px; /* Rounded corners */
-  margin: 15px 0; /* 15px top/bottom margin between FAQ items */
-  box-shadow: 0 2px 4px rgba(0,0,0,.1); /* Subtle shadow */
+  background: #fff;
+  border-radius: 6px;
+  margin: 15px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,.1);
 }
 .faq-list summary {
-  font-weight: bold; /* Bold text for FAQ questions */
-  font-size: 18px; /* Larger font size for questions */
-  padding: 15px; /* 15px padding around clickable summary */
-  cursor: pointer; /* Show pointer cursor to indicate clickable */
-  color: #0d4bf7; /* Blue color for closed FAQ items */
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px;
+  cursor: pointer;
+  color: #0d4bf7;
 }
-.faq-list details[open] summary { color: #ee0a0a; } /* Red color when FAQ item is open */
+.faq-list details[open] summary { color: #ee0a0a; }
 .faq-list details p {
-  padding: 0 15px 15px; /* No top padding, 15px left/right/bottom padding */
-  font-size: 16px; /* Font size for FAQ answers */
-  color: #333; /* Dark gray color for answer text */
-  text-align: left; /* Left-align answer text */
+  padding: 0 15px 15px;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
 }
 .faq-list a {
-  color: #0d4bf7; /* Blue color for links within FAQ answers */
-  text-decoration: none; /* Remove underlines from links */
-  font-weight: bold; /* Make links bold */
+  color: #0d4bf7;
+  text-decoration: none;
+  font-weight: bold;
 }
-.faq-list a:hover {
-  color: #ee0a0a; /* Red color on hover */
-  text-decoration: underline; /* Add underline on hover */
-}
+.faq-list a:hover { color: #ee0a0a; text-decoration: underline; }
 
-/* -------------------- RESOURCES PAGE (scoped lists/links) -------------------- */
-/* Scope resource list styling to content only (not the nav) */
-/* Keep list styling for content-only lists (not the nav) */
-/* Content lists on the Resources page ONLY (not the nav) */
-.resources :where(section, .card-box, .banner-strip) ul {
+/* =========================================================
+   RESOURCES PAGE — CONTENT LISTS ONLY (SCOPED)
+   ========================================================= */
+/* Style UL/LI/A inside content areas, NOT the top nav */
+.resources :where(section, .card-box, .banner-strip, .banner-alert) ul {
   list-style: square;
   text-align: left;
   margin: 0 auto 25px;
   max-width: 800px;
   padding-left: 20px;
 }
+.resources :where(section, .card-box, .banner-strip, .banner-alert) li {
+  margin: 8px 0;
+  font-size: 16px;
+  color: #333;
+}
+.resources :where(section, .card-box, .banner-strip, .banner-alert) a {
+  color: #0d4bf7;
+  font-weight: bold;
+  text-decoration: none;
+}
+.resources :where(section, .card-box, .banner-strip, .banner-alert) a:hover {
+  color: #ee0a0a;
+  text-decoration: underline;
+}
 
-/* Mobile: make nav items full-width buttons everywhere (matches your other pages) */
+/* Make sure the Resources page NAV matches other pages */
+.resources nav.navigation ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  max-width: none;
+  text-align: center;
+}
+
+/* =========================================================
+   RESPONSIVE (≤ 600px)
+   ========================================================= */
 @media (max-width: 600px) {
+  /* even blue gutters on both sides */
+  .container {
+    padding: 15px;
+    margin: 0 12px 50px;
+  }
+
+  /* full-width stacked nav, big tap targets */
   .navigation ul {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
     margin: 20px 0;
+    padding: 0;
   }
-  .navigation a {
-    display: block;
-    padding: 12px 16px; /* big tap target */
+  .navigation li {
+    width: 100%;
+    border-radius: 8px;
+    border-right: 1px solid #000;
+    margin-bottom: 5px;
     text-align: center;
   }
+  .navigation li:not(:last-child) { border-bottom: 1px solid #000; }
+  .navigation a {
+    display: block;                   /* entire row is clickable */
+    padding: 12px 16px;
+  }
 }
+
+
 
