@@ -377,39 +377,44 @@ h2,
 /* -------------------- RESPONSIVE -------------------- */
 /* Mobile/tablet styles for screens 600px and smaller */
 /* put this inside your existing @media (max-width: 600px) { ... } block */
+/* === Final mobile overrides (place at END of styles.css) === */
 @media (max-width: 600px) {
-  /* Add equal blue gutters on both sides of the content */
-  .container{
-    padding: 15px;              /* you already had this */
-    margin: 0 12px 50px;        /* ⬅️ NEW: left/right gutters */
+  /* equal blue gutters on BOTH sides */
+  .container { 
+    margin: 0 12px 50px !important;   /* left & right 12px, keep bottom space */
+    padding: 15px !important;         /* your existing smaller padding */
   }
 
-  /* Mobile nav — full-width stacked buttons with big tap targets */
-  .navigation ul{
+  /* match footer to the container edges */
+  .site-footer {
+    margin: 0 12px !important;
+    border-radius: 10px;
+  }
+
+  /* stacked nav with big tap targets */
+  .navigation ul {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
-    margin: 20px 0;
+    margin: 20px 0 !important;
     padding: 0;
   }
-  .navigation li{
+  .navigation li {
     width: 100%;
     border-radius: 8px;
-    border-right: 1px solid #000;         /* keep your border look */
+    border-right: 1px solid #000;
     margin-bottom: 5px;
     text-align: center;
   }
-  .navigation li:not(:last-child){
-    border-bottom: 1px solid #000;
-  }
-  .navigation a{
-    display: block;                        /* ⬅️ makes the whole row clickable */
-    padding: 12px 16px;                    /* bigger tap target */
-  }
-
-  /* Optional: give the footer the same side gutters on mobile */
-  /* .site-footer { margin: 0 12px; border-radius: 10px; } */
+  .navigation li:not(:last-child) { border-bottom: 1px solid #000; }
+  .navigation a { display: block; padding: 12px 16px; }
 }
+
+/* defensive: no sideways scroll from any child */
+html, body { overflow-x: hidden; }
+img, iframe, video { max-width: 100%; height: auto; display: block; }
+
+
 
 
 
