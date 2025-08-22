@@ -1,8 +1,8 @@
-/* -------------------- GLOBAL ELEMENTS -------------------- */
-/* Reset default browser spacing for html and body elements */
-html, body {
+/* ----------html, body {
   height: 100%; /* Make html and body take full viewport height */
-  margin: 0; /* Remove default browser margins */
+  margin: 0; /* ---------- GLOBAL ELEMENTS -------------------- */
+/* Reset default browser spacing for html and body elements */
+Remove default browser margins */
   padding: 0; /* Remove default browser padding */
 }
 
@@ -404,3 +404,4 @@ h2,
     text-align: center;
   }
 }
+
