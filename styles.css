@@ -123,34 +123,76 @@ h2,
 
 /* -------------------- NAVIGATION -------------------- */
 .navigation ul {
-  list-style: none; /* Remove bullet points from list */
-  padding: 0; /* Remove default padding */
-  margin: 20px auto; /* 20px top/bottom margin, center horizontally */
-  display: flex; /* Use flexbox for horizontal layout */
-  justify-content: center; /* Center the navigation items */
-  gap: 0; /* No gap between items (they share borders) */
+  list-style: none;
+  padding: 0;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0;
+  width: 100%;
 }
+
 .navigation li {
-  background: #fff; /* White background for nav items */
-  border: 1px solid #000; /* Black border around each item */
-  padding: 10px 15px; /* 10px top/bottom, 15px left/right padding */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow below nav items */
+  background: #fff;
+  border: 1px solid #000;
+  margin: 0;
+  flex: 0 1 auto;
+  display: flex;
 }
-.navigation li:not(:last-child) { border-right: none; } /* Remove right border except for last item to avoid double borders */
+
+.navigation li:not(:last-child) {
+  border-right: none;
+}
+
 .navigation a {
-  text-decoration: none; /* Remove underlines from links */
-  color: #0d4bf7; /* Blue color for navigation links */
-  font-weight: bold; /* Make navigation text bold */
-  transition: color 0.3s; /* Smooth color transition on hover (0.3 seconds) */
+  text-decoration: none;
+  color: #0d4bf7;
+  font-weight: bold;
+  padding: 10px 15px;
+  transition: color 0.3s;
+  display: block;
+  width: 100%;
 }
-.navigation a:hover { color: #ee0a0a; } /* Change to red on hover */
-.navigation a[aria-current="page"] { text-decoration: underline; } /* Underline the current page link */
-/* Focus styles for accessibility */
-.navigation a:focus-visible,
-.site-footer a:focus-visible {
-  outline: 3px solid #0d4bf7; /* Blue outline when focused via keyboard */
-  outline-offset: 2px; /* 2px space between element and outline */
-  border-radius: 4px; /* Rounded outline corners */
+
+.navigation a:hover {
+  color: #ee0a0a;
+}
+
+.navigation a[aria-current="page"] {
+  text-decoration: underline;
+}
+
+/* Mobile Navigation */
+@media (max-width: 600px) {
+  .navigation ul {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 15px 0;
+  }
+
+  .navigation li {
+    width: 100%;
+    border: 1px solid #000;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+
+  .navigation li:not(:last-child) {
+    border-right: 1px solid #000;
+  }
+
+  .navigation a {
+    padding: 12px 16px;
+    text-align: center;
+  }
+}
+
+/* Remove any resource-specific navigation overrides */
+.resources .navigation ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
 }
 
 /* -------------------- CONTENT CARDS -------------------- */
