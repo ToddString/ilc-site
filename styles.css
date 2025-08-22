@@ -338,6 +338,7 @@ h2,
 
 /* -------------------- RESOURCES PAGE (scoped lists/links) -------------------- */
 /* Scope resource list styling to content only (not the nav) */
+/* Keep list styling for content-only lists (not the nav) */
 .resources :where(section, .card-box, .banner-strip) ul {
   list-style: square;
   text-align: left;
@@ -346,42 +347,30 @@ h2,
   padding-left: 20px;
 }
 
-/* Make the navigation on Resources match other pages */
-.resources .navigation ul {
+/* Force the Resources nav to behave like the others */
+.resources nav.navigation ul {
   list-style: none;
-  padding: 0;
   margin: 20px auto;
+  padding: 0;
   display: flex;
-  justify-content: center;   /* center the row of buttons */
+  justify-content: center;
   gap: 0;
-  max-width: none;           /* no 800px cap */
-  padding-left: 0;
+  max-width: none;
 }
-.resources .navigation li { text-align: center; }  /* center text inside each button */
-.resources .navigation a  { display: block; }      /* full-width, big tap target */
+.resources nav.navigation li { text-align: center; }
+.resources nav.navigation a  { display: block; text-align: center; padding: 12px 16px; }
 
-/* -------------------- MOBILE -------------------- */
+/* If any older rule still wins, these !important lines pin it down */
+.resources nav.navigation,
+.resources nav.navigation ul,
+.resources nav.navigation li,
+.resources nav.navigation a { text-align: center !important; }
+
 @media (max-width: 600px) {
-  .resources .navigation ul {
+  .resources nav.navigation ul {
     flex-direction: column;
     align-items: stretch;
     width: 100%;
     margin: 20px 0;
   }
-  .resources .navigation a {
-    text-align: center;      /* keep text centered on mobile */
-    padding: 14px 16px;
-  }
-
-  /* Other mobile tweaks */
-  .card-box {
-    margin: 15px 0;
-    padding: 15px;
-  }
-  .site-footer {
-    padding: 20px 15px;
-    width: 100%;
-    box-sizing: border-box;
-  }
 }
-
