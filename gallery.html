@@ -47,6 +47,121 @@
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "sr8xd1rrpr");
   </script>
+
+  <!-- Structured data (Organization + WebSite + CollectionPage + Breadcrumb + Images) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://spinalinjurysupportmobileal.org/#org",
+      "name": "Spinal Injury Support Group",
+      "url": "https://spinalinjurysupportmobileal.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://spinalinjurysupportmobileal.org/logo.webp"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-251-460-0301",
+        "contactType": "Information",
+        "areaServed": "US-AL"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6750 Howells Ferry Road",
+        "addressLocality": "Mobile",
+        "addressRegion": "AL",
+        "postalCode": "36618",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://spinalinjurysupportmobileal.org/#website",
+      "name": "Spinal Injury Support Group – Mobile, Alabama",
+      "url": "https://spinalinjurysupportmobileal.org/",
+      "publisher": { "@id": "https://spinalinjurysupportmobileal.org/#org" }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://spinalinjurysupportmobileal.org/gallery.html#webpage",
+      "url": "https://spinalinjurysupportmobileal.org/gallery.html",
+      "name": "Gallery | Spinal Injury Support Group – Mobile, AL",
+      "isPartOf": { "@id": "https://spinalinjurysupportmobileal.org/#website" },
+      "about": "Photo gallery of meetings and community events for the Spinal Injury Support Group in Mobile, Alabama.",
+      "image": [
+        "https://spinalinjurysupportmobileal.org/ilcscimeeting1.JPG",
+        "https://spinalinjurysupportmobileal.org/ilcscimeeting2.JPG",
+        "https://spinalinjurysupportmobileal.org/tpov.JPG",
+        "https://spinalinjurysupportmobileal.org/tpov2.JPG",
+        "https://spinalinjurysupportmobileal.org/May%20meeting%20Loaves%20Fishes.JPG"
+      ],
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://spinalinjurysupportmobileal.org/logo.webp"
+      },
+      "breadcrumb": { "@id": "https://spinalinjurysupportmobileal.org/gallery.html#breadcrumb" },
+      "hasPart": { "@id": "https://spinalinjurysupportmobileal.org/gallery.html#images" },
+      "publisher": { "@id": "https://spinalinjurysupportmobileal.org/#org" },
+      "datePublished": "2025-08-21",
+      "dateModified": "2025-08-21"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://spinalinjurysupportmobileal.org/gallery.html#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://spinalinjurysupportmobileal.org/" },
+        { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://spinalinjurysupportmobileal.org/gallery.html" }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://spinalinjurysupportmobileal.org/gallery.html#images",
+      "itemListElement": [
+        {
+          "@type": "ImageObject",
+          "position": 1,
+          "url": "https://spinalinjurysupportmobileal.org/ilcscimeeting1.JPG",
+          "caption": "July 2025 — SCI support meeting at the Independent Living Center of Mobile"
+        },
+        {
+          "@type": "ImageObject",
+          "position": 2,
+          "url": "https://spinalinjurysupportmobileal.org/ilcscimeeting2.JPG",
+          "caption": "Another view of the July 2025 meeting at ILC Mobile"
+        },
+        {
+          "@type": "ImageObject",
+          "position": 3,
+          "url": "https://spinalinjurysupportmobileal.org/tpov.JPG",
+          "caption": "Conversation during the July 2025 meeting"
+        },
+        {
+          "@type": "ImageObject",
+          "position": 4,
+          "url": "https://spinalinjurysupportmobileal.org/tpov2.JPG",
+          "caption": "Group photo — July 2025 meeting"
+        },
+        {
+          "@type": "ImageObject",
+          "position": 5,
+          "url": "https://spinalinjurysupportmobileal.org/May%20meeting%20Loaves%20Fishes.JPG",
+          "caption": "May 2025 — Loaves & Fishes Family Restaurant"
+        },
+        {
+          "@type": "ImageObject",
+          "position": 6,
+          "url": "https://spinalinjurysupportmobileal.org/May%20meeting%20at%20Loaves%20Fishes2.JPG",
+          "caption": "Another angle — May 2025 Loaves & Fishes"
+        }
+      ]
+    }
+  ]
+}
+</script>
+
   <!-- Site styles -->
   <link rel="stylesheet" href="styles.css?v=24">
   <!-- Links the external stylesheet for consistent styling across site -->
@@ -342,6 +457,7 @@
   <!-- End of modal and auto-nav script -->
 </body>
 </html>
+
 
 
 
