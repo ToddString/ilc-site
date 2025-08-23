@@ -49,29 +49,81 @@
     })(window, document, "clarity", "script", "sr8xd1rrpr");
   </script>
   <!-- JSON-LD structured data providing details about the organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Spinal Injury Support Group",
-    "url": "https://spinalinjurysupportmobileal.org/",
-    "logo": "https://spinalinjurysupportmobileal.org/logo.webp",
-    "contactPoint": {
-      "@type": "ContactPoint",
+  <!-- Structured data (Organization + WebSite + WebPage + Event) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://spinalinjurysupportmobileal.org/#org",
+      "name": "Spinal Injury Support Group",
+      "url": "https://spinalinjurysupportmobileal.org/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://spinalinjurysupportmobileal.org/logo.webp"
+      },
       "telephone": "+1-251-460-0301",
-      "contactType": "Information",
-      "areaServed": "US-AL"
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "6750 Howells Ferry Road",
+        "addressLocality": "Mobile",
+        "addressRegion": "AL",
+        "postalCode": "36618",
+        "addressCountry": "US"
+      }
     },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "6750 Howells Ferry Road",
-      "addressLocality": "Mobile",
-      "addressRegion": "AL",
-      "postalCode": "36618",
-      "addressCountry": "US"
+    {
+      "@type": "WebSite",
+      "@id": "https://spinalinjurysupportmobileal.org/#website",
+      "name": "Spinal Injury Support Group – Mobile, Alabama",
+      "url": "https://spinalinjurysupportmobileal.org/",
+      "publisher": { "@id": "https://spinalinjurysupportmobileal.org/#org" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://spinalinjurysupportmobileal.org/faq.html#webpage",
+      "url": "https://spinalinjurysupportmobileal.org/faq.html",
+      "name": "FAQ | Spinal Injury Support Group – Mobile, AL",
+      "description": "Answers to common questions about meetings, accessibility, transportation, and finding spinal cord injury support in the Mobile area.",
+      "isPartOf": { "@id": "https://spinalinjurysupportmobileal.org/#website" },
+      "about": { "@id": "https://spinalinjurysupportmobileal.org/#org" },
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://spinalinjurysupportmobileal.org/logo.webp"
+      },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "Event",
+      "@id": "https://spinalinjurysupportmobileal.org/#event-2025-08-25",
+      "name": "Spinal Injury Support Group – Monthly Meeting",
+      "description": "Free, peer-led support meeting for spinal cord injury survivors, families, and caregivers.",
+      "startDate": "2025-08-25T13:00:00-05:00",
+      "endDate": "2025-08-25T14:30:00-05:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+      "isAccessibleForFree": true,
+      "image": "https://spinalinjurysupportmobileal.org/grouppicrev.webp",
+      "location": {
+        "@type": "Place",
+        "name": "Independent Living Center of Mobile",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "6750 Howells Ferry Road",
+          "addressLocality": "Mobile",
+          "addressRegion": "AL",
+          "postalCode": "36618",
+          "addressCountry": "US"
+        }
+      },
+      "organizer": { "@id": "https://spinalinjurysupportmobileal.org/#org" }
     }
-  }
-  </script>
+  ]
+}
+</script>
+
 
   <!-- Open FAQ item when visiting a #hash -->
   <!-- JavaScript to expand a specific FAQ when linked via hash (#) -->
@@ -246,6 +298,7 @@
   </script>
 </body>
 </html>
+
 
 
 
