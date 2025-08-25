@@ -167,7 +167,7 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
 .navigation li:first-child {
   margin-left: 0; /* No negative margin for first item */
 }
-.navigation li:not(:last-child) { border-right: none; }
+.navigation li:not(:last-child) { border-right: 1px solid #000; }
 .navigation a {
   text-decoration: none;
   color: #0d4bf7;
@@ -439,6 +439,7 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
     padding: 12px 16px;
   }
 }
+
 
 
 
