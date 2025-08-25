@@ -224,6 +224,7 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
   text-decoration: underline;
 }
 
+
 /* =========================================================
    IMAGES & GALLERIES
    ========================================================= */
@@ -412,12 +413,10 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
    RESPONSIVE (≤ 600px)
    ========================================================= */
 @media (max-width: 600px) {
-  /* even blue gutters on both sides */
   .container {
-    padding: 15px;
-    margin: 0 12px 50px;
+    padding: 15px 15px 50px;  /* keep the bottom space inside */
+    margin: 0 12px 0;         /* no outside bottom margin → no blue gap */
   }
-
   /* full-width stacked nav, big tap targets */
   .navigation ul {
     flex-direction: column;
@@ -438,7 +437,14 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
     display: block;                   /* entire row is clickable */
     padding: 12px 16px;
   }
+   /* Contact page only */
+   .contact .container{
+      margin-bottom: 0;      /* cancel the global bottom margin */
+      padding-bottom: 50px;  /* keep the same visual space inside */
 }
+   
+}
+
 
 
 
