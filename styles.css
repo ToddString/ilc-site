@@ -10,9 +10,6 @@ html, body {
   padding: 0;
   overflow-x: hidden;                 /* no sideways scroll */
 }
-
-html { background: #EBF3FD; } 
-
 body {
   background: rgb(13,62,239);         /* solid blue; change to rgba(...,.9) if you prefer */
   font-family: sans-serif;
@@ -441,6 +438,7 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
   }
   
 }
+
 
 
 
