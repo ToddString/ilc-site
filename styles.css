@@ -4,8 +4,6 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 html, body {
-  height: 100%;
-  width: 100%;
   margin: 0;
   padding: 0;
   overflow-x: hidden;                 /* no sideways scroll */
@@ -41,7 +39,7 @@ img, iframe, video {
    ========================================================= */
 .container {
   max-width: 900px;
-  margin: 0 auto;
+  margin: 0 auto 60px auto;  /* added 60px bottom margin for consistent spacing before footer */
   background: #EBF3FD;
   padding: 30px 30px 50px;  /* keep the space INSIDE the light panel */
   border-radius: 10px;
@@ -376,16 +374,18 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
    ========================================================= */
 /* Style UL/LI/A inside content areas, NOT the top nav */
 .resources :where(section, .card-box, .banner-strip, .banner-alert) ul {
-  list-style: square;
+  list-style: none !important;
   text-align: left;
-  margin: 0 auto 25px;
+  margin: 8px auto 25px;
   max-width: 800px;
-  padding-left: 20px;
+  padding-left: 0;
 }
 .resources :where(section, .card-box, .banner-strip, .banner-alert) li {
-  margin: 8px 0;
+  margin: 15px 0;
   font-size: 16px;
   color: #333;
+  text-align: left;
+  list-style: none !important;
 }
 .resources :where(section, .card-box, .banner-strip, .banner-alert) a {
   color: #0d4bf7;
@@ -395,6 +395,17 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
 .resources :where(section, .card-box, .banner-strip, .banner-alert) a:hover {
   color: #ee0a0a;
   text-decoration: underline;
+}
+
+/* Additional specific rule for resources page lists */
+.resources ul {
+  list-style: none !important;
+  padding-left: 0 !important;
+  text-align: left;
+}
+.resources li {
+  list-style: none !important;
+  text-align: left;
 }
 
 /* Make sure the Resources page NAV matches other pages */
@@ -415,7 +426,7 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
 @media (max-width: 600px) {
   .container {
     padding: 15px 15px 50px;  /* keep the bottom space inside */
-    margin: 0 12px 0;         /* no outside bottom margin → no blue gap */
+    margin: 0 12px 60px 12px;         /* added 60px bottom margin for consistent spacing before footer */
   }
   /* full-width stacked nav, big tap targets */
   .navigation ul {
@@ -439,6 +450,24 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
   }
   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
