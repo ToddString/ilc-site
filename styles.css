@@ -451,6 +451,15 @@ h3, h4, h5, h6 { color: #000; margin-top: 1.5rem; margin-bottom: .75rem; }
   
 }
 
+/* Mobile landscape and tablet portrait - override gallery max-width */
+@media (max-width: 1024px) and (orientation: landscape),
+       (max-width: 768px) {
+  .container[style*="max-width:1000px"] {
+    max-width: none !important;
+    margin: 0 12px 60px 12px;
+    padding: 15px 15px 50px;
+  }
+}
 
 
 
